@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   Menu,
-  Sparkles,
 } from 'lucide-react';
 import './styles.css';
 
 const etsyShop = 'https://vantahollow.etsy.com';
+const shopPoliciesUrl = 'https://www.etsy.com/shop/vantahollow/?etsrc=sdt#policies';
 const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID;
 const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+
+const etsyLinkProps = {
+  target: '_blank',
+  rel: 'noreferrer',
+};
 
 const categories = [
   {
@@ -66,16 +71,6 @@ const features = [
   },
 ];
 
-function OrnateRule({ compact = false }) {
-  return (
-    <span className={compact ? 'ornate ornate-compact' : 'ornate'} aria-hidden="true">
-      <span />
-      <Sparkles size={compact ? 12 : 15} strokeWidth={1.5} />
-      <span />
-    </span>
-  );
-}
-
 function Wordmark({ footer = false }) {
   return (
     <img
@@ -132,7 +127,7 @@ function NewsletterSignup() {
       setStatus({
         type: 'success',
         message:
-          "🖤 Welcome to the Hollow.\nYou'll be the first to hear about new releases and collector favorites.",
+          "Welcome to the Hollow.\nYou'll be the first to hear about new releases and collector favorites.",
       });
     } catch {
       setStatus({
@@ -362,10 +357,32 @@ function AboutPage() {
   );
 }
 
+function ContactPage() {
+  return (
+    <InfoPage eyebrow="Contact Vanta Hollow" title="Send A Message Into The Hollow" className="contact-page">
+      <article>
+        <h2>Questions, Orders, And Dark Little Details</h2>
+        <p>
+          For questions about artwork, orders, shipping, or custom requests, reach out directly and
+          we will get back to you as soon as possible.
+        </p>
+        <p>
+          <a className="button info-button" href="mailto:vantahollow.art@gmail.com">
+            Email Vanta Hollow <span aria-hidden="true">&rsaquo;</span>
+          </a>
+        </p>
+      </article>
+    </InfoPage>
+  );
+}
+
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isHome = currentPath === '/';
   const isAbout = currentPath === '/about';
   const isFAQ = currentPath === '/faq';
+  const isContact = currentPath === '/contact';
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <div className="site-shell">
@@ -376,24 +393,35 @@ function App() {
       </div>
 
       <header className="site-header">
-        <a className="brand" href="/" aria-label="Vanta Hollow home">
+        <div className="brand" aria-label="Vanta Hollow">
           <Wordmark />
-        </a>
+        </div>
 
-        <button className="menu-button" aria-label="Open menu">
+        <button
+          className="menu-button"
+          type="button"
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
           <Menu size={28} />
         </button>
 
-        <nav className="main-nav" aria-label="Primary navigation">
-          <a className={isHome ? 'active' : undefined} href="/">
+        <nav
+          className={`main-nav ${isMenuOpen ? 'open' : ''}`}
+          id="primary-navigation"
+          aria-label="Primary navigation"
+        >
+          <a className={isHome ? 'active' : undefined} href="/" onClick={closeMenu}>
             Home
           </a>
-          <a href={etsyShop}>Shop All</a>
-          <a href="/#collections">Collections</a>
-          <a className={isAbout ? 'active' : undefined} href="/about">About</a>
-          <a href={`${etsyShop}#reviews`}>Reviews</a>
-          <a className={isFAQ ? 'active' : undefined} href="/faq">FAQ</a>
-          <a href="mailto:vantahollow.art@gmail.com">Contact</a>
+          <a href={etsyShop} {...etsyLinkProps} onClick={closeMenu}>Shop All</a>
+          <a href="/#collections" onClick={closeMenu}>Collections</a>
+          <a className={isAbout ? 'active' : undefined} href="/about" onClick={closeMenu}>About</a>
+          <a href={`${etsyShop}#reviews`} {...etsyLinkProps} onClick={closeMenu}>Reviews</a>
+          <a className={isFAQ ? 'active' : undefined} href="/faq" onClick={closeMenu}>FAQ</a>
+          <a className={isContact ? 'active' : undefined} href="/contact" onClick={closeMenu}>Contact</a>
         </nav>
 
       </header>
@@ -403,6 +431,8 @@ function App() {
           <FAQPage />
         ) : isAbout ? (
           <AboutPage />
+        ) : isContact ? (
+          <ContactPage />
         ) : (
           <>
         <section className="hero" id="home">
@@ -420,8 +450,8 @@ function App() {
               <br />
               Curated artwork for those who find beauty in the darkness.
             </p>
-            <a className="button" href={etsyShop}>
-              Browse the Collection <span aria-hidden="true">›</span>
+            <a className="button" href={etsyShop} {...etsyLinkProps}>
+              Browse the Collection <span aria-hidden="true">&rsaquo;</span>
             </a>
           </div>
         </section>
@@ -454,7 +484,7 @@ function App() {
 
           <div className="collection-grid">
             {categories.map((category) => (
-              <a className="collection-card" href={category.href} key={category.name}>
+              <a className="collection-card" href={category.href} key={category.name} {...etsyLinkProps}>
                 <img src={category.image} alt={category.name} />
                 <span>{category.label}</span>
                 <strong>View All</strong>
@@ -462,8 +492,8 @@ function App() {
             ))}
           </div>
 
-          <a className="button centered" href={etsyShop}>
-            Shop All Collections <span aria-hidden="true">›</span>
+          <a className="button centered" href={etsyShop} {...etsyLinkProps}>
+            Shop All Collections <span aria-hidden="true">&rsaquo;</span>
           </a>
         </section>
 
@@ -482,11 +512,11 @@ function App() {
               <br />
               and returned to again and again.
             </p>
-            <a className="button" href="https://www.etsy.com/shop/vantahollow/?etsrc=sdt&section_id=56626705">
-              Shop Favorites <span aria-hidden="true">›</span>
+            <a className="button" href="https://www.etsy.com/shop/vantahollow/?etsrc=sdt&section_id=56626705" {...etsyLinkProps}>
+              Shop Favorites <span aria-hidden="true">&rsaquo;</span>
             </a>
           </div>
-          <img src="/images/mockup/featured-art-crop.png" alt="Framed Vanta Hollow artwork on a dark wall" />
+          <img src="/images/mockup/featured-bg-responsive.png" alt="Framed Vanta Hollow artwork on a dark wall" />
         </section>
           </>
         )}
@@ -526,14 +556,14 @@ function App() {
           <section className="quick-links">
             <h2>Quick Links</h2>
             <div>
-              <a href={etsyShop}>Shop All</a>
+              <a href={etsyShop} {...etsyLinkProps}>Shop All</a>
               <a href="/#collections">Collections</a>
               <a href="/about">About Us</a>
-              <a href={`${etsyShop}#reviews`}>Reviews</a>
+              <a href={`${etsyShop}#reviews`} {...etsyLinkProps}>Reviews</a>
               <a href="/faq">FAQ</a>
-              <a href="mailto:vantahollow.art@gmail.com">Contact</a>
-              <a href={etsyShop}>Shipping & Returns</a>
-              <a href={etsyShop}>Etsy Shop</a>
+              <a href="/contact">Contact</a>
+              <a href={shopPoliciesUrl} {...etsyLinkProps}>Shop Policies</a>
+              <a href={etsyShop} {...etsyLinkProps}>Etsy Shop</a>
             </div>
           </section>
 

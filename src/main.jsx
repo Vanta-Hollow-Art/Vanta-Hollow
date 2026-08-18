@@ -90,6 +90,12 @@ const manualNewestListings = [
   },
 ];
 
+function getArtworkName(title) {
+  const separatorIndex = title.search(/\s[-–—=]\s/);
+
+  return separatorIndex === -1 ? title : title.slice(0, separatorIndex).trim() || title;
+}
+
 function getValidatedNewestListings(payload) {
   if (!Array.isArray(payload?.listings) || payload.listings.length !== 4) {
     return null;
@@ -120,7 +126,7 @@ function getValidatedNewestListings(payload) {
     return {
       listingId,
       day: title,
-      label: 'Newest Listing',
+      label: getArtworkName(title),
       image,
       imageAlt: imageAlt || title,
       href,

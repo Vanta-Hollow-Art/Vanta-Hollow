@@ -478,6 +478,28 @@ img {
   height: 100%;
 }
 
+.newest-card-placeholder {
+  background: linear-gradient(110deg, #050505 30%, #0b0b0b 45%, #050505 60%);
+  background-size: 200% 100%;
+  animation: newest-placeholder-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes newest-placeholder-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .newest-card-placeholder {
+    animation: none;
+  }
+}
+
 .collection-card::after {
   content: '';
   position: absolute;

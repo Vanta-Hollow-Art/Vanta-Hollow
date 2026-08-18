@@ -1149,7 +1149,10 @@ function App() {
   const journalEntry = journalEntries.find((entry) => currentPath === `/journal/${entry.slug}`);
   const isFAQ = currentPath === '/faq';
   const isContact = currentPath === '/contact';
-  const [displayedNewestListings, setDisplayedNewestListings] = useState(manualNewestListings);
+  const [newestListingsState, setNewestListingsState] = useState({
+    status: 'loading',
+    listings: [],
+  });
   const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
@@ -1158,6 +1161,11 @@ function App() {
     }
 
     const controller = new AbortController();
+    const showManualNewestListings = () => {
+      if (!controller.signal.aborted) {
+        setNewestListingsState({ status: 'failure', listings: [] });
+      }
+    };
 
     const loadNewestListings = async () => {
       try {
@@ -1167,15 +1175,21 @@ function App() {
         });
 
         if (!response.ok) {
+          showManualNewestListings();
           return;
         }
 
         const listings = getValidatedNewestListings(await response.json());
-        if (listings && !controller.signal.aborted) {
-          setDisplayedNewestListings(listings);
+        if (!listings) {
+          showManualNewestListings();
+          return;
+        }
+
+        if (!controller.signal.aborted) {
+          setNewestListingsState({ status: 'success', listings });
         }
       } catch {
-        // Keep the four recovered manual cards when the API is unavailable.
+        showManualNewestListings();
       }
     };
 
@@ -1183,6 +1197,10 @@ function App() {
 
     return () => controller.abort();
   }, [isHome]);
+
+  const displayedNewestListings = newestListingsState.status === 'success'
+    ? newestListingsState.listings
+    : manualNewestListings;
 
   return (
     <div className="site-shell">
@@ -1295,13 +1313,21 @@ function App() {
           </div>
 
           <div className="newest-grid">
-            {displayedNewestListings.map((listing) => (
-              <a className="collection-card newest-card" href={listing.href} key={listing.listingId || listing.day} {...etsyLinkProps}>
-                <img src={listing.image} alt={listing.imageAlt || listing.day} />
-                <span>{listing.label}</span>
-                <strong>View Listing</strong>
-              </a>
-            ))}
+            {newestListingsState.status === 'loading'
+              ? Array.from({ length: 4 }, (_, index) => (
+                <div
+                  aria-hidden="true"
+                  className="collection-card newest-card newest-card-placeholder"
+                  key={`newest-placeholder-${index}`}
+                />
+              ))
+              : displayedNewestListings.map((listing) => (
+                <a className="collection-card newest-card" href={listing.href} key={listing.listingId || listing.day} {...etsyLinkProps}>
+                  <img src={listing.image} alt={listing.imageAlt || listing.day} />
+                  <span>{listing.label}</span>
+                  <strong>View Listing</strong>
+                </a>
+              ))}
           </div>
         </section>
 

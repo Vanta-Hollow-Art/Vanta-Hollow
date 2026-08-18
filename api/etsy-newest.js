@@ -1,18 +1,40 @@
 const ETSY_API_BASE = 'https://openapi.etsy.com/v3/application';
 const LISTING_COUNT = 4;
-const CANDIDATE_COUNT = 25;
-const ETSY_TIMEOUT_MS = 8000;
+const ACTIVE_PAGE_SIZE = 100;
+const DETAIL_BATCH_SIZE = 25;
+const MAX_ACTIVE_PAGES = 1000;
+const ETSY_TIMEOUT_MS = 15000;
 
 function getCreationTimestamp(listing) {
-  return Number(listing?.creation_timestamp ?? listing?.created_timestamp);
+  const timestampFields = [
+    listing?.original_creation_timestamp,
+    listing?.creation_timestamp,
+    listing?.created_timestamp,
+  ];
+
+  for (const value of timestampFields) {
+    const timestamp = Number(value);
+
+    if (Number.isFinite(timestamp) && timestamp > 0) {
+      return timestamp;
+    }
+  }
+
+  return Number.NaN;
 }
 
 function getListingType(listing) {
-  const listingType = listing?.listing_type ?? listing?.type;
-  return typeof listingType === 'string' ? listingType.trim().toLowerCase() : '';
+  const listingType = typeof listing?.listing_type === 'string'
+    ? listing.listing_type.trim().toLowerCase()
+    : '';
+  const fallbackType = typeof listing?.type === 'string'
+    ? listing.type.trim().toLowerCase()
+    : '';
+
+  return listingType || fallbackType;
 }
 
-function isNonDigitalListing(listing) {
+function isPhysicalListing(listing) {
   return getListingType(listing) === 'physical';
 }
 
@@ -20,18 +42,31 @@ function getCandidateListings(listings) {
   const seenListingIds = new Set();
 
   return [...listings]
-    .sort((left, right) => getCreationTimestamp(right) - getCreationTimestamp(left))
     .filter((listing) => {
       const listingId = Number(listing?.listing_id);
       const creationTimestamp = getCreationTimestamp(listing);
 
-      if (
-        !isNonDigitalListing(listing) ||
-        !Number.isSafeInteger(listingId) ||
-        listingId < 1 ||
-        !Number.isFinite(creationTimestamp) ||
-        seenListingIds.has(listingId)
-      ) {
+      return (
+        listing?.state === 'active' &&
+        isPhysicalListing(listing) &&
+        Number.isSafeInteger(listingId) &&
+        listingId > 0 &&
+        Number.isFinite(creationTimestamp)
+      );
+    })
+    .sort((left, right) => {
+      const timestampDifference = getCreationTimestamp(right) - getCreationTimestamp(left);
+
+      if (timestampDifference !== 0) {
+        return timestampDifference;
+      }
+
+      return Number(right?.listing_id) - Number(left?.listing_id);
+    })
+    .filter((listing) => {
+      const listingId = Number(listing?.listing_id);
+
+      if (seenListingIds.has(listingId)) {
         return false;
       }
 
@@ -79,6 +114,113 @@ async function fetchEtsyJson(url, apiKey, signal) {
   return response.json();
 }
 
+async function fetchAllActiveListings(shopId, apiKey, signal) {
+  const activeListings = [];
+
+  for (let page = 0; page < MAX_ACTIVE_PAGES; page += 1) {
+    const offset = page * ACTIVE_PAGE_SIZE;
+    const activeListingsUrl = new URL(`${ETSY_API_BASE}/shops/${shopId}/listings/active`);
+    activeListingsUrl.searchParams.set('limit', String(ACTIVE_PAGE_SIZE));
+    activeListingsUrl.searchParams.set('offset', String(offset));
+
+    const activePayload = await fetchEtsyJson(activeListingsUrl, apiKey, signal);
+    if (!Array.isArray(activePayload?.results)) {
+      throw new Error('Invalid Etsy active-listings response');
+    }
+
+    const pageListings = activePayload.results;
+    if (pageListings.length === 0) {
+      return activeListings;
+    }
+
+    activeListings.push(...pageListings);
+
+    const totalCount = Number(activePayload?.count);
+    const hasKnownTotal = Number.isSafeInteger(totalCount) && totalCount >= 0;
+    const nextOffset = offset + ACTIVE_PAGE_SIZE;
+
+    if (
+      (hasKnownTotal && nextOffset >= totalCount) ||
+      pageListings.length < ACTIVE_PAGE_SIZE
+    ) {
+      return activeListings;
+    }
+  }
+
+  throw new Error('Etsy active-listings pagination limit exceeded');
+}
+
+function getUsableListing(listing, listingId) {
+  const primaryImage = Array.isArray(listing?.images)
+    ? listing.images.find((image) => Number(image?.rank) === 1)
+    : null;
+  const title = typeof listing?.title === 'string' ? listing.title.trim() : '';
+  const listingUrl = typeof listing?.url === 'string' ? listing.url.trim() : '';
+  const imageUrl = primaryImage?.url_570xN || primaryImage?.url_fullxfull || '';
+  const imageAlt = typeof primaryImage?.alt_text === 'string' ? primaryImage.alt_text.trim() : '';
+
+  if (
+    listing?.state !== 'active' ||
+    !isPhysicalListing(listing) ||
+    !title ||
+    !isEtsyListingUrl(listingUrl) ||
+    !isHttpsUrl(imageUrl)
+  ) {
+    return null;
+  }
+
+  return {
+    id: listingId,
+    title,
+    url: listingUrl,
+    imageUrl,
+    imageAlt: imageAlt || title,
+  };
+}
+
+async function fetchNewestUsableListings(candidateListings, apiKey, signal) {
+  const listings = [];
+
+  for (
+    let candidateIndex = 0;
+    candidateIndex < candidateListings.length && listings.length < LISTING_COUNT;
+    candidateIndex += DETAIL_BATCH_SIZE
+  ) {
+    const candidateBatch = candidateListings.slice(
+      candidateIndex,
+      candidateIndex + DETAIL_BATCH_SIZE,
+    );
+    const listingIds = candidateBatch.map((listing) => Number(listing.listing_id));
+
+    const batchUrl = new URL(`${ETSY_API_BASE}/listings/batch`);
+    batchUrl.searchParams.set('listing_ids', listingIds.join(','));
+    batchUrl.searchParams.set('includes', 'Images');
+
+    const batchPayload = await fetchEtsyJson(batchUrl, apiKey, signal);
+    if (!Array.isArray(batchPayload?.results)) {
+      throw new Error('Invalid Etsy listing-details response');
+    }
+
+    const detailsById = new Map(
+      batchPayload.results.map((listing) => [Number(listing?.listing_id), listing]),
+    );
+
+    for (const listingId of listingIds) {
+      const usableListing = getUsableListing(detailsById.get(listingId), listingId);
+
+      if (usableListing) {
+        listings.push(usableListing);
+      }
+
+      if (listings.length === LISTING_COUNT) {
+        break;
+      }
+    }
+  }
+
+  return listings;
+}
+
 function sendUnavailable(response) {
   response.setHeader('Cache-Control', 'no-store');
   return response.status(503).json({ error: 'Newest listings are temporarily unavailable.' });
@@ -102,62 +244,18 @@ export default async function handler(request, response) {
   const timeout = setTimeout(() => controller.abort(), ETSY_TIMEOUT_MS);
 
   try {
-    const activeListingsUrl = new URL(`${ETSY_API_BASE}/shops/${shopId}/listings/active`);
-    activeListingsUrl.searchParams.set('limit', String(CANDIDATE_COUNT));
-
-    const activePayload = await fetchEtsyJson(activeListingsUrl, apiKey, controller.signal);
-    if (!Array.isArray(activePayload?.results)) {
-      return sendUnavailable(response);
-    }
-
-    const candidateListings = getCandidateListings(activePayload.results);
+    const activeListings = await fetchAllActiveListings(shopId, apiKey, controller.signal);
+    const candidateListings = getCandidateListings(activeListings);
 
     if (candidateListings.length < LISTING_COUNT) {
       return sendUnavailable(response);
     }
 
-    const listingIds = candidateListings.map((listing) => Number(listing.listing_id));
-
-    const batchUrl = new URL(`${ETSY_API_BASE}/listings/batch`);
-    batchUrl.searchParams.set('listing_ids', listingIds.join(','));
-    batchUrl.searchParams.set('includes', 'Images');
-
-    const batchPayload = await fetchEtsyJson(batchUrl, apiKey, controller.signal);
-    if (!Array.isArray(batchPayload?.results)) {
-      return sendUnavailable(response);
-    }
-
-    const detailsById = new Map(
-      batchPayload.results.map((listing) => [Number(listing?.listing_id), listing]),
+    const listings = await fetchNewestUsableListings(
+      candidateListings,
+      apiKey,
+      controller.signal,
     );
-
-    const listings = listingIds.map((listingId) => {
-      const listing = detailsById.get(listingId);
-      const primaryImage = Array.isArray(listing?.images)
-        ? listing.images.find((image) => Number(image?.rank) === 1)
-        : null;
-      const title = typeof listing?.title === 'string' ? listing.title.trim() : '';
-      const listingUrl = typeof listing?.url === 'string' ? listing.url.trim() : '';
-      const imageUrl = primaryImage?.url_570xN || primaryImage?.url_fullxfull || '';
-      const imageAlt = typeof primaryImage?.alt_text === 'string' ? primaryImage.alt_text.trim() : '';
-
-      if (
-        listing?.state !== 'active' ||
-        !title ||
-        !isEtsyListingUrl(listingUrl) ||
-        !isHttpsUrl(imageUrl)
-      ) {
-        return null;
-      }
-
-      return {
-        id: listingId,
-        title,
-        url: listingUrl,
-        imageUrl,
-        imageAlt: imageAlt || title,
-      };
-    }).filter(Boolean).slice(0, LISTING_COUNT);
 
     if (listings.length !== LISTING_COUNT) {
       return sendUnavailable(response);

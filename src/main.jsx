@@ -993,7 +993,7 @@ function FAQPage() {
     {
       question: 'What Types Of Artwork Do You Offer?',
       answer: (
-        <p>Vanta Hollow specializes in dark fantasy, gothic, horror, sugar skull, and dark fairytale artwork. Every piece is selected to bring atmosphere, mystery, and cinematic beauty into your space.</p>
+        <p>Vanta Hollow specializes in dark fantasy, gothic, horror, sugar skull, dark fairytale, Creepy Clown Art, and Demon Art. Every piece is selected to bring atmosphere, mystery, and cinematic beauty into your space.</p>
       ),
     },
     {
@@ -1319,7 +1319,9 @@ function App() {
                   aria-hidden="true"
                   className="collection-card newest-card newest-card-placeholder"
                   key={`newest-placeholder-${index}`}
-                />
+                >
+                  <span className="newest-card-loading-label">Loading</span>
+                </div>
               ))
               : displayedNewestListings.map((listing) => (
                 <a className="collection-card newest-card" href={listing.href} key={listing.listingId || listing.day} {...etsyLinkProps}>

@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
+  Copy,
   Menu,
+  Search,
 } from 'lucide-react';
 import './styles.css';
 
 const etsyShop = 'https://vantahollow.etsy.com';
+const collectorFavoritesUrl = 'https://www.etsy.com/shop/vantahollow/?etsrc=sdt&section_id=56626705';
 const shopPoliciesUrl = 'https://www.etsy.com/shop/vantahollow/?etsrc=sdt#policies';
 const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID;
 const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
@@ -29,6 +32,12 @@ const categories = [
     href: 'https://www.etsy.com/shop/vantahollow?section_id=55965747',
   },
   {
+    name: 'Clown Art',
+    label: 'Clown Art',
+    image: '/images/categories/clown-art.jpg',
+    href: 'https://www.etsy.com/shop/VantaHollow?section_id=59608394',
+  },
+  {
     name: 'Dark Fairytale Art',
     label: 'Dark Fairytale Art',
     image: '/images/categories/dark-fairytale-art.jpg',
@@ -41,10 +50,104 @@ const categories = [
     href: 'https://www.etsy.com/shop/vantahollow?section_id=55948980',
   },
   {
+    name: 'Demon Art',
+    label: 'Demon Art',
+    image: '/images/categories/demon-art.jpg',
+    href: 'https://www.etsy.com/shop/VantaHollow?section_id=59624503',
+  },
+  {
     name: 'Premium Canvases',
     label: 'Premium Canvases',
     image: '/images/categories/premium-canvases.jpg',
     href: 'https://www.etsy.com/shop/vantahollow/?etsrc=sdt&section_id=57721612',
+  },
+];
+
+const manualNewestListings = [
+  {
+    day: 'Newest Listing 1',
+    label: 'Newest Listing',
+    image: '/images/newest/listing-1.png',
+    href: etsyShop,
+  },
+  {
+    day: 'Newest Listing 2',
+    label: 'Newest Listing',
+    image: '/images/newest/listing-2.png',
+    href: etsyShop,
+  },
+  {
+    day: 'Newest Listing 3',
+    label: 'Newest Listing',
+    image: '/images/newest/listing-3.png',
+    href: etsyShop,
+  },
+  {
+    day: 'Newest Listing 4',
+    label: 'Newest Listing',
+    image: '/images/newest/listing-4.png',
+    href: etsyShop,
+  },
+];
+
+function getValidatedNewestListings(payload) {
+  if (!Array.isArray(payload?.listings) || payload.listings.length !== 4) {
+    return null;
+  }
+
+  const listings = payload.listings.map((listing) => {
+    const listingId = String(listing?.id || '').trim();
+    const title = typeof listing?.title === 'string' ? listing.title.trim() : '';
+    const image = typeof listing?.imageUrl === 'string' ? listing.imageUrl.trim() : '';
+    const imageAlt = typeof listing?.imageAlt === 'string' ? listing.imageAlt.trim() : '';
+    const href = typeof listing?.url === 'string' ? listing.url.trim() : '';
+
+    try {
+      const listingUrl = new URL(href);
+      const imageUrl = new URL(image);
+      const isEtsyListing =
+        listingUrl.protocol === 'https:' &&
+        /(^|\.)etsy\.com$/i.test(listingUrl.hostname) &&
+        /^\/listing\/\d+(?:\/|$)/.test(listingUrl.pathname);
+
+      if (!listingId || !title || imageUrl.protocol !== 'https:' || !isEtsyListing) {
+        return null;
+      }
+    } catch {
+      return null;
+    }
+
+    return {
+      listingId,
+      day: title,
+      label: 'Newest Listing',
+      image,
+      imageAlt: imageAlt || title,
+      href,
+    };
+  });
+
+  return listings.every(Boolean) ? listings : null;
+}
+
+const collectorFavorites = [
+  {
+    title: 'Day of the Dead',
+    label: 'Day of the Dead',
+    image: '/images/collector-favorites/favorite-1.png',
+    href: 'https://vantahollow.etsy.com/listing/1524739765',
+  },
+  {
+    title: 'Dark Alice',
+    label: 'Dark Alice',
+    image: '/images/collector-favorites/favorite-2.png',
+    href: 'https://vantahollow.etsy.com/listing/1463946996',
+  },
+  {
+    title: 'Evil Clown',
+    label: 'Evil Clown',
+    image: '/images/collector-favorites/favorite-3.png',
+    href: 'https://vantahollow.etsy.com/listing/1468266381',
   },
 ];
 
@@ -71,6 +174,202 @@ const features = [
   },
 ];
 
+const journalEntries = [
+  {
+    entryNumber: 'Archive Entry 001',
+    title: 'The Cathedral',
+    slug: 'the-cathedral',
+    artworkImage: '/images/journal/the-cathedral/the-cathedral.png',
+    framedMockup: '/images/journal/the-cathedral/the-cathedral-framed.png',
+    publishedDate: 'June 30, 2026',
+    category: 'Horror',
+    collection: 'Horror',
+    series: 'Cathedral Trilogy',
+    keywords: ['cathedral', 'gothic', 'architecture', 'stained glass', 'lantern'],
+    relatedArticles: ['emergence', 'the-return'],
+    excerpt:
+      'A cathedral rises from the dark like a memory that refuses to fade. This archive entry studies the architecture, light, and quiet tension behind one of the Hollow\'s flagship visions.',
+    story: `The Cathedral began with the question: *What exists beyond the places history refuses to remember?*
+
+The artwork tells the story of a lone traveler answering a call that few ever hear. Beyond the last road and beyond the reach of kingdoms, she discovers a cathedral unlike anything built by human hands. Its impossible architecture rises from the mountains as though it has always existed, waiting in silence for someone willing to answer its invitation.
+
+The Cathedral never explains itself. It offers no answers about who built it or what waits beyond its crimson entrance. Instead, it invites the viewer to stand beside the traveler for a single moment—the instant before curiosity becomes commitment. By the time she realizes she may not have discovered the Cathedral at all, it is already too late.`,
+    behindTheCreation: `The original vision wasn't simply to create another gothic cathedral. It needed to feel ancient, impossible, and alive—as though the mountain itself had grown into a monument for something that should never have been worshipped.
+
+Every major decision revolved around scale. The lone figure was intentionally kept small so the viewer would instinctively compare themselves to the structure towering above her. The cathedral wasn't meant to feel abandoned. It was meant to feel patient.
+
+The crimson glow became the emotional centerpiece of the composition. Rather than filling the artwork with red, the light was restrained and concentrated around the entrance, allowing it to act as both a beacon and a warning. It doesn't force the traveler inside—it simply waits for her to choose.`,
+    creativeProcess: `One of the greatest challenges was balancing beauty with unease.
+
+Early concepts leaned too heavily into horror, making the cathedral feel aggressive rather than mysterious. As the composition evolved, many of the obvious horror elements were stripped away in favor of cleaner architecture, stronger silhouettes, and more deliberate lighting.
+
+The skull wasn't added as decoration. It was woven directly into the cathedral itself so that many viewers don't notice it immediately. Once they do, it's impossible to unsee. That delayed discovery became one of the defining characteristics of the final piece.
+
+Every revision pushed toward a single goal: creating an image that revealed something new every time someone stood in front of it.`,
+    symbolism: `Cathedrals have traditionally represented sanctuary, faith, and salvation.
+
+The Cathedral turns that idea on its head.
+
+Its towering walls inspire reverence, yet offer no comfort. The crimson light spilling from its entrance resembles a welcome, but nothing within the image suggests safety. Instead, the building exists as a monument to curiosity itself—the irresistible desire to step forward even when every instinct says not to.
+
+The traveler represents every viewer who has ever felt drawn toward the unknown despite knowing better.
+
+Sometimes the greatest danger isn't being hunted.
+
+It's willingly answering the call.`,
+    hiddenDetails: `The Cathedral was designed to reward slow observation.
+
+At first glance, the architecture dominates the scene. With time, the skull hidden within the stone begins to emerge, transforming the entire structure into something far more unsettling. The longer the viewer studies the piece, the more the building seems to possess a face of its own.
+
+The reflections beneath the cathedral subtly exaggerate its height, making the structure feel even larger than the eye first perceives. Nearly every vertical line guides attention toward the center tower, while the surrounding clouds naturally frame the entrance below.
+
+Even the red lighting is intentionally restrained. Rather than flooding the entire composition with color, it appears only where it serves the story, drawing the eye toward the single place every path eventually leads.`,
+    collectorNotes: `The Cathedral is the opening chapter of the Cathedral Trilogy and serves as the foundation for the world of Vanta Hollow.
+
+Its visual language established many of the elements that continue to appear throughout later works: impossible architecture, restrained color palettes, cinematic lighting, and environments that feel like living characters rather than simple backgrounds.
+
+Although it stands as a complete artwork on its own, The Cathedral also marks the beginning of a much larger journey into the Hollow. For many collectors, it becomes the piece that introduces them to the world before they continue deeper into its stories.`,
+    closingArchive: `Every legend begins with a single step.
+
+For the traveler, that step carried her beyond the last road, beyond forgotten kingdoms, and to a place that should never have existed.
+
+She believed she had discovered the Cathedral.
+
+Perhaps that's what every visitor believes.
+
+The Cathedral has stood there far longer than memory itself.
+
+Waiting.
+
+Listening.
+
+Calling.
+
+And every once in a while...
+
+Someone answers.`,
+    featuredDescription:
+      'A dark fantasy collector piece built around gothic architecture, cinematic scale, and the silence before entering the unknown.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4528260885',
+    seo: {
+      title: 'The Cathedral | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the inspiration, symbolism, hidden details, and collector notes behind The Cathedral from Vanta Hollow.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 002',
+    title: 'Emergence',
+    slug: 'emergence',
+    artworkImage: '/images/journal/the-emergence/the-emergence.png',
+    framedMockup: '/images/journal/the-emergence/the-emergence-framed.png',
+    publishedDate: 'June 30, 2026',
+    category: 'Horror',
+    collection: 'Horror',
+    keywords: ['emergence', 'fairytale', 'transformation', 'shadow', 'awakening'],
+    relatedArticles: ['the-cathedral', 'the-return'],
+    excerpt:
+      'Emergence captures the instant a hidden world begins to breathe. This entry preserves the visual choices that turn transformation into something elegant, strange, and cinematic.',
+    story: `The Cathedral promised no salvation. It only asked a question:
+
+*Would you step inside?*
+
+She answered.
+
+What happened beyond those crimson gates has never been witnessed by another soul. No records remain. No survivors ever spoke of what waited inside those impossible halls. When the Cathedral's ancient doors opened once more, the woman who emerged wore the same face...but whatever humanity had entered was gone.
+
+Emergence marks the moment the Hollow claimed its first disciple. She was never rescued. She was remade. The Cathedral did not destroy her. It transformed her into something that now carries its presence beyond those forgotten mountains.`,
+    behindTheCreation: `While *The Cathedral* focused on place, *Emergence* shifts the attention to transformation.
+
+The goal was never to create another haunted figure or gothic queen. Every design decision revolved around the unsettling idea that the Cathedral leaves its mark on anyone who answers its call. She needed to feel recognizable enough that viewers believed she was once human, yet different enough that something about her presence immediately felt wrong.
+
+Rather than relying on exaggerated horror, the composition leans into restraint. Her expression reveals almost nothing, allowing the viewer to decide whether she has accepted her fate willingly...or no longer possesses the ability to resist it.`,
+    creativeProcess: `One of the greatest challenges was finding the balance between beauty and corruption.
+
+Too much darkness, and the mystery disappeared. Too much elegance, and the transformation lost its weight. The final composition lives between those extremes, allowing traces of the woman she once was to remain visible beneath whatever the Cathedral has made her become.
+
+Lighting became one of the most important storytelling tools. The crimson glow no longer exists only within the Cathedral itself. It now follows her, suggesting that whatever power awakened inside those halls has crossed into the world beyond.`,
+    symbolism: `Emergence explores the idea that some places never truly let people leave.
+
+The Cathedral does not imprison its visitors behind locked doors. Instead, it sends them back changed. The transformation becomes part of them, quietly reshaping the world wherever they walk.
+
+She represents the cost of forbidden curiosity. The moment someone chooses to cross a threshold they were never meant to find, they become part of the story that place has been writing long before they arrived.
+
+Sometimes the greatest horrors are not the monsters waiting inside.
+
+Sometimes they are the people who return.`,
+    hiddenDetails: `Although the figure commands immediate attention, the surrounding atmosphere quietly reinforces the story. The crimson lighting subtly echoes the Cathedral's entrance from the first piece, visually linking the two artworks without repeating the same composition.
+
+Her posture remains calm rather than aggressive. Nothing about her suggests violence, yet the stillness itself creates tension. Even the smallest details were chosen to make viewers question whether they are looking at a survivor...or an extension of the Cathedral's will.
+
+Collectors often notice new visual connections to *The Cathedral* after displaying the two pieces together, revealing details that are easy to overlook when viewed individually.`,
+    collectorNotes: `*Emergence* serves as the second chapter of the Cathedral Trilogy, shifting the narrative away from architecture and toward consequence.
+
+Where *The Cathedral* asks whether the traveler will answer the call, *Emergence* reveals what happens after that decision has already been made. Together, the two pieces establish the central idea that the Hollow does not merely contain darkness—it reshapes those who enter it.
+
+Displayed alongside *The Cathedral*, the two works become a continuous story rather than separate illustrations.`,
+    closingArchive: `She walked through the Cathedral's doors searching for answers.
+
+The Cathedral gave her a purpose instead.
+
+Now the gates stand silent once more.
+
+Waiting.
+
+Because every place that hungers eventually calls again.
+
+And sooner or later...
+
+Someone always answers.`,
+    featuredDescription:
+      'A dark fairytale artwork for collectors drawn to transformation, shadow, and cinematic mystery.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4529108056',
+    seo: {
+      title: 'Emergence | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the inspiration, creative process, symbolism, and collector notes behind Emergence from Vanta Hollow.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 003',
+    title: 'The Return',
+    slug: 'the-return',
+    artworkImage: '/images/journal/the-return/the-return.png',
+    framedMockup: '/images/journal/the-return/the-return-framed.png',
+    publishedDate: 'June 30, 2026',
+    category: 'Horror',
+    collection: 'Horror',
+    keywords: ['return', 'horror', 'haunting', 'ritual', 'shadow'],
+    relatedArticles: ['the-cathedral', 'emergence'],
+    excerpt:
+      'The Return documents the feeling of something crossing back into the world. Its archive record follows the atmosphere, symbolism, and quiet dread hidden inside the composition.',
+    story:
+      'The Return is about arrival after absence. The artwork suggests that whatever has come back was not forgotten, only waiting beyond the edge of sight.',
+    behindTheCreation:
+      'The piece was guided by tension and restraint. Instead of relying on spectacle, the atmosphere was built through a heavy palette, directional light, and a composition that makes the viewer feel watched.',
+    creativeProcess:
+      'Early versions leaned more directly into horror. The final direction pulled back, allowing the setting, posture, and surrounding darkness to carry the unease with more elegance.',
+    symbolism:
+      'The darkness functions as a witness. Lighting becomes a signal, the architecture becomes a boundary, and the central presence suggests a recurring theme in the Hollow: the past never stays buried.',
+    hiddenDetails:
+      'The strongest details sit in the negative space. Notice how the composition guides attention toward what is visible, then quietly asks what might be standing just outside the frame.',
+    collectorNotes:
+      'A gothic horror archive entry designed for collectors who prefer slow dread over obvious shock. One of the most atmosphere-driven pieces in this first Journal set.',
+    closingArchive:
+      'The Return closes with the sense that the image has not ended. It has only paused long enough for the viewer to realize something has already arrived.',
+    featuredDescription:
+      'A gothic horror collector artwork built around return, silence, and the pressure of unseen presence.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4532432647',
+    seo: {
+      title: 'The Return | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the story, hidden details, symbolism, and collector notes behind The Return from Vanta Hollow.',
+    },
+  },
+];
+
+const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skull', 'Gothic', 'Fairytales', 'Newest', 'Oldest'];
+
 function Wordmark({ footer = false }) {
   return (
     <img
@@ -78,6 +377,458 @@ function Wordmark({ footer = false }) {
       src="/images/mockup/logo-header.png"
       alt="Vanta Hollow"
     />
+  );
+}
+
+function getEntryUrl(entry) {
+  return `/journal/${entry.slug}`;
+}
+
+function getAbsoluteUrl(path) {
+  if (typeof window === 'undefined') {
+    return path;
+  }
+
+  return new URL(path, window.location.origin).href;
+}
+
+function formatPublishedDate(entry) {
+  return `Published: ${entry.publishedDate}`;
+}
+
+function getMetadataLines(entry) {
+  return [
+    ['Collection', entry.collection],
+    ['Category', entry.category],
+    ['Series', entry.series],
+  ].filter(([, value]) => Boolean(value));
+}
+
+function useRevealOnView() {
+  const elementRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+
+    if (!element) {
+      return undefined;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.12 },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return [elementRef, isVisible];
+}
+
+function JournalArtworkImage({ entry, className = '', framed = false, priority = false }) {
+  return (
+    <div className={`artwork-placeholder journal-artwork-image ${framed ? 'framed' : ''} ${className}`.trim()}>
+      <img
+        src={framed ? entry.framedMockup : entry.artworkImage}
+        alt={framed ? `${entry.title} framed artwork mockup` : `${entry.title} artwork`}
+        loading={priority ? 'eager' : 'lazy'}
+      />
+    </div>
+  );
+}
+
+function JournalArchiveRecord({ entry }) {
+  const [recordRef, isVisible] = useRevealOnView();
+  const archiveMetadata = [
+    ['Collection', entry.collection],
+    ['Category', entry.category],
+  ].filter(([, value]) => Boolean(value));
+
+  return (
+    <article className={`journal-record journal-reveal ${isVisible ? 'visible' : ''}`} ref={recordRef}>
+      <a className="journal-record-art" href={getEntryUrl(entry)} aria-label={`Read ${entry.title}`}>
+        <JournalArtworkImage entry={entry} />
+      </a>
+      <div className="journal-record-copy">
+        <p className="journal-entry-number">{entry.entryNumber}</p>
+        <h2>{entry.title}</h2>
+        <div className="journal-card-meta">
+          <p className="journal-date">{formatPublishedDate(entry)}</p>
+          {archiveMetadata.map(([label, value]) => (
+            <p className="journal-meta-line" key={label}>
+              {label}: {value}
+            </p>
+          ))}
+        </div>
+        <p>{entry.excerpt}</p>
+        <a className="button journal-button" href={getEntryUrl(entry)}>
+          Read Entry <span aria-hidden="true">&rsaquo;</span>
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function JournalLandingPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredEntries = useMemo(() => {
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const filtered = journalEntries.filter((entry) => {
+      const searchableText = [
+        entry.title,
+        entry.category,
+        entry.collection,
+        entry.series,
+        entry.excerpt,
+        ...(entry.keywords || []),
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      const matchesSearch = !normalizedSearch || searchableText.includes(normalizedSearch);
+      const matchesFilter =
+        activeFilter === 'All' ||
+        activeFilter === 'Newest' ||
+        activeFilter === 'Oldest' ||
+        entry.category === activeFilter;
+
+      return matchesSearch && matchesFilter;
+    });
+
+    if (activeFilter === 'Newest') {
+      return [...filtered].reverse();
+    }
+
+    return filtered;
+  }, [activeFilter, searchTerm]);
+
+  return (
+    <section className="journal-page journal-landing">
+      <div className="journal-hero">
+        <p className="info-eyebrow">The Hollow Archive</p>
+        <h1>The Hollow Journal</h1>
+        <p>
+          Every masterpiece carries a story beyond the canvas.
+          <br />
+          <br />
+          Step inside the Hollow and explore the inspiration, symbolism, hidden details, and creative journey behind every flagship creation.
+        </p>
+      </div>
+
+      <div className="journal-tools" aria-label="Search and filter The Hollow Journal">
+        <label className="journal-search" htmlFor="journal-search">
+          <Search size={16} aria-hidden="true" />
+          <span>Search Entries</span>
+          <input
+            id="journal-search"
+            type="search"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            placeholder="Search by title, keyword, category, or series"
+          />
+        </label>
+
+        <div className="journal-filters" aria-label="Journal filters">
+          {archiveFilters.map((filter) => (
+            <button
+              className={activeFilter === filter ? 'active' : undefined}
+              type="button"
+              onClick={() => setActiveFilter(filter)}
+              key={filter}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="journal-archive" aria-label="The Hollow Journal archive">
+        {filteredEntries.map((entry) => (
+          <JournalArchiveRecord entry={entry} key={entry.slug} />
+        ))}
+        {filteredEntries.length === 0 ? (
+          <p className="journal-empty">No archive entries found.</p>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function JournalEntrySection({ title, children }) {
+  return (
+    <section className="journal-story-section">
+      <h2>{title}</h2>
+      <p>{children}</p>
+    </section>
+  );
+}
+
+function useJournalSeo(entry) {
+  useEffect(() => {
+    const pageTitle = entry.seo?.title || `${entry.title} | The Hollow Journal | Vanta Hollow`;
+    const pageDescription = entry.seo?.description || entry.excerpt;
+    const canonicalUrl = getAbsoluteUrl(getEntryUrl(entry));
+    const imageUrl = getAbsoluteUrl(entry.artworkImage);
+    const previousTitle = document.title;
+    const touchedMeta = [];
+
+    const upsertMeta = (selector, attributes) => {
+      let element = document.head.querySelector(selector);
+
+      if (!element) {
+        element = document.createElement('meta');
+        document.head.appendChild(element);
+      }
+
+      Object.entries(attributes).forEach(([key, value]) => {
+        element.setAttribute(key, value);
+      });
+      touchedMeta.push(element);
+    };
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', canonicalUrl);
+
+    document.title = pageTitle;
+    upsertMeta('meta[name="description"]', { name: 'description', content: pageDescription });
+    upsertMeta('meta[property="og:type"]', { property: 'og:type', content: 'article' });
+    upsertMeta('meta[property="og:title"]', { property: 'og:title', content: pageTitle });
+    upsertMeta('meta[property="og:description"]', { property: 'og:description', content: pageDescription });
+    upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+    upsertMeta('meta[property="og:image"]', { property: 'og:image', content: imageUrl });
+    upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
+    upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: pageTitle });
+    upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: pageDescription });
+    upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: imageUrl });
+
+    const schema = document.createElement('script');
+    schema.type = 'application/ld+json';
+    schema.dataset.journalSchema = entry.slug;
+    schema.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: entry.title,
+      description: pageDescription,
+      image: imageUrl,
+      datePublished: entry.publishedDate,
+      author: {
+        '@type': 'Organization',
+        name: 'Vanta Hollow',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Vanta Hollow',
+      },
+      mainEntityOfPage: canonicalUrl,
+    });
+    document.head.appendChild(schema);
+
+    return () => {
+      document.title = previousTitle;
+      schema.remove();
+      touchedMeta.forEach((element) => {
+        if (!element.getAttribute('content')) {
+          element.remove();
+        }
+      });
+    };
+  }, [entry]);
+}
+
+function ReadingProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const nextProgress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+      setProgress(Math.min(100, Math.max(0, nextProgress)));
+    };
+
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+
+    return () => {
+      window.removeEventListener('scroll', updateProgress);
+      window.removeEventListener('resize', updateProgress);
+    };
+  }, []);
+
+  return <div className="journal-progress" style={{ transform: `scaleX(${progress / 100})` }} />;
+}
+
+function ShareArchive({ entry }) {
+  const [copied, setCopied] = useState(false);
+  const entryUrl = getAbsoluteUrl(getEntryUrl(entry));
+  const encodedUrl = encodeURIComponent(entryUrl);
+  const encodedTitle = encodeURIComponent(`${entry.title} | Vanta Hollow`);
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(entryUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  return (
+    <section className="journal-share">
+      <h2>Share This Entry</h2>
+      <div>
+        <a href={`https://www.pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`} target="_blank" rel="noreferrer" aria-label="Share on Pinterest">
+          <SocialIcon type="pinterest" />
+          <span>Pinterest</span>
+        </a>
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook">
+          <SocialIcon type="facebook" />
+          <span>Facebook</span>
+        </a>
+        <a href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`} target="_blank" rel="noreferrer" aria-label="Share on X">
+          <span className="share-x-icon" aria-hidden="true">X</span>
+          <span>X</span>
+        </a>
+        <button type="button" onClick={copyLink}>
+          <Copy size={16} aria-hidden="true" />
+          <span>{copied ? 'Copied' : 'Copy Link'}</span>
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function JournalRelatedEntry({ entry }) {
+  const [entryRef, isVisible] = useRevealOnView();
+
+  return (
+    <article className={`journal-related-entry journal-reveal ${isVisible ? 'visible' : ''}`} ref={entryRef}>
+      <a href={getEntryUrl(entry)} aria-label={`Read ${entry.title}`}>
+        <JournalArtworkImage entry={entry} />
+      </a>
+      <h3>{entry.title}</h3>
+      <p>{entry.excerpt}</p>
+      <a className="button journal-button" href={getEntryUrl(entry)}>
+        Read Entry <span aria-hidden="true">&rsaquo;</span>
+      </a>
+    </article>
+  );
+}
+
+function RelatedEntries({ entry }) {
+  const relatedEntries = (entry.relatedArticles || [])
+    .map((slug) => journalEntries.find((item) => item.slug === slug))
+    .filter(Boolean);
+  const fallbackEntries = journalEntries.filter((item) => item.slug !== entry.slug);
+  const entries = [...relatedEntries, ...fallbackEntries.filter((item) => !relatedEntries.includes(item))].slice(0, 2);
+
+  return (
+    <section className="journal-related">
+      <h2>Explore More Entries</h2>
+      <div className="journal-related-grid">
+        {entries.map((relatedEntry) => (
+          <JournalRelatedEntry entry={relatedEntry} key={relatedEntry.slug} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function JournalEntryPage({ entry }) {
+  useJournalSeo(entry);
+  const entryIndex = journalEntries.findIndex((item) => item.slug === entry.slug);
+  const previousEntry = entryIndex > 0 ? journalEntries[entryIndex - 1] : null;
+  const nextEntry = entryIndex < journalEntries.length - 1 ? journalEntries[entryIndex + 1] : null;
+  const metadataLines = getMetadataLines(entry);
+
+  return (
+    <article className="journal-page journal-entry-page">
+      <ReadingProgressBar />
+      <div className="journal-entry-flow">
+        <aside className="journal-entry-meta">
+          <p className="journal-entry-number">{entry.entryNumber}</p>
+          <h1>{entry.title}</h1>
+          <dl>
+            <div>
+              <dt>Published</dt>
+              <dd>{entry.publishedDate}</dd>
+            </div>
+            {metadataLines.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </aside>
+
+        <div className="journal-entry-hero">
+          <a href={entry.artworkImage} target="_blank" rel="noreferrer" aria-label={`View larger ${entry.title} artwork`}>
+            <JournalArtworkImage entry={entry} priority />
+          </a>
+        </div>
+
+        <div className="journal-entry-content">
+          <JournalEntrySection title="Story">{entry.story}</JournalEntrySection>
+          <JournalEntrySection title="Behind the Creation">{entry.behindTheCreation}</JournalEntrySection>
+          <JournalEntrySection title="Creative Process">{entry.creativeProcess}</JournalEntrySection>
+          <JournalEntrySection title="Symbolism">{entry.symbolism}</JournalEntrySection>
+          <JournalEntrySection title="Hidden Details">{entry.hiddenDetails}</JournalEntrySection>
+          <JournalEntrySection title="Collector Notes">{entry.collectorNotes}</JournalEntrySection>
+          <JournalEntrySection title="Closing the Archive">{entry.closingArchive}</JournalEntrySection>
+
+          <section className="journal-featured-artwork">
+            <div>
+              <h2>Featured Artwork</h2>
+              <p>{entry.featuredDescription}</p>
+              <a className="button journal-button" href={entry.etsyUrl || etsyShop} {...etsyLinkProps}>
+                Collect This Piece <span aria-hidden="true">&rsaquo;</span>
+              </a>
+            </div>
+            <JournalArtworkImage entry={entry} framed />
+          </section>
+
+          <RelatedEntries entry={entry} />
+          <ShareArchive entry={entry} />
+
+          <nav className="journal-entry-nav" aria-label="Journal entry navigation">
+            {previousEntry ? (
+              <a href={getEntryUrl(previousEntry)}>Previous Entry</a>
+            ) : (
+              <span aria-hidden="true">Previous Entry</span>
+            )}
+            <a href="/journal">Back to Journal</a>
+            {nextEntry ? (
+              <a href={getEntryUrl(nextEntry)}>Next Entry</a>
+            ) : (
+              <span aria-hidden="true">Next Entry</span>
+            )}
+          </nav>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -190,6 +941,14 @@ function SocialIcon({ type }) {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M14.2 3.5v10.2a4.5 4.5 0 1 1-4.5-4.5c.4 0 .8.1 1.2.2v2.9c-.3-.2-.7-.3-1.2-.3a1.7 1.7 0 1 0 1.7 1.7V3.5h2.8c.4 2.2 1.8 3.6 4 3.9v2.8c-1.6-.1-2.9-.7-4-1.7z" />
+      </svg>
+    );
+  }
+
+  if (type === 'youtube') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" />
       </svg>
     );
   }
@@ -380,9 +1139,44 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isHome = currentPath === '/';
   const isAbout = currentPath === '/about';
+  const isJournal = currentPath === '/journal';
+  const journalEntry = journalEntries.find((entry) => currentPath === `/journal/${entry.slug}`);
   const isFAQ = currentPath === '/faq';
   const isContact = currentPath === '/contact';
+  const [displayedNewestListings, setDisplayedNewestListings] = useState(manualNewestListings);
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    if (!isHome) {
+      return undefined;
+    }
+
+    const controller = new AbortController();
+
+    const loadNewestListings = async () => {
+      try {
+        const response = await fetch('/api/etsy-newest', {
+          headers: { Accept: 'application/json' },
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          return;
+        }
+
+        const listings = getValidatedNewestListings(await response.json());
+        if (listings && !controller.signal.aborted) {
+          setDisplayedNewestListings(listings);
+        }
+      } catch {
+        // Keep the four recovered manual cards when the API is unavailable.
+      }
+    };
+
+    loadNewestListings();
+
+    return () => controller.abort();
+  }, [isHome]);
 
   return (
     <div className="site-shell">
@@ -393,9 +1187,7 @@ function App() {
       </div>
 
       <header className="site-header">
-        <div className="brand" aria-label="Vanta Hollow">
-          <Wordmark />
-        </div>
+        <div className="brand" aria-hidden="true" />
 
         <button
           className="menu-button"
@@ -419,6 +1211,7 @@ function App() {
           <a href={etsyShop} {...etsyLinkProps} onClick={closeMenu}>Shop All</a>
           <a href="/#collections" onClick={closeMenu}>Collections</a>
           <a className={isAbout ? 'active' : undefined} href="/about" onClick={closeMenu}>About</a>
+          <a className={isJournal || journalEntry ? 'active' : undefined} href="/journal" onClick={closeMenu}>Journal</a>
           <a href={`${etsyShop}#reviews`} {...etsyLinkProps} onClick={closeMenu}>Reviews</a>
           <a className={isFAQ ? 'active' : undefined} href="/faq" onClick={closeMenu}>FAQ</a>
           <a className={isContact ? 'active' : undefined} href="/contact" onClick={closeMenu}>Contact</a>
@@ -431,15 +1224,18 @@ function App() {
           <FAQPage />
         ) : isAbout ? (
           <AboutPage />
+        ) : isJournal ? (
+          <JournalLandingPage />
+        ) : journalEntry ? (
+          <JournalEntryPage entry={journalEntry} />
         ) : isContact ? (
           <ContactPage />
         ) : (
           <>
         <section className="hero" id="home">
           <div className="hero-copy">
-            <img className="welcome-art" src="/images/mockup/ornament-short.png" alt="Welcome To" />
             <h1>
-              <img src="/images/generated/hero-wordmark-mockup-transparent.png" alt="Vanta Hollow" />
+              <img className="hero-comparison-logo" src="/images/generated/hero-circular-logo-test.png" alt="Vanta Hollow" />
             </h1>
             <p className="tagline">Dark Fantasy Wall Art</p>
             <p className="hero-text">
@@ -472,14 +1268,43 @@ function App() {
           </div>
         </section>
 
+        <section className="newest-listings" id="newest-listings">
+          <div className="newest-copy">
+            <span className="eyebrow">Freshly Unearthed</span>
+            <h2>
+              New Relics
+              <br />
+              From The Hollow
+            </h2>
+            <p>
+              The newest pieces to leave the Hollow.
+              <br />
+              Fresh listings gathered in one place,
+              <br />
+              gathered here before they disappear into the Hollow.
+            </p>
+            <a className="button" href={etsyShop} {...etsyLinkProps}>
+              Shop Newest Listings <span aria-hidden="true">&rsaquo;</span>
+            </a>
+          </div>
+
+          <div className="newest-grid">
+            {displayedNewestListings.map((listing) => (
+              <a className="collection-card newest-card" href={listing.href} key={listing.listingId || listing.day} {...etsyLinkProps}>
+                <img src={listing.image} alt={listing.imageAlt || listing.day} />
+                <span>{listing.label}</span>
+                <strong>View Listing</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section className="collections" id="collections">
           <div className="section-heading">
-            <img src="/images/mockup/ornament-heading-left.png" alt="" aria-hidden="true" />
             <div>
               <h2>Enter The Hollow</h2>
               <p>Art for Those Who Walk in Darkness</p>
             </div>
-            <img src="/images/mockup/ornament-heading-right.png" alt="" aria-hidden="true" />
           </div>
 
           <div className="collection-grid">
@@ -512,11 +1337,19 @@ function App() {
               <br />
               and returned to again and again.
             </p>
-            <a className="button" href="https://www.etsy.com/shop/vantahollow/?etsrc=sdt&section_id=56626705" {...etsyLinkProps}>
+            <a className="button" href={collectorFavoritesUrl} {...etsyLinkProps}>
               Shop Favorites <span aria-hidden="true">&rsaquo;</span>
             </a>
           </div>
-          <img src="/images/mockup/featured-bg-responsive.png" alt="Framed Vanta Hollow artwork on a dark wall" />
+          <div className="featured-grid">
+            {collectorFavorites.map((favorite) => (
+              <a className="collection-card featured-card" href={favorite.href} key={favorite.title} {...etsyLinkProps}>
+                <img src={favorite.image} alt={favorite.title} />
+                <span>{favorite.label}</span>
+                <strong>View Listing</strong>
+              </a>
+            ))}
+          </div>
         </section>
           </>
         )}
@@ -524,52 +1357,64 @@ function App() {
 
       <footer className="site-footer">
         <div className="footer-inner">
-          <section>
-            <Wordmark footer />
-            <p>
-              Dark fantasy wall art for the souls
-              <br />
-              who live in the shadows.
+          <div className="footer-grid">
+            <section className="footer-brand">
+              <Wordmark footer />
+              <p>Dark fantasy wall art for the souls who live in the shadows.</p>
+              <div className="socials" aria-label="Social links">
+                <a href="https://www.facebook.com/people/Vanta-Hollow/61565393533552/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                  <SocialIcon type="facebook" />
+                </a>
+                <a href="https://instagram.com/vantahollow" target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <SocialIcon type="instagram" />
+                </a>
+                <a href="https://www.tiktok.com/@vantahollow" target="_blank" rel="noreferrer" aria-label="TikTok">
+                  <SocialIcon type="tiktok" />
+                </a>
+                <a href="https://www.youtube.com/@vantahollow" target="_blank" rel="noreferrer" aria-label="YouTube">
+                  <SocialIcon type="youtube" />
+                </a>
+                <a href="https://in.pinterest.com/VantaHollow/" target="_blank" rel="noreferrer" aria-label="Pinterest">
+                  <SocialIcon type="pinterest" />
+                </a>
+              </div>
+            </section>
+
+            <section className="footer-links">
+              <h2>Shop</h2>
+              <nav aria-label="Footer shop links">
+                <a href={etsyShop} {...etsyLinkProps}>Shop All</a>
+                <a href="/#collections">Collections</a>
+                <a href={collectorFavoritesUrl} {...etsyLinkProps}>Collector Favorites</a>
+                <a href={etsyShop} {...etsyLinkProps}>Etsy Shop</a>
+              </nav>
+            </section>
+
+            <section className="footer-links">
+              <h2>Information</h2>
+              <nav aria-label="Footer information links">
+                <a href="/about">About Us</a>
+                <a href="/journal">Journal</a>
+                <a href={`${etsyShop}#reviews`} {...etsyLinkProps}>Reviews</a>
+                <a href="/faq">FAQ</a>
+                <a href="/contact">Contact</a>
+                <a href={shopPoliciesUrl} {...etsyLinkProps}>Shop Policies</a>
+              </nav>
+            </section>
+
+            <section className="newsletter">
+              <h2>Join The Hollow</h2>
+              <p>Get early access to all new art, exclusive drops and dark inspiration.</p>
+              <NewsletterSignup />
+            </section>
+          </div>
+
+          <div className="footer-utility">
+            <p className="copyright">&copy; 2026 Vanta Hollow. All rights reserved.</p>
+            <p className="etsy-attribution">
+              The term ‘Etsy’ is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certified by Etsy, Inc.
             </p>
-            <div className="socials" aria-label="Social links">
-              <a href="https://www.facebook.com/people/Vanta-Hollow/61565393533552/" target="_blank" rel="noreferrer" aria-label="Facebook">
-                <SocialIcon type="facebook" />
-              </a>
-              <a href="https://instagram.com/vantahollow" target="_blank" rel="noreferrer" aria-label="Instagram">
-                <SocialIcon type="instagram" />
-              </a>
-              <a href="https://www.tiktok.com/@vantahollow" target="_blank" rel="noreferrer" aria-label="TikTok">
-                <SocialIcon type="tiktok" />
-              </a>
-              <a href="https://in.pinterest.com/VantaHollow/" target="_blank" rel="noreferrer" aria-label="Pinterest">
-                <SocialIcon type="pinterest" />
-              </a>
-            </div>
-          </section>
-
-          <section className="newsletter">
-            <h2>Join The Hollow</h2>
-            <p>Get early access to all new art, exclusive drops and dark inspiration.</p>
-            <NewsletterSignup />
-          </section>
-
-          <section className="quick-links">
-            <h2>Quick Links</h2>
-            <div>
-              <a href={etsyShop} {...etsyLinkProps}>Shop All</a>
-              <a href="/#collections">Collections</a>
-              <a href="/about">About Us</a>
-              <a href={`${etsyShop}#reviews`} {...etsyLinkProps}>Reviews</a>
-              <a href="/faq">FAQ</a>
-              <a href="/contact">Contact</a>
-              <a href={shopPoliciesUrl} {...etsyLinkProps}>Shop Policies</a>
-              <a href={etsyShop} {...etsyLinkProps}>Etsy Shop</a>
-            </div>
-          </section>
-
-          <p className="copyright">
-            &copy; 2026 Vanta Hollow. All rights reserved.
-          </p>
+          </div>
         </div>
       </footer>
     </div>

@@ -96,8 +96,8 @@ function getArtworkName(title) {
   return separatorIndex === -1 ? title : title.slice(0, separatorIndex).trim() || title;
 }
 
-function getValidatedNewestListings(payload) {
-  if (!Array.isArray(payload?.listings) || payload.listings.length !== 4) {
+function getValidatedNewestListings(payload, expectedCount = 4) {
+  if (!Array.isArray(payload?.listings) || payload.listings.length !== expectedCount) {
     return null;
   }
 
@@ -195,11 +195,13 @@ const journalEntries = [
     relatedArticles: ['emergence', 'the-return'],
     excerpt:
       'A cathedral rises from the dark like a memory that refuses to fade. This archive entry studies the architecture, light, and quiet tension behind one of the Hollow\'s flagship visions.',
-    story: `The Cathedral began with the question: *What exists beyond the places history refuses to remember?*
-
-The artwork tells the story of a lone traveler answering a call that few ever hear. Beyond the last road and beyond the reach of kingdoms, she discovers a cathedral unlike anything built by human hands. Its impossible architecture rises from the mountains as though it has always existed, waiting in silence for someone willing to answer its invitation.
-
-The Cathedral never explains itself. It offers no answers about who built it or what waits beyond its crimson entrance. Instead, it invites the viewer to stand beside the traveler for a single moment—the instant before curiosity becomes commitment. By the time she realizes she may not have discovered the Cathedral at all, it is already too late.`,
+    story: (
+      <>
+        {'The Cathedral began with the question: '}
+        <em>What exists beyond the places history refuses to remember?</em>
+        {'\n\nThe artwork tells the story of a lone traveler answering a call that few ever hear. Beyond the last road and beyond the reach of kingdoms, she discovers a cathedral unlike anything built by human hands. Its impossible architecture rises from the mountains as though it has always existed, waiting in silence for someone willing to answer its invitation.\n\nThe Cathedral never explains itself. It offers no answers about who built it or what waits beyond its crimson entrance. Instead, it invites the viewer to stand beside the traveler for a single moment—the instant before curiosity becomes commitment. By the time she realizes she may not have discovered the Cathedral at all, it is already too late.'}
+      </>
+    ),
     behindTheCreation: `The original vision wasn't simply to create another gothic cathedral. It needed to feel ancient, impossible, and alive—as though the mountain itself had grown into a monument for something that should never have been worshipped.
 
 Every major decision revolved around scale. The lone figure was intentionally kept small so the viewer would instinctively compare themselves to the structure towering above her. The cathedral wasn't meant to feel abandoned. It was meant to feel patient.
@@ -209,7 +211,7 @@ The crimson glow became the emotional centerpiece of the composition. Rather tha
 
 Early concepts leaned too heavily into horror, making the cathedral feel aggressive rather than mysterious. As the composition evolved, many of the obvious horror elements were stripped away in favor of cleaner architecture, stronger silhouettes, and more deliberate lighting.
 
-The skull wasn't added as decoration. It was woven directly into the cathedral itself so that many viewers don't notice it immediately. Once they do, it's impossible to unsee. That delayed discovery became one of the defining characteristics of the final piece.
+The skull wasn't added as decoration. The Cathedral's architecture forms a colossal skull-like face that dominates the structure from the first glance. Crimson light burns from the mouth-like entrance, making the facade one of the defining characteristics of the final piece.
 
 Every revision pushed toward a single goal: creating an image that revealed something new every time someone stood in front of it.`,
     symbolism: `Cathedrals have traditionally represented sanctuary, faith, and salvation.
@@ -225,7 +227,7 @@ Sometimes the greatest danger isn't being hunted.
 It's willingly answering the call.`,
     hiddenDetails: `The Cathedral was designed to reward slow observation.
 
-At first glance, the architecture dominates the scene. With time, the skull hidden within the stone begins to emerge, transforming the entire structure into something far more unsettling. The longer the viewer studies the piece, the more the building seems to possess a face of its own.
+At first glance, the architecture dominates the scene as a colossal skull-like face. The Cathedral's towers and stonework form its unmistakable features, while crimson light spills from the mouth-like entrance below. The longer the viewer studies the piece, the more the building seems to possess a face of its own.
 
 The reflections beneath the cathedral subtly exaggerate its height, making the structure feel even larger than the eye first perceives. Nearly every vertical line guides attention toward the center tower, while the surrounding clouds naturally frame the entrance below.
 
@@ -265,7 +267,7 @@ Someone answers.`,
   },
   {
     entryNumber: 'Archive Entry 002',
-    title: 'Emergence',
+    title: 'The Emergence',
     slug: 'emergence',
     artworkImage: '/images/journal/the-emergence/the-emergence.png',
     framedMockup: '/images/journal/the-emergence/the-emergence-framed.png',
@@ -275,17 +277,15 @@ Someone answers.`,
     keywords: ['emergence', 'fairytale', 'transformation', 'shadow', 'awakening'],
     relatedArticles: ['the-cathedral', 'the-return'],
     excerpt:
-      'Emergence captures the instant a hidden world begins to breathe. This entry preserves the visual choices that turn transformation into something elegant, strange, and cinematic.',
-    story: `The Cathedral promised no salvation. It only asked a question:
-
-*Would you step inside?*
-
-She answered.
-
-What happened beyond those crimson gates has never been witnessed by another soul. No records remain. No survivors ever spoke of what waited inside those impossible halls. When the Cathedral's ancient doors opened once more, the woman who emerged wore the same face...but whatever humanity had entered was gone.
-
-Emergence marks the moment the Hollow claimed its first disciple. She was never rescued. She was remade. The Cathedral did not destroy her. It transformed her into something that now carries its presence beyond those forgotten mountains.`,
-    behindTheCreation: `While *The Cathedral* focused on place, *Emergence* shifts the attention to transformation.
+      'The Emergence captures the instant a hidden world begins to breathe. This entry preserves the visual choices that turn transformation into something elegant, strange, and cinematic.',
+    story: (
+      <>
+        {'The Cathedral promised no salvation. It only asked a question:\n\n'}
+        <em>Would you step inside?</em>
+        {'\n\nShe answered.\n\nWhat happened beyond those crimson gates has never been witnessed by another soul. No records remain. No survivors ever spoke of what waited inside those impossible halls. When the Cathedral\'s ancient doors opened once more, the woman who emerged wore the same face...but whatever humanity had entered was gone.\n\nThe Emergence marks the moment the Hollow claimed its first disciple. She was never rescued. She was remade. The Cathedral did not destroy her. It transformed her into something that now carries its presence beyond those forgotten mountains.'}
+      </>
+    ),
+    behindTheCreation: `While The Cathedral focused on place, The Emergence shifts the attention to transformation.
 
 The goal was never to create another haunted figure or gothic queen. Every design decision revolved around the unsettling idea that the Cathedral leaves its mark on anyone who answers its call. She needed to feel recognizable enough that viewers believed she was once human, yet different enough that something about her presence immediately felt wrong.
 
@@ -295,7 +295,7 @@ Rather than relying on exaggerated horror, the composition leans into restraint.
 Too much darkness, and the mystery disappeared. Too much elegance, and the transformation lost its weight. The final composition lives between those extremes, allowing traces of the woman she once was to remain visible beneath whatever the Cathedral has made her become.
 
 Lighting became one of the most important storytelling tools. The crimson glow no longer exists only within the Cathedral itself. It now follows her, suggesting that whatever power awakened inside those halls has crossed into the world beyond.`,
-    symbolism: `Emergence explores the idea that some places never truly let people leave.
+    symbolism: `The Emergence explores the idea that some places never truly let people leave.
 
 The Cathedral does not imprison its visitors behind locked doors. Instead, it sends them back changed. The transformation becomes part of them, quietly reshaping the world wherever they walk.
 
@@ -308,12 +308,12 @@ Sometimes they are the people who return.`,
 
 Her posture remains calm rather than aggressive. Nothing about her suggests violence, yet the stillness itself creates tension. Even the smallest details were chosen to make viewers question whether they are looking at a survivor...or an extension of the Cathedral's will.
 
-Collectors often notice new visual connections to *The Cathedral* after displaying the two pieces together, revealing details that are easy to overlook when viewed individually.`,
-    collectorNotes: `*Emergence* serves as the second chapter of the Cathedral Trilogy, shifting the narrative away from architecture and toward consequence.
+Collectors often notice new visual connections to The Cathedral after displaying the two pieces together, revealing details that are easy to overlook when viewed individually.`,
+    collectorNotes: `The Emergence serves as the second chapter of the Cathedral Trilogy, shifting the narrative away from architecture and toward consequence.
 
-Where *The Cathedral* asks whether the traveler will answer the call, *Emergence* reveals what happens after that decision has already been made. Together, the two pieces establish the central idea that the Hollow does not merely contain darkness—it reshapes those who enter it.
+Where The Cathedral asks whether the traveler will answer the call, The Emergence reveals what happens after that decision has already been made. Together, the two pieces establish the central idea that the Hollow does not merely contain darkness—it reshapes those who enter it.
 
-Displayed alongside *The Cathedral*, the two works become a continuous story rather than separate illustrations.`,
+Displayed alongside The Cathedral, the two works become a continuous story rather than separate illustrations.`,
     closingArchive: `She walked through the Cathedral's doors searching for answers.
 
 The Cathedral gave her a purpose instead.
@@ -331,9 +331,9 @@ Someone always answers.`,
       'A dark fairytale artwork for collectors drawn to transformation, shadow, and cinematic mystery.',
     etsyUrl: 'https://vantahollow.etsy.com/listing/4529108056',
     seo: {
-      title: 'Emergence | The Hollow Journal | Vanta Hollow',
+      title: 'The Emergence | The Hollow Journal | Vanta Hollow',
       description:
-        'Explore the inspiration, creative process, symbolism, and collector notes behind Emergence from Vanta Hollow.',
+        'Explore the inspiration, creative process, symbolism, and collector notes behind The Emergence from Vanta Hollow.',
     },
   },
   {
@@ -662,6 +662,63 @@ function useJournalSeo(entry) {
   }, [entry]);
 }
 
+function useNewRelicsSeo() {
+  useEffect(() => {
+    const pageTitle = 'New Relics | Latest Dark Fantasy & Horror Art | Vanta Hollow';
+    const pageDescription = 'Explore the latest physical dark fantasy and horror art releases from Vanta Hollow, gathered newest to oldest by original creation date.';
+    const canonicalUrl = getAbsoluteUrl('/new-relics');
+    const previousTitle = document.title;
+    const touchedElements = [];
+
+    const upsertElement = (selector, tagName, attributes) => {
+      let element = document.head.querySelector(selector);
+      const wasCreated = !element;
+      const previousAttributes = {};
+
+      if (!element) {
+        element = document.createElement(tagName);
+        document.head.appendChild(element);
+      }
+
+      Object.entries(attributes).forEach(([key, value]) => {
+        previousAttributes[key] = element.getAttribute(key);
+        element.setAttribute(key, value);
+      });
+
+      touchedElements.push({ element, wasCreated, previousAttributes });
+    };
+
+    document.title = pageTitle;
+    upsertElement('link[rel="canonical"]', 'link', { rel: 'canonical', href: canonicalUrl });
+    upsertElement('meta[name="description"]', 'meta', { name: 'description', content: pageDescription });
+    upsertElement('meta[property="og:type"]', 'meta', { property: 'og:type', content: 'website' });
+    upsertElement('meta[property="og:title"]', 'meta', { property: 'og:title', content: pageTitle });
+    upsertElement('meta[property="og:description"]', 'meta', { property: 'og:description', content: pageDescription });
+    upsertElement('meta[property="og:url"]', 'meta', { property: 'og:url', content: canonicalUrl });
+    upsertElement('meta[name="twitter:card"]', 'meta', { name: 'twitter:card', content: 'summary' });
+    upsertElement('meta[name="twitter:title"]', 'meta', { name: 'twitter:title', content: pageTitle });
+    upsertElement('meta[name="twitter:description"]', 'meta', { name: 'twitter:description', content: pageDescription });
+
+    return () => {
+      document.title = previousTitle;
+      touchedElements.forEach(({ element, wasCreated, previousAttributes }) => {
+        if (wasCreated) {
+          element.remove();
+          return;
+        }
+
+        Object.entries(previousAttributes).forEach(([key, value]) => {
+          if (value === null) {
+            element.removeAttribute(key);
+          } else {
+            element.setAttribute(key, value);
+          }
+        });
+      });
+    };
+  }, []);
+}
+
 function ReadingProgressBar() {
   const [progress, setProgress] = useState(0);
 
@@ -835,6 +892,100 @@ function JournalEntryPage({ entry }) {
         </div>
       </div>
     </article>
+  );
+}
+
+function NewRelicsLoadingCards({ count }) {
+  return Array.from({ length: count }, (_, index) => (
+    <div
+      aria-hidden="true"
+      className="collection-card newest-card newest-card-placeholder"
+      key={`new-relics-placeholder-${index}`}
+    >
+      <span className="newest-card-loading-label">Loading</span>
+    </div>
+  ));
+}
+
+function NewRelicsPage() {
+  const listingCount = 24;
+  const [listingsState, setListingsState] = useState({
+    status: 'loading',
+    listings: [],
+  });
+
+  useNewRelicsSeo();
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadNewestRelics = async () => {
+      try {
+        const response = await fetch(`/api/etsy-newest?limit=${listingCount}`, {
+          headers: { Accept: 'application/json' },
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          throw new Error('New Relics request failed');
+        }
+
+        const listings = getValidatedNewestListings(await response.json(), listingCount);
+        if (!listings) {
+          throw new Error('Invalid New Relics response');
+        }
+
+        if (!controller.signal.aborted) {
+          setListingsState({ status: 'success', listings });
+        }
+      } catch {
+        if (!controller.signal.aborted) {
+          setListingsState({ status: 'failure', listings: [] });
+        }
+      }
+    };
+
+    loadNewestRelics();
+
+    return () => controller.abort();
+  }, []);
+
+  return (
+    <section className="new-relics-page">
+      <div className="new-relics-page-inner">
+        <header className="new-relics-header">
+          <p className="info-eyebrow">Freshly Unearthed</p>
+          <h1>New Relics</h1>
+          <p>The latest physical Vanta Hollow releases, gathered newest to oldest from the depths of the Hollow.</p>
+        </header>
+
+        {listingsState.status === 'failure' ? (
+          <div className="new-relics-failure" role="alert">
+            <h2>The Relics Could Not Be Summoned.</h2>
+            <p>Please try again soon, or enter the Etsy shop to explore the collection.</p>
+            <a className="button" href={etsyShop} {...etsyLinkProps}>
+              Visit Etsy Shop <span aria-hidden="true">&rsaquo;</span>
+            </a>
+          </div>
+        ) : (
+          <div
+            className="new-relics-grid"
+            aria-busy={listingsState.status === 'loading'}
+            aria-label="Newest physical Vanta Hollow artwork"
+          >
+            {listingsState.status === 'loading'
+              ? <NewRelicsLoadingCards count={listingCount} />
+              : listingsState.listings.map((listing) => (
+                <a className="collection-card newest-card" href={listing.href} key={listing.listingId} {...etsyLinkProps}>
+                  <img src={listing.image} alt={listing.imageAlt || listing.day} />
+                  <span>{listing.label}</span>
+                  <strong>View Listing</strong>
+                </a>
+              ))}
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -1149,6 +1300,7 @@ function App() {
   const journalEntry = journalEntries.find((entry) => currentPath === `/journal/${entry.slug}`);
   const isFAQ = currentPath === '/faq';
   const isContact = currentPath === '/contact';
+  const isNewRelics = currentPath === '/new-relics';
   const [newestListingsState, setNewestListingsState] = useState({
     status: 'loading',
     listings: [],
@@ -1252,6 +1404,8 @@ function App() {
           <JournalLandingPage />
         ) : journalEntry ? (
           <JournalEntryPage entry={journalEntry} />
+        ) : isNewRelics ? (
+          <NewRelicsPage />
         ) : isContact ? (
           <ContactPage />
         ) : (
@@ -1307,8 +1461,8 @@ function App() {
               <br />
               gathered here before they disappear into the Hollow.
             </p>
-            <a className="button" href={etsyShop} {...etsyLinkProps}>
-              Shop Newest Listings <span aria-hidden="true">&rsaquo;</span>
+            <a className="button" href="/new-relics">
+              Newest Relics <span aria-hidden="true">&rsaquo;</span>
             </a>
           </div>
 

@@ -1,5 +1,6 @@
 const ETSY_API_BASE = 'https://openapi.etsy.com/v3/application';
-const LISTING_COUNT = 4;
+const DEFAULT_LISTING_COUNT = 4;
+const MAX_LISTING_COUNT = 24;
 const ACTIVE_PAGE_SIZE = 100;
 const DETAIL_BATCH_SIZE = 25;
 const MAX_ACTIVE_PAGES = 1000;
@@ -178,12 +179,12 @@ function getUsableListing(listing, listingId) {
   };
 }
 
-async function fetchNewestUsableListings(candidateListings, apiKey, signal) {
+async function fetchNewestUsableListings(candidateListings, listingCount, apiKey, signal) {
   const listings = [];
 
   for (
     let candidateIndex = 0;
-    candidateIndex < candidateListings.length && listings.length < LISTING_COUNT;
+    candidateIndex < candidateListings.length && listings.length < listingCount;
     candidateIndex += DETAIL_BATCH_SIZE
   ) {
     const candidateBatch = candidateListings.slice(
@@ -212,13 +213,31 @@ async function fetchNewestUsableListings(candidateListings, apiKey, signal) {
         listings.push(usableListing);
       }
 
-      if (listings.length === LISTING_COUNT) {
+      if (listings.length === listingCount) {
         break;
       }
     }
   }
 
   return listings;
+}
+
+function getRequestedListingCount(request) {
+  const rawLimit = Array.isArray(request.query?.limit)
+    ? request.query.limit[0]
+    : request.query?.limit;
+
+  if (rawLimit === undefined || !/^\d+$/.test(String(rawLimit))) {
+    return DEFAULT_LISTING_COUNT;
+  }
+
+  const requestedLimit = Number(rawLimit);
+
+  if (!Number.isSafeInteger(requestedLimit) || requestedLimit < 1) {
+    return DEFAULT_LISTING_COUNT;
+  }
+
+  return Math.min(requestedLimit, MAX_LISTING_COUNT);
 }
 
 function sendUnavailable(response) {
@@ -235,6 +254,7 @@ export default async function handler(request, response) {
 
   const apiKey = process.env.ETSY_API_KEY;
   const shopId = process.env.ETSY_SHOP_ID;
+  const listingCount = getRequestedListingCount(request);
 
   if (!apiKey || !apiKey.includes(':') || !/^[1-9]\d*$/.test(shopId || '')) {
     return sendUnavailable(response);
@@ -247,17 +267,18 @@ export default async function handler(request, response) {
     const activeListings = await fetchAllActiveListings(shopId, apiKey, controller.signal);
     const candidateListings = getCandidateListings(activeListings);
 
-    if (candidateListings.length < LISTING_COUNT) {
+    if (candidateListings.length < listingCount) {
       return sendUnavailable(response);
     }
 
     const listings = await fetchNewestUsableListings(
       candidateListings,
+      listingCount,
       apiKey,
       controller.signal,
     );
 
-    if (listings.length !== LISTING_COUNT) {
+    if (listings.length !== listingCount) {
       return sendUnavailable(response);
     }
 

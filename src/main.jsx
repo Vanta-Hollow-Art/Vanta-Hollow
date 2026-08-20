@@ -921,7 +921,7 @@ function NewRelicsPage() {
 
     const loadNewestRelics = async () => {
       try {
-        const response = await fetch(`/api/etsy-newest?limit=${listingCount}`, {
+        const response = await fetch('/api/etsy-newest?limit=24', {
           headers: { Accept: 'application/json' },
           signal: controller.signal,
         });
@@ -1321,7 +1321,7 @@ function App() {
 
     const loadNewestListings = async () => {
       try {
-        const response = await fetch('/api/etsy-newest', {
+        const response = await fetch('/api/etsy-newest?limit=24', {
           headers: { Accept: 'application/json' },
           signal: controller.signal,
         });
@@ -1331,14 +1331,14 @@ function App() {
           return;
         }
 
-        const listings = getValidatedNewestListings(await response.json());
+        const listings = getValidatedNewestListings(await response.json(), 24);
         if (!listings) {
           showManualNewestListings();
           return;
         }
 
         if (!controller.signal.aborted) {
-          setNewestListingsState({ status: 'success', listings });
+          setNewestListingsState({ status: 'success', listings: listings.slice(0, 4) });
         }
       } catch {
         showManualNewestListings();

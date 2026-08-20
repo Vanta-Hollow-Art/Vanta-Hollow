@@ -282,7 +282,7 @@ export default async function handler(request, response) {
       return sendUnavailable(response);
     }
 
-    response.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=86400');
+    response.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=60');
     return response.status(200).json({ listings });
   } catch {
     return sendUnavailable(response);

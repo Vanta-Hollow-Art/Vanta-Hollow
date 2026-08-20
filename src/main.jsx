@@ -5,6 +5,7 @@ import {
   Menu,
   Search,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './styles.css';
 
 const etsyShop = 'https://vantahollow.etsy.com';
@@ -1356,6 +1357,7 @@ function App() {
 
   return (
     <div className="site-shell">
+      <Analytics />
       <div className="announcement">
         <img src="/images/mockup/announcement-left.png" alt="" aria-hidden="true" />
         <span>GOTHIC QUEENS &#8226; HAUNTED KINGDOMS &#8226; HORROR &#8226; DARK FAIRYTALES</span>

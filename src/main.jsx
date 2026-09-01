@@ -372,6 +372,141 @@ Someone always answers.`,
         'Explore the story, hidden details, symbolism, and collector notes behind The Return from Vanta Hollow.',
     },
   },
+  {
+    entryNumber: 'Archive Entry 004',
+    title: 'The Black Saint',
+    slug: 'the-black-saint',
+    artworkImage: '/images/journal/the-black-saint/the-black-saint.png',
+    framedMockup: '/images/journal/the-black-saint/the-black-saint-framed.png',
+    publishedDate: 'September 1, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: [
+      'black saint',
+      'dark fantasy',
+      'warrior',
+      'medieval fantasy',
+      'gothic warrior',
+      'dark knight',
+      'gothic architecture',
+    ],
+    relatedArticles: ['the-cathedral', 'the-return'],
+    excerpt:
+      'The Black Saint stands inside a kingdom built to appear holy while carrying the secrets buried beneath it. This archive entry explores the white city, the staff of names, the sealed halo, and the moment duty becomes judgment.',
+    story: `They built the city in white so no one would question what slept beneath it.
+
+Every coronation, one warrior was chosen to wear black.
+
+He walked behind the throne, stood beneath the bells, and carried every secret the kingdom could not survive—vanished bloodlines, buried uprisings, purchased miracles, and the names of the dead erased so the empire could keep calling itself holy.
+
+The people called him blessed.
+
+The rulers called him loyal.
+
+For years, he believed the staff in his hands was a symbol of duty. Then, deep beneath the cathedral, he discovered the truth: the shaft was carved with thousands of names, each hidden inside the wood like a grave no one was meant to find. The halo behind him was no mark of sainthood.
+
+It was a lock.
+
+On the morning of the new king’s ascension, the city gathered in white and gold. Priests filled the stairs. Soldiers lined the sacred avenue. Black banners hung motionless between the spires as the chosen warrior took his place before the cathedral gates.
+
+When the crown was raised, he drove the staff into the marble.
+
+The halo opened.
+
+Every sealed chamber beneath the city answered at once.
+
+Golden statues bowed. Cathedral doors split wide. The dead rose as shadows across the plaza, each bearing the face of someone the kingdom had buried without a name. The spotless city finally revealed the graves built into its foundations.
+
+Only then did the court understand why one man had been made to carry every sin.
+
+He was never their absolution.
+
+He was the witness kept alive until judgment had a voice.`,
+    behindTheCreation: `The Black Saint began with a contradiction: a radiant kingdom guarded by the darkest figure in the scene.
+
+The white city needed to feel immaculate. Pale stone, gold ornament, monumental towers, and ceremonial architecture create the appearance of a civilization certain of its own holiness. Against that setting, the lone warrior in black immediately becomes an interruption.
+
+That contrast shaped the story. Rather than making him an outsider attacking the kingdom, he became part of its machinery—the one person entrusted with everything the crown could never allow the public to know.
+
+His darkness is not evidence of corruption. It is evidence of what he has been forced to carry.
+
+The final concept turned the image from a portrait of authority into something more unsettling: a man standing at the center of a beautiful system because he alone knows what was buried to keep it beautiful.`,
+    creativeProcess: `The composition was built around hierarchy, ceremony, and restraint.
+
+The warrior occupies the foreground as the strongest dark shape in the image while the pale architecture rises behind him in repeating vertical lines. The staff reinforces that structure, connecting the figure visually to the towers, gates, and sacred geometry of the city.
+
+The palette became essential to the narrative. White and gold suggest purity, legitimacy, and religious authority. Black becomes the visual record of everything those colors are attempting to conceal.
+
+The halo-like form behind the warrior was especially important. It needed to read first as part of the city's sacred imagery while still supporting the darker story attached to it. In the lore, that symbol is not proof of sainthood.
+
+It is a lock.
+
+The final image relies on contrast rather than spectacle: one dark witness standing inside a kingdom designed to make darkness appear impossible.`,
+    symbolism: `Nearly every major element in The Black Saint is built around the difference between appearance and truth.
+
+The white city represents manufactured innocence. Its architecture is magnificent because the kingdom needs magnificence to become evidence of its own righteousness. Gold crowns, sacred towers, ceremonies, and monuments allow power to present itself as holiness.
+
+The warrior's black armor carries the opposite meaning. He has been assigned everything the kingdom refuses to display: erased bloodlines, suppressed uprisings, purchased miracles, unnamed dead, and generations of secrets.
+
+The staff represents institutional memory. What appears to be a symbol of office is actually carved with the names the kingdom tried to remove from history.
+
+The halo carries the most important inversion. It resembles sanctity, but within the story it functions as containment—a lock placed around truths that cannot remain buried forever.
+
+When he finally opens it, judgment does not arrive from outside the kingdom.
+
+It comes from everything already beneath its foundations.`,
+    hiddenDetails: `The Black Saint rewards attention through visual relationships that reinforce the story without requiring invented hidden imagery.
+
+The most immediate contrast is the black figure against the pale city. His silhouette separates him from the ceremonial world surrounding him even though his position makes clear that he belongs within its hierarchy.
+
+The vertical staff visually echoes the surrounding towers and architectural lines, tying the warrior to the institution he serves. At the same time, its prominence gives weight to the object that becomes central to the lore.
+
+The halo-like structure behind him creates another deliberate contradiction. It frames him with the visual language of sainthood while the story reveals that its purpose is far more ominous.
+
+The white-and-gold environment matters just as much as the warrior himself. The city must look clean, sacred, and almost untouchable for the revelation beneath it to carry any meaning.
+
+Nothing here depends on a secret object the viewer has to discover. The tension comes from learning that familiar symbols of duty and holiness mean something very different once the city's history is known.`,
+    collectorNotes: `The Black Saint stands as an independent Dark Fantasy story within Vanta Hollow.
+
+Its mythology centers on institutional secrecy, corrupted holiness, suppressed history, and the transformation of obedience into judgment. The warrior is neither a conventional hero nor a villain. For most of his life, he serves the system exactly as he was taught to serve it.
+
+What changes is not his strength.
+
+It is his understanding of what that service protects.
+
+That distinction gives The Black Saint its place within the Hollow. The story is not about destroying a kingdom because darkness has invaded it. The darkness was already there, sealed beneath white stone and sacred ceremony.
+
+The Black Saint simply becomes the person who refuses to carry it silently any longer.
+
+For collectors drawn to dark medieval fantasy, Gothic architecture, morally complicated warriors, and imagery where beauty conceals something much darker, this work represents one of the clearest expressions of Vanta Hollow's Dark Fantasy identity.`,
+    closingArchive: `The city had survived wars.
+
+It had survived famine.
+
+It had survived rebellion, succession, and every secret its rulers believed they had successfully buried.
+
+What it could not survive was being remembered.
+
+The crown rose.
+
+The staff struck marble.
+
+And beneath a city built in white...
+
+the dead finally answered.
+
+They had given one man every name they wanted forgotten.
+
+In the end, that was their mistake.`,
+    featuredDescription:
+      'A dark fantasy warrior artwork about sacred authority, buried history, and the moment a kingdom\'s chosen keeper of secrets becomes its witness of judgment.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4548859289',
+    seo: {
+      title: 'The Black Saint | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the story, symbolism, and creation of The Black Saint, a dark fantasy warrior carrying the buried secrets of a radiant kingdom.',
+    },
+  },
 ];
 
 const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skull', 'Gothic', 'Fairytales', 'Newest', 'Oldest'];

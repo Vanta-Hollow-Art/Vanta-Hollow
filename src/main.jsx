@@ -507,6 +507,147 @@ In the end, that was their mistake.`,
         'Explore the story, symbolism, and creation of The Black Saint, a dark fantasy warrior carrying the buried secrets of a radiant kingdom.',
     },
   },
+  {
+    entryNumber: 'Archive Entry 005',
+    title: 'The Final Judgment',
+    slug: 'the-final-judgment',
+    artworkImage: '/images/journal/the-final-judgement/the-final-judgement.png',
+    framedMockup: '/images/journal/the-final-judgement/the-final-judgement-framed.png',
+    publishedDate: 'September 1, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: [
+      'the final judgment',
+      'final judgment',
+      'knight',
+      'knights',
+      'dark fantasy',
+      'gothic cathedral',
+      'medieval battle',
+      'eclipse',
+      'prophecy',
+    ],
+    relatedArticles: ['the-black-saint', 'the-cathedral'],
+    excerpt:
+      'The Final Judgment captures two rival knights beneath an eclipsed sky, their divided relic blades colliding before a ruined cathedral. What appears to be a final duel becomes the revelation that both warriors are opposing keys in a prophecy-built ritual.',
+    story: `Both kingdoms had been taught the same prophecy.
+
+At the eclipse, one knight would ascend toward the cathedral. Another would descend from it. The warrior left standing would inherit everything beneath the darkened sun.
+
+The Order of Dawn sent its brightest champion dressed in white and gold.
+
+The Black Crown answered with a knight forged in iron, shadow, and crimson fire.
+
+Neither had seen the other’s face.
+
+Neither knew their swords had been forged from the same ancient relic, divided generations earlier and given to kingdoms taught to hate one another.
+
+They met before the cathedral steps as the moon swallowed the sun.
+
+Steel collided.
+
+Crimson lightning tore outward from one blade. White fire erupted from the other. The impact raced through the stone beneath their feet and climbed the cathedral walls like something inside the building had finally heard its name.
+
+But no blood fell.
+
+Instead, both swords pulled harder toward the clash.
+
+Ancient markings awakened across the cathedral facade. Stone saints turned their faces from the altar. Above the knights, the great staircase split along a hidden seam, exposing a sealed gate beneath the cathedral.
+
+Then the missing final line of the prophecy appeared across the stone:
+
+The victor will not inherit the kingdom.
+
+The kingdom will inherit the victor.
+
+For generations, both orders had sent their greatest warriors toward the same confrontation.
+
+The white armor and black armor had never represented good and evil.
+
+They were opposing keys.
+
+Their hatred was the mechanism.
+
+Their swords were designed to meet.
+
+Every battle had fed the thing sealed beneath the cathedral, and every champion had been taught that victory meant destroying the warrior standing across from him.
+
+The energy raging between the blades was not theirs.
+
+Something below was waking.
+
+For the first time, both knights understood what the prophecy had truly demanded.
+
+Finish the strike, defeat the enemy, and release whatever their kingdoms had spent centuries worshipping beneath the stone.
+
+Or break the ritual together.`,
+    behindTheCreation: `The Final Judgment began with a confrontation designed to look familiar before revealing something far more dangerous.
+
+The white-and-gold knight and the black-and-crimson rival create an immediate visual opposition. Their armor suggests competing orders and inherited loyalties, but neither warrior was intended to represent simple good or evil. The contrast needed to establish the conflict their kingdoms had taught them to believe.
+
+The eclipse and ruined cathedral shift that conflict beyond a conventional duel. Both elements make the encounter feel ceremonial, as though the knights have arrived at a moment prepared long before either of them was born.
+
+The central idea became revelation rather than victory. The battle matters because the collision exposes the machinery behind it: two champions shaped into opposing weapons, brought together to complete a ritual neither was ever meant to understand.`,
+    creativeProcess: `The composition was built around the precise point where the two swords collide.
+
+Both warriors drive the eye toward that center through opposing movement, armor silhouettes, and blade direction. Crimson energy and radiant white fire separate the two forces while binding them inside the same decisive impact.
+
+The ruined cathedral steps create a ceremonial stage for the confrontation. Vertical architecture rises behind the knights while the eclipsed sky presses down over the scene, holding the battle between monumental stone and a darkened sun.
+
+The armor language reinforces the inherited division between the two orders. White and gold carry the authority of Dawn; black metal and crimson light carry the severity of the Black Crown. The final composition suspends both warriors at the instant before action becomes consequence, when the clash can still become either completion or refusal.`,
+    symbolism: `The two knights function as opposing keys rather than moral opposites.
+
+Their armor presents the conflict in the language their kingdoms created: light against darkness, order against threat, chosen champion against sworn enemy. The story reveals that these identities were constructed to keep both warriors moving toward the same ritual.
+
+Their inherited hatred is the mechanism. Each order preserves the prophecy, forges a champion, and teaches that victory requires the destruction of the other. Neither kingdom needs to control the final battle directly because generations of belief have already ensured it will happen.
+
+The divided swords represent a shared origin concealed by political memory. When the blades meet, they do not simply oppose one another. They reconnect the relic and awaken the sealed power beneath the cathedral.
+
+The prophecy is therefore not a promise of inheritance but an instrument of manipulation. Its missing line exposes the truth: the victor was never meant to rule the kingdom. The victor was meant to become the final possession of whatever waits below it.`,
+    hiddenDetails: `The Final Judgment rewards attention through visible relationships that reinforce the confrontation.
+
+The opposing armor palettes establish the divide immediately. White and gold face black and crimson, giving each knight a distinct visual language without reducing the scene to a simple image of good against evil.
+
+The energy at the collision point carries both forces outward. Crimson lightning and radiant fire make the swords feel connected through the impact even while the warriors continue to push against one another.
+
+The cathedral steps place both figures on the same path. One appears to ascend while the other descends, echoing the prophecy that has directed them toward this meeting.
+
+Above them, the eclipsed sky mirrors the locked clash below. The ruined Gothic architecture surrounds the duel with the weight of previous generations, while the awakened cathedral suggests that the building is responding to the swords rather than merely serving as a backdrop.
+
+Nothing depends on an invented concealed symbol. The tension comes from recognizing how every visible element—the armor, blades, steps, eclipse, and cathedral—converges on the same ritual moment.`,
+    collectorNotes: `The Final Judgment captures a turning point rather than the conclusion of a battle.
+
+The image holds both knights at the exact instant their understanding changes. Until this moment, each warrior believes the figure across from him is the final obstacle demanded by prophecy. The awakening cathedral reveals that both have been used by the same design.
+
+That realization gives the confrontation its real weight. Completing the strike may satisfy centuries of inherited duty, but it will also open the gate and release the power their kingdoms have been feeding beneath the stone.
+
+Breaking the ritual requires something more difficult than victory. Both warriors must reject the identities, hatred, and promises that shaped them.
+
+For collectors drawn to medieval battles, rival knights, ruined Gothic architecture, and dark fantasy stories built around moral choice, The Final Judgment preserves the moment before two enemies decide whether history will repeat itself.`,
+    closingArchive: `The prophecy had promised a victor.
+
+The cathedral had prepared a gate.
+
+Between them, two blades remained locked inside a storm that belonged to neither knight.
+
+For the first time, each warrior saw the true enemy standing beneath the battle rather than across from it.
+
+One final strike would complete the will buried below the cathedral.
+
+One act of refusal could deny it.
+
+The Final Judgment was never about which knight would fall.
+
+It was about whether either would choose to finish the ritual.`,
+    featuredDescription:
+      'A dark fantasy battle artwork capturing two rival knights at the moment their clash reveals the ancient ritual hidden beneath a ruined Gothic cathedral.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4550141963',
+    seo: {
+      title: 'The Final Judgment | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the story, symbolism, and creation of The Final Judgment, a dark fantasy battle between two rival knights whose clash reveals a ritual hidden beneath the cathedral.',
+    },
+  },
 ];
 
 const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skull', 'Gothic', 'Fairytales', 'Newest', 'Oldest'];

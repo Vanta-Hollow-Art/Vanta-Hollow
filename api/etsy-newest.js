@@ -6,6 +6,41 @@ const DETAIL_BATCH_SIZE = 25;
 const MAX_ACTIVE_PAGES = 1000;
 const ETSY_TIMEOUT_MS = 15000;
 
+const HTML_ENTITIES = {
+  amp: '&',
+  apos: "'",
+  gt: '>',
+  lt: '<',
+  quot: '"',
+};
+
+function decodeHtmlEntities(value) {
+  if (typeof value !== 'string') {
+    return '';
+  }
+
+  return value.replace(
+    /&(?:#(\d+)|#[xX]([0-9a-fA-F]+)|([a-zA-Z]+));/g,
+    (entity, decimalValue, hexadecimalValue, namedEntity) => {
+      if (namedEntity) {
+        return Object.hasOwn(HTML_ENTITIES, namedEntity)
+          ? HTML_ENTITIES[namedEntity]
+          : entity;
+      }
+
+      const codePoint = Number.parseInt(decimalValue || hexadecimalValue, hexadecimalValue ? 16 : 10);
+      const isValidCodePoint = (
+        Number.isInteger(codePoint) &&
+        codePoint >= 0 &&
+        codePoint <= 0x10FFFF &&
+        (codePoint < 0xD800 || codePoint > 0xDFFF)
+      );
+
+      return isValidCodePoint ? String.fromCodePoint(codePoint) : entity;
+    },
+  );
+}
+
 function getCreationTimestamp(listing) {
   const timestampFields = [
     listing?.original_creation_timestamp,
@@ -155,10 +190,14 @@ function getUsableListing(listing, listingId) {
   const primaryImage = Array.isArray(listing?.images)
     ? listing.images.find((image) => Number(image?.rank) === 1)
     : null;
-  const title = typeof listing?.title === 'string' ? listing.title.trim() : '';
+  const title = typeof listing?.title === 'string'
+    ? decodeHtmlEntities(listing.title).trim()
+    : '';
   const listingUrl = typeof listing?.url === 'string' ? listing.url.trim() : '';
   const imageUrl = primaryImage?.url_570xN || primaryImage?.url_fullxfull || '';
-  const imageAlt = typeof primaryImage?.alt_text === 'string' ? primaryImage.alt_text.trim() : '';
+  const imageAlt = typeof primaryImage?.alt_text === 'string'
+    ? decodeHtmlEntities(primaryImage.alt_text).trim()
+    : '';
 
   if (
     listing?.state !== 'active' ||

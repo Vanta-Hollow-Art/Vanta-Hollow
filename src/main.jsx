@@ -650,7 +650,7 @@ It was about whether either would choose to finish the ritual.`,
   },
 ];
 
-const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skull', 'Gothic', 'Fairytales', 'Newest', 'Oldest'];
+const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skulls', 'Dark Fairytales', 'Creepy Clowns', 'Demons', 'Newest', 'Oldest'];
 
 function Wordmark({ footer = false }) {
   return (

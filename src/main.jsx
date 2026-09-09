@@ -649,6 +649,368 @@ It was about whether either would choose to finish the ritual.`,
         'Explore the story, symbolism, and creation of The Final Judgment, a dark fantasy battle between two rival knights whose clash reveals a ritual hidden beneath the cathedral.',
     },
   },
+  {
+    entryNumber: 'Archive Entry 006',
+    title: 'The Thirteenth Saint',
+    slug: 'the-thirteenth-saint',
+    artworkImage: '/images/journal/the-thirteenth-saint/the-thirteenth-saint.png',
+    framedMockup: '/images/journal/the-thirteenth-saint/the-thirteenth-saint-framed.png',
+    publishedDate: 'September 8, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: [
+      'thirteenth saint',
+      'dark fantasy',
+      'gothic cathedral',
+      'fallen saint',
+      'raven',
+      'blood moon',
+      'gothic architecture',
+      'supernatural',
+      'cursed legend',
+      'dark religious art',
+    ],
+    relatedArticles: ['the-cathedral', 'the-black-saint'],
+    excerpt:
+      'For centuries, every cathedral honored twelve saints while leaving a thirteenth alcove empty. This archive entry explores the forbidden space, the crowned figure who finally claimed it, and the moment an old faith revealed what it had spent generations refusing to name.',
+    story: `Every cathedral tells the same story.
+
+None of them mention the Thirteenth.
+
+For centuries, kingdoms raised impossible cathedrals from black stone and filled them with twelve saints carved in marble. Pilgrims crossed mountains to kneel beneath their vaulted ceilings, believing every prayer climbed toward heaven. The bells rang without fail. The candles never burned out. Faith seemed eternal.
+
+Yet every cathedral was built with thirteen alcoves.
+
+One was always left empty.
+
+The oldest priests refused to answer why.
+
+Every surviving scripture ended one page too soon.
+
+When the last cathedral finally fell silent, the empty alcove was no longer empty.
+
+She stepped into the moonlight wearing a crown no saint had ever claimed. Ravens abandoned the bell towers to follow her. Candles burned crimson in her presence. Stained glass darkened as she passed, as though even the light wished to hide.
+
+The faithful believed they were witnessing the return of a miracle.
+
+They never understood...
+
+The empty alcove was never waiting for a saint.
+
+It was waiting for her.`,
+    behindTheCreation: `The Thirteenth Saint began with the idea of an absence that had become part of the architecture.
+
+The cathedral could not simply contain a mysterious woman. It needed to suggest that space had been reserved for her long before anyone living understood why. The empty thirteenth alcove became the central piece of the mythology: something physically present in every sacred structure, yet deliberately excluded from scripture and ritual.
+
+That contradiction shaped the figure herself. She needed to feel ceremonial enough to belong within the cathedral, but wrong enough that her arrival immediately breaks the meaning of everything around her.
+
+The crown, black stone, crimson light, ravens, and monumental scale all reinforce the same idea.
+
+She has not invaded the cathedral.
+
+She has returned to the place that was always hers.`,
+    creativeProcess: `The composition depends on scale and vertical architecture.
+
+Towering Gothic forms create the sense of a faith built over centuries, while the central figure provides a human focal point within something much larger and older than herself.
+
+Crimson accents were deliberately restrained so they would function as signals rather than flood the entire image. The moon, stained glass, candlelight, and surrounding darkness carry the atmosphere while the figure remains the visual point where those elements converge.
+
+The challenge was preserving beauty without making the scene feel safe. The final direction allows the cathedral to remain magnificent while quietly suggesting that its symmetry, ritual, and history have always contained one deliberate omission.`,
+    symbolism: `The number thirteen carries the mythology of exclusion.
+
+Twelve saints are named, carved, celebrated, and remembered. The thirteenth exists only as empty architecture.
+
+That absence represents everything an institution chooses not to record because acknowledging it would threaten the story the institution tells about itself.
+
+The cathedral represents faith preserved through repetition. The empty alcove represents the truth repetition cannot erase.
+
+Her crown complicates the idea of sainthood further. She does not return seeking permission, canonization, or recognition from the people who excluded her.
+
+She arrives already possessing an authority older than their rituals.
+
+The ravens leaving the towers suggest allegiance shifting away from the institution and toward the figure it tried to erase.
+
+The final revelation is not that a forgotten saint returned.
+
+It is that the empty place was never meant for one of their saints at all.`,
+    hiddenDetails: `The Thirteenth Saint rewards attention through relationships between the figure and the architecture rather than through invented concealed imagery.
+
+The vertical cathedral forms repeatedly draw the eye upward, reinforcing the ceremonial scale of the setting while making the crowned figure feel connected to the structure instead of simply placed in front of it.
+
+Crimson illumination breaks through an otherwise dark palette in controlled areas, giving the scene the visual language of sacred light while changing its emotional meaning.
+
+Ravens, stained glass, black stone, and the blood-red moon all reinforce the same transition: the cathedral remains recognizable, but its symbols no longer belong entirely to the faith that built it.
+
+The tension comes from realizing that nothing in the architecture needed to change when she arrived.
+
+The missing place had already been built for her.`,
+    collectorNotes: `The Thirteenth Saint stands independently within Vanta Hollow while sharing the brand's recurring fascination with monumental Gothic architecture, corrupted sacred imagery, and histories that refuse to remain buried.
+
+Unlike The Cathedral, this story is not about answering an invitation into the unknown. It is about discovering that an institution has spent generations structuring itself around something it refuses to acknowledge.
+
+The figure is neither a conventional saint nor a simple antagonist. Her arrival exposes a gap that has always existed between official history and whatever truth the empty alcove was created to contain.
+
+For collectors drawn to Gothic cathedrals, fallen saints, ravens, dark religious imagery, supernatural mythology, and cinematic dark fantasy, The Thirteenth Saint represents one of Vanta Hollow's clearest combinations of beauty, reverence, and unease.`,
+    closingArchive: `Twelve names remained in the scripture.
+
+Twelve statues stood beneath the bells.
+
+Twelve saints received every prayer the kingdoms knew how to offer.
+
+The thirteenth alcove received nothing.
+
+Until the cathedral went silent.
+
+Until the ravens descended.
+
+Until someone stepped into the place that had waited centuries without a name.
+
+The faithful called it a miracle.
+
+The cathedral knew better.`,
+    featuredDescription:
+      'A gothic dark fantasy artwork about an empty thirteenth alcove, a crowned figure erased from scripture, and the cathedral that had been waiting for her return.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4534332539',
+    seo: {
+      title: 'The Thirteenth Saint | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the story, symbolism, and creation of The Thirteenth Saint, a gothic dark fantasy artwork built around a forgotten alcove, ravens, and forbidden cathedral mythology.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 007',
+    title: 'The Show Never Ends',
+    slug: 'the-show-never-ends',
+    artworkImage: '/images/journal/the-show-never-ends/the-show-never-ends.png',
+    framedMockup: '/images/journal/the-show-never-ends/the-show-never-ends-framed.png',
+    publishedDate: 'September 8, 2026',
+    category: 'Creepy Clowns',
+    collection: 'Creepy Clowns',
+    keywords: [
+      'the show never ends',
+      'creepy clown',
+      'horror clown',
+      'dark carnival',
+      'zipper face',
+      'sinister clown',
+      'gothic horror',
+      'carnival horror',
+      'amber eyes',
+      'stitched face',
+    ],
+    relatedArticles: ['the-return', 'the-thirteenth-saint'],
+    excerpt:
+      'A carnival appears where no map says it should exist, and every survivor remembers the same performer waiting beyond the midway. This archive entry explores the zipper-faced clown, the missing attraction, and the question no one who returns can answer: did they ever really leave?',
+    story: `Some people insist the carnival burned to the ground decades ago. Others swear they wandered through it only days before. The stories never agree on where it appears or how long it stays, but every survivor remembers the same sound: laughter drifting through the empty midway long after the rides have stopped moving.
+
+Beyond the faded entrance stands an attraction with no ticket booth, no line, and no name on the map. Above its doorway hangs a weathered sign bearing four words:
+
+THE SHOW NEVER ENDS.
+
+Inside waits the performer every witness describes. Crimson hair spills from beneath a black top hat. Amber eyes burn through the darkness. Stitches divide his pale skin, while a heavy metal zipper splits one side of his face from brow to jaw, exposing something darker beneath. Some believe the zipper conceals another face. Others believe it is the only thing keeping something far worse from getting out.
+
+The survivors remember his grin most clearly—rows of impossible teeth appearing just before the lights go dark. Everyone remembers seeing him. No one remembers leaving. By morning, they are home again with dirt on their shoes, the smell of smoke in their clothes, and the certainty that somewhere beyond the edge of town, the carnival is still waiting for its next audience.
+
+They thought they had come to watch the show. He never did.`,
+    behindTheCreation: `The Show Never Ends began with a portrait rather than a full carnival scene.
+
+The performer needed to carry the entire mythology in his face. The black top hat, crimson hair, amber eyes, stitched skin, metal zipper, and impossible teeth create enough visual evidence for the viewer to imagine the attraction around him without requiring the carnival itself to dominate the image.
+
+The zipper became the defining idea.
+
+It introduces a question the artwork never answers: is something hidden behind his face, or is the zipper the only thing preventing something else from escaping?
+
+That uncertainty gives the character more power than a straightforward monster reveal. The viewer sees enough to know something is wrong, but not enough to understand what the performer actually is.`,
+    creativeProcess: `The composition was designed to make eye contact unavoidable.
+
+Rather than placing the clown deep inside a busy environment, the portrait pushes him forward and allows the black background to swallow nearly everything that is not essential.
+
+Amber eyes become the first point of contact. Crimson hair and aged metallic details then guide attention toward the zipper, stitches, and mouth.
+
+The palette stays tightly controlled around black, blood red, amber, pale flesh, and tarnished bronze so the character remains theatrical without becoming colorful or playful.
+
+The final image needed to feel like the instant a carnival attraction stops performing for a crowd and begins looking directly at one specific person.`,
+    symbolism: `The carnival traditionally separates performer from audience.
+
+The Show Never Ends removes that boundary.
+
+The sign promises endless entertainment, but the story turns that promise into confinement. The audience believes it has entered voluntarily, watched the attraction, and eventually gone home.
+
+The dirt on their shoes and smoke in their clothes suggest otherwise.
+
+The zipper represents containment. Whether it hides another face or seals something deeper is deliberately unresolved.
+
+His grin represents the moment spectacle becomes threat. A clown's smile should reassure the audience that everything is part of the performance.
+
+Here, the smile suggests the exact opposite.
+
+The show does not continue because the carnival keeps performing.
+
+It continues because the audience never completely leaves.`,
+    hiddenDetails: `The strongest details in The Show Never Ends are visible immediately but become more unsettling when understood together.
+
+The amber eyes are bright enough to control the portrait without overpowering the surrounding darkness. Crimson hair frames the face and leads attention toward the stitched skin and exposed metal zipper.
+
+The zipper divides the face vertically, creating a visual split between the recognizable performer and whatever the viewer imagines might exist beneath him.
+
+The teeth exaggerate the smile beyond anything human while the formal top hat preserves enough traditional carnival imagery to keep the character recognizable as a performer.
+
+Nothing here depends on a secret object concealed inside the image.
+
+The discomfort comes from seeing every major clue clearly and still being unable to decide what kind of creature is looking back.`,
+    collectorNotes: `The Show Never Ends expands the horror side of Vanta Hollow through a character-driven mythology rather than monumental architecture or medieval fantasy.
+
+Its strength comes from proximity.
+
+There is no army, kingdom, or distant threat between the collector and the subject. The performer occupies the image directly, forcing the confrontation to happen at portrait distance.
+
+For collectors drawn to creepy clown art, dark carnival imagery, stitched faces, sinister performers, alternative horror decor, and unsettling character portraits, The Show Never Ends represents a more intimate form of Vanta Hollow horror.
+
+The mythology remains deliberately incomplete.
+
+Survivors remember the carnival.
+
+They remember him.
+
+What they cannot remember is how they escaped.`,
+    closingArchive: `By morning, the midway is gone.
+
+No lights remain between the trees.
+
+No music carries across the empty road.
+
+The survivors wake in their own beds and tell themselves they made it home.
+
+Then they find dirt beneath their shoes.
+
+Smoke in their clothes.
+
+And somewhere in the silence...
+
+laughter.
+
+The show never ended.
+
+The audience simply stopped remembering it.`,
+    featuredDescription:
+      'A creepy clown horror artwork centered on a zipper-faced carnival performer whose audience always returns home without remembering how they escaped.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4535780792',
+    seo: {
+      title: 'The Show Never Ends | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the story and creation of The Show Never Ends, a creepy clown horror artwork about a vanished carnival and the zipper-faced performer waiting inside.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 008',
+    title: 'The Widow\'s Bloom',
+    slug: 'the-widows-bloom',
+    artworkImage: '/images/journal/the-widow\'s-bloom/the-widow\'s-bloom.png',
+    framedMockup: '/images/journal/the-widow\'s-bloom/the-widow\'s-bloom-framed.png',
+    publishedDate: 'September 8, 2026',
+    category: 'Sugar Skulls',
+    collection: 'Sugar Skulls',
+    keywords: [
+      'widow\'s bloom',
+      'sugar skull',
+      'sugar skull woman',
+      'gothic roses',
+      'burgundy roses',
+      'calavera',
+      'dark floral portrait',
+      'gothic woman',
+      'day of the dead',
+      'mourning',
+    ],
+    relatedArticles: ['the-thirteenth-saint', 'the-black-saint'],
+    excerpt:
+      'A widow returned to the same grave every night carrying one burgundy rose. This archive entry explores the mourning portrait, the locked cemetery, the second grave that appeared without being dug, and a devotion that refused to remain on the living side of the gates.',
+    story: `They buried him beneath the roses and told her grief would fade with time. Instead, she returned to his grave each night carrying a single burgundy bloom, painting her face in mourning patterns so the dead would recognize the woman who still remembered.
+
+The cemetery keeper began finding fresh petals scattered along the path before sunrise, even though the iron gates remained locked from dusk until morning. Then, on the night the final rose opened, she passed through those gates and was never seen again.
+
+By dawn, a second grave stood beside his.
+
+No name had been carved into the stone. No earth had been disturbed. Only roses marked the place, darker than any that had grown there before. Every year, when the boundary between the living and the dead feels thinnest, those same flowers bloom across both graves.`,
+    behindTheCreation: `The Widow's Bloom began with mourning rather than death.
+
+The portrait needed to feel intimate, elegant, and deeply personal instead of threatening. Roses, flowing black hair, ornamental facial details, dark jewelry, and a restrained crimson palette create the visual language of remembrance before the story reveals where that devotion eventually leads.
+
+The sugar skull influence became part of the mythology rather than decoration alone.
+
+Her face is painted so the dead will recognize her.
+
+That choice transforms the portrait from an image of grief into an act of preparation. Each night she returns to the cemetery looking a little more like someone who already belongs on the other side of its gates.`,
+    creativeProcess: `The composition was built around the relationship between the face and the roses.
+
+Deep burgundy flowers surround the portrait without overwhelming it, while black hair and dark clothing keep the palette grounded in shadow. Warm skin tones and pale ornamental markings prevent the face from disappearing into the surrounding darkness.
+
+The goal was to preserve elegance while allowing the macabre details to remain unmistakable.
+
+Rather than using aggressive horror imagery, the final direction relies on symmetry, floral framing, jewelry, facial ornamentation, and controlled contrast.
+
+The result needed to feel less like a warning and more like a memorial.`,
+    symbolism: `The roses represent memory made physical.
+
+She carries one bloom to the grave each night because grief requires repetition. The ritual continues long after everyone around her expects mourning to fade.
+
+Her painted face represents recognition across the boundary between life and death. The patterns are not a disguise. They are a promise that when she finally crosses that boundary, the person she lost will know who has come looking for him.
+
+The locked cemetery gates represent the division the living believe cannot be crossed.
+
+The untouched second grave proves otherwise.
+
+Most important is the final bloom. Its opening marks the moment remembrance stops being something she carries into the cemetery and becomes something the cemetery carries for both of them.`,
+    hiddenDetails: `The Widow's Bloom rewards attention through ornamental repetition and controlled color.
+
+Burgundy roses frame the portrait and echo the darker red accents within the facial decoration and jewelry, binding the floral and human elements into a single visual rhythm.
+
+Black hair creates a continuous shadow around the face, making the pale ornamental details appear almost illuminated without requiring artificial glow.
+
+The portrait balances traditional calavera-inspired visual language with Gothic mourning imagery, allowing neither influence to overpower the other.
+
+Nothing in the artwork requires an invented hidden symbol or concealed figure.
+
+The story deepens details already visible: the flowers become offerings, the face becomes preparation, and the elegance of the portrait becomes part of a ritual of remembrance.`,
+    collectorNotes: `The Widow's Bloom brings the Sugar Skulls category into The Hollow Journal through a quieter kind of supernatural story.
+
+Where many Vanta Hollow works center on kingdoms, cathedrals, warriors, or overt horror, this artwork remains close to one woman and one act of remembrance.
+
+Its darkness comes from devotion rather than violence.
+
+For collectors drawn to sugar skull women, burgundy roses, Gothic floral portraits, calavera-inspired details, dark feminine artwork, Victorian mourning aesthetics, and elegant macabre decor, The Widow's Bloom offers a more romantic and intimate expression of the Hollow.
+
+The second grave is never explained.
+
+The story does not need to decide whether she died, crossed willingly, or was simply claimed by the place she visited every night.
+
+The roses are the only answer left behind.`,
+    closingArchive: `The cemetery keeper replaced the lock.
+
+The gates still opened for no one after dusk.
+
+Every morning, he walked the path and found the same two graves beneath the roses.
+
+One carried a name.
+
+The other never did.
+
+Years passed.
+
+The flowers never stopped returning.
+
+And when the final bloom opens each autumn...
+
+the petals fall across both stones.`,
+    featuredDescription:
+      'A gothic sugar skull portrait about mourning, burgundy roses, and a widow whose devotion carried her beyond the locked gates of the cemetery.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4536021326',
+    seo: {
+      title: 'The Widow\'s Bloom | The Hollow Journal | Vanta Hollow',
+      description:
+        'Explore the story and symbolism of The Widow\'s Bloom, a gothic sugar skull portrait about burgundy roses, mourning, memory, and devotion beyond death.',
+    },
+  },
 ];
 
 const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skulls', 'Dark Fairytales', 'Creepy Clowns', 'Demons', 'Newest', 'Oldest'];

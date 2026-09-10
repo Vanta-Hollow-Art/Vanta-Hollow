@@ -2005,7 +2005,7 @@ img {
     padding: 95px 24px 32px;
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.95) 100%),
-      url('/images/generated/hero-site-wide-v6.jpg') 58% center / cover no-repeat;
+      url('/images/generated/hero-site-wide-v6.jpg') 66% center / auto 92% no-repeat;
   }
 
   .hero-copy {
@@ -2226,6 +2226,8 @@ img {
   .hero {
     min-height: 0;
     padding: 72px 18px 28px;
+    background-position: 0 0, 74% center;
+    background-size: auto, auto 84%;
   }
 
   .hero h1 img {
@@ -2488,6 +2490,8 @@ img {
 @media (max-width: 360px) {
   .hero {
     padding-top: 64px;
+    background-position: 0 0, 76% center;
+    background-size: auto, auto 80%;
   }
 
   .hero h1 img {

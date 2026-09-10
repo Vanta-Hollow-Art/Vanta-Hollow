@@ -2005,7 +2005,7 @@ img {
     padding: 95px 24px 32px;
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.95) 100%),
-      url('/images/hero-portal-main-v1.png') 58% center / cover no-repeat;
+      url('/images/generated/hero-site-wide-v6.jpg') 58% center / cover no-repeat;
   }
 
   .hero-copy {

@@ -2005,7 +2005,7 @@ img {
     padding: 95px 24px 32px;
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.95) 100%),
-      url('/images/generated/hero-site-wide-v6.jpg') 66% center / auto 92% no-repeat;
+      url('/images/generated/hero-site-wide-v6.jpg') calc(88% + 10vw - 34.4px) top / auto clamp(73%, calc(73% + 20vw - 68.8px), 92%) no-repeat;
   }
 
   .hero-copy {
@@ -2226,8 +2226,6 @@ img {
   .hero {
     min-height: 0;
     padding: 72px 18px 28px;
-    background-position: 0 0, 74% center;
-    background-size: auto, auto 84%;
   }
 
   .hero h1 img {
@@ -2469,6 +2467,25 @@ img {
   }
 }
 
+@media (min-width: 821px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero {
+    background-position: 0 0, 0 0, calc(68% - 72.4vw + 594px) top;
+    background-size: auto, auto, auto 92%;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1280px) and (orientation: landscape) {
+  .hero {
+    background-position: 0 0, 0 0, 72% center;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1365px) and (orientation: landscape) {
+  .hero {
+    background-position: 0 0, 0 0, calc(50% + 180.2vw - 2461.5px) center;
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1024px) {
   .feature-inner {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2490,8 +2507,6 @@ img {
 @media (max-width: 360px) {
   .hero {
     padding-top: 64px;
-    background-position: 0 0, 76% center;
-    background-size: auto, auto 80%;
   }
 
   .hero h1 img {

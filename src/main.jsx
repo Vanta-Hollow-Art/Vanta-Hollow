@@ -1011,6 +1011,214 @@ the petals fall across both stones.`,
         'Explore the story and symbolism of The Widow\'s Bloom, a gothic sugar skull portrait about burgundy roses, mourning, memory, and devotion beyond death.',
     },
   },
+  {
+    entryNumber: 'Archive Entry 009',
+    title: 'When Hell Answered',
+    slug: 'when-hell-answered',
+    artworkImage: '/images/journal/when-hell-answered/when-hell-answered.png',
+    framedMockup: '/images/journal/when-hell-answered/when-hell-answered-framed.png',
+    publishedDate: 'September 20, 2026',
+    category: 'Demons',
+    collection: 'Demons',
+    keywords: ['when hell answered', 'demon', 'hell', 'horned demon', 'winged demon', 'eclipse', 'red eclipse', 'ritual', 'occult', 'cathedral', 'gothic', 'dark fantasy', 'sigil', 'summoning'],
+    relatedArticles: ['the-thirteenth-saint', 'the-final-judgment'],
+    excerpt: 'Beneath a red eclipse, the faithful mistake a horned demon\'s bowed head for acceptance. The ritual reveals that the creature is only a doorway, and the circle marks the place where Hell will open.',
+    story: `The bells beneath the cathedral had been silent for three hundred years. On the night the eclipse burned red, they rang without a hand touching them.
+
+The hooded faithful descended among the ruined spires and took their places beyond the circle. At the first bell, the sigil carved into the stone ignited. At the second, the chains hanging in the darkness pulled taut. At the third, two figures rose soundlessly into the crimson sky—and the horned giant appeared inside the circle with his hands open and his head bowed.
+
+For generations, the order had believed the ritual would summon a ruler they could kneel before. When the demon lowered himself beneath the eclipse, they mistook the gesture for acceptance.
+
+Then the crimson line descended from the blackened sun, passed through the creature's chest, and struck the sigil at their feet. The demon slowly lifted his face, but no voice came from his mouth. The answer came from somewhere beneath the stone, vast enough to make the cathedral towers tremble.
+
+Only then did the faithful understand what their ancestors had hidden from them. The circle had never been drawn to summon Hell into their world.
+
+It had been drawn to mark the place where Hell would open.
+
+They had spent generations asking whether Hell could hear them. When Hell answered, the demon was only the doorway.`,
+    behindTheCreation: `When Hell Answered draws its tension from the difference between what the faithful expect and what the ritual reveals. The monumental demon gives their expectation a visible shape, while the cathedral and the eclipse place that figure within a scene too vast for the gathered witnesses to understand.
+
+The bowed head and open hands allow the image to hold a moment of apparent acceptance. Read alongside the story, those gestures become unsettling because the creature is not the ruler the order believed it was summoning.`,
+    creativeProcess: `The composition connects the eclipse, the demon, and the ritual circle through the story's descending crimson line. That vertical relationship guides attention from the sky toward the stone, making the location of the opening as significant as the figure standing above it.
+
+Black establishes the depth of the scene, while crimson concentrates attention on the eclipse and the ritual. The spires and hooded faithful provide a sense of scale around the horned, winged figure.`,
+    symbolism: `The circle represents the order's mistaken understanding of its own ritual. Its purpose is to mark where Hell will open, and the revelation changes the meaning of every act performed around it.
+
+The demon's monumental presence suggests power, but the story makes that presence a threshold. The eclipse and the descending line connect the visible ceremony to an answer beneath the stone, turning the faithful's certainty into dread.`,
+    hiddenDetails: `The contrast between the giant's open hands and the chains pulling taut gives the scene an uneasy balance of stillness and tension. The hooded figures remain small against the cathedral and the demon, reinforcing how little control they have over the answer they requested.
+
+The crucial detail is the line passing through the creature's chest before reaching the sigil. Following that sequence keeps the revelation clear: the demon is only the doorway.`,
+    collectorNotes: `When Hell Answered belongs to the Demons collection. Its black and crimson palette, horned silhouette, cathedral spires, and occult circle bring the narrative into a single imposing scene.
+
+For collectors drawn to gothic architecture and dark fantasy ritual imagery, the work offers a discovery that changes how the central figure is read. The terror rests in the purpose of the ceremony becoming clear only after the answer arrives.`,
+    closingArchive: 'The archive closes on the distinction the faithful understood too late. Their ancestors\' circle marked an opening, and the figure they expected to rule over them was only the doorway. The final revelation leaves their generations of asking answered by something beneath the stone.',
+    featuredDescription: 'A monumental horned, winged demon beneath a crimson eclipse, where a cathedral ritual reveals the doorway through which Hell will open.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4536526179',
+    seo: {
+      title: 'When Hell Answered | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of When Hell Answered, a gothic demon artwork where a forbidden ritual reveals that the summoned creature was only the doorway.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 010',
+    title: 'The Crimson Queen',
+    slug: 'the-crimson-queen',
+    artworkImage: '/images/journal/the-crimson-queen/the-crimson-queen.png',
+    framedMockup: '/images/journal/the-crimson-queen/the-crimson-queen-framed.png',
+    publishedDate: 'September 20, 2026',
+    category: 'Dark Fairytales',
+    collection: 'Dark Fairytales',
+    keywords: ['the crimson queen', 'crimson queen', 'queen of hearts', 'playing card', 'gothic queen', 'dark fairytale', 'dark fantasy', 'card', 'roses', 'crown', 'royal portrait', 'gothic'],
+    relatedArticles: ['a-cup-before-dying', 'the-widows-bloom'],
+    excerpt: 'A Queen of Hearts steps through the card that imprisoned her while a nearly identical queen remains inside. Crown, roses, and a fractured border frame a return whose second face remains unexplained.',
+    story: `They sealed her inside the card because no kingdom could survive her reign.
+
+For centuries, she watched from behind painted eyes while lesser rulers wore her crown. The roses grew wild around the forgotten deck. The castle emptied. Her name became a warning whispered before every final hand.
+
+Then someone drew the Queen of Hearts.
+
+The border cracked.
+
+The storm returned.
+
+And the woman who stepped through was not the prisoner they remembered.
+
+Behind her, another queen remains trapped inside the card—silent, watchful, and nearly identical. Proof that only one of them was ever meant to escape.
+
+The Crimson Queen captures the moment the game ends, the card releases what it was created to contain, and the true ruler returns to reclaim her throne.
+
+The final card has already been drawn. Add The Crimson Queen to your collection and let her reign over the room.`,
+    behindTheCreation: `The Crimson Queen brings the intimacy of a playing card into contact with the scale of a royal return. The card is both a familiar image and the prison described in the story, so its border carries narrative weight before it cracks.
+
+The mirrored royal portrait keeps the second queen central to the work's unease. The escaping ruler and the silent figure left behind remain nearly identical, preserving a question the story deliberately leaves open.`,
+    creativeProcess: `The playing-card composition gives the portrait an ordered frame. The ornate crown, corset, lace, and gothic jewelry build visual density within that structure, while roses soften its edges without removing the sense of confinement.
+
+Black and crimson connect the image to the Queen of Hearts, and aged parchment gives the card a material presence. The relationship between the royal portrait and its enclosing border makes the act of stepping through feel like a disruption of the image's own rules of composition.`,
+    symbolism: `The card represents containment within the supplied story, and its cracked border marks the end of that containment for one queen. The crown carries the claim to rule, while the roses connect the portrait to the forgotten deck around which they grew.
+
+The second queen makes escape an incomplete answer. Her presence invites attention to likeness and separation, but it does not establish which queen is the original or why only one was meant to leave.`,
+    hiddenDetails: `The mirrored portrait rewards looking between the queen who steps through and the figure that remains inside. Similarity is the source of the tension; the image does not need a named double or an explanation of the second figure to sustain it.
+
+Lace, jewelry, and the ornate crown add smaller points of attention around the face. Against aged parchment, the crimson accents keep the playing-card identity legible throughout the gothic detail.`,
+    collectorNotes: `The Crimson Queen belongs to Dark Fairytales. Its Queen of Hearts composition joins royal portraiture, roses, and gothic ornament with a story about an imprisonment ending.
+
+Collectors drawn to playing-card art and dark fantasy queens can read the work as both an imposing portrait and a moment of release. The nearly identical queen still inside the card ensures the story retains its mystery after that moment has passed.`,
+    closingArchive: 'The final card has been drawn, and one queen has stepped through. The other remains silent and watchful inside the border. The archive leaves them there, preserving the story\'s certainty that only one was meant to escape without assigning an identity to either.',
+    featuredDescription: 'A gothic Queen of Hearts portrait in black, crimson, and aged parchment, with one ruler escaping the card while a nearly identical queen remains within.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4539189363',
+    seo: {
+      title: 'The Crimson Queen | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Crimson Queen, a dark fairytale Queen of Hearts artwork about a ruler escaping the card that imprisoned her.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 011',
+    title: 'The Haunted Reflection',
+    slug: 'the-haunted-reflection',
+    artworkImage: '/images/journal/the-haunted-reflection/the-haunted-reflection.png',
+    framedMockup: '/images/journal/the-haunted-reflection/the-haunted-reflection-framed.png',
+    publishedDate: 'September 20, 2026',
+    category: 'Horror',
+    collection: 'Horror',
+    keywords: ['the haunted reflection', 'haunted reflection', 'haunted mirror', 'mirror', 'reflection', 'faceless figure', 'supernatural', 'horror', 'gothic horror', 'dark fantasy', 'ghost', 'haunting'],
+    relatedArticles: ['the-show-never-ends', 'the-cathedral'],
+    excerpt: 'A woman faces a mirror that no longer copies her movements. The motionless, faceless figure within watches patiently, leaving her uncertain which side of the glass she truly occupies.',
+    story: `She remembered washing the mirror clean.
+
+She remembered turning off the light.
+
+What she did not remember was leaving someone behind in the glass.
+
+The woman in the room has already survived whatever happened there. The figure in the mirror is something else entirely—motionless, faceless, and patiently watching. It does not copy her movements. It does not disappear when she turns away. And the longer she stares, the less certain she becomes that she is the one standing outside.
+
+The Haunted Reflection captures the moment an ordinary room becomes impossible—and the mirror stops showing the truth.
+
+Not every reflection belongs to you. Add The Haunted Reflection to your collection and let your walls keep one secret after dark.`,
+    behindTheCreation: `The Haunted Reflection places its horror in a familiar relationship becoming unreliable. A mirror should repeat the room and the person before it; the supplied story removes that reassurance while leaving the setting ordinary enough to recognize.
+
+The woman outside the glass and the faceless figure inside establish the visual tension. Neither an identity for the watcher nor a settled answer about who is outside is needed for the scene to become impossible.`,
+    creativeProcess: `The composition asks the eye to compare the woman with the figure held in the mirror. Their relationship carries the scene, making attention and stillness more important than overt action.
+
+Deep black and cold gray sustain the subdued atmosphere, while restrained crimson adds a controlled accent. This limited palette supports cinematic visual storytelling by keeping the viewer focused on the room's unsettling division.`,
+    symbolism: `The mirror becomes a symbol of failed certainty. It still offers an image, but that image no longer behaves as evidence of what stands before it.
+
+The faceless figure withholds the recognition a reflection normally provides. Its stillness and refusal to copy the woman's movements turn looking into an encounter with something unexplained, while her growing uncertainty prevents the glass from establishing a secure boundary.`,
+    hiddenDetails: `The figure's lack of movement matters as much as its lack of a face. In the story it neither follows the woman nor disappears when she turns away, so its presence cannot be made reassuring by treating it as an ordinary reflection.
+
+The restrained color supports that patient unease. Looking between the woman and the glass allows the contradiction to remain central without requiring a concealed identity or an additional supernatural explanation.`,
+    collectorNotes: `The Haunted Reflection belongs to Horror. The haunted mirror scene combines a quiet interior, a faceless watcher, and a cold palette for collectors drawn to psychological unease and gothic supernatural imagery.
+
+Its narrative remains deliberately unresolved. The figure is not identified, and the woman's uncertainty about being outside the mirror is part of the experience the artwork preserves.`,
+    closingArchive: 'She remembers cleaning the mirror and turning off the light. Those ordinary memories cannot account for the presence left in the glass. The archive closes with the watcher still unexplained and the distinction between inside and outside still uncertain.',
+    featuredDescription: 'A gothic horror mirror scene in deep black, cold gray, and restrained crimson, where a faceless watcher makes an ordinary room impossible.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4539207975',
+    seo: {
+      title: 'The Haunted Reflection | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Haunted Reflection, a gothic horror artwork where a mirror stops reflecting and begins watching.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 012',
+    title: 'A Cup Before Dying',
+    slug: 'a-cup-before-dying',
+    artworkImage: '/images/journal/a-cup-before-dying/a-cup-before-dying.png',
+    framedMockup: '/images/journal/a-cup-before-dying/a-cup-before-dying-framed.png',
+    publishedDate: 'September 20, 2026',
+    category: 'Dark Fairytales',
+    collection: 'Dark Fairytales',
+    keywords: ['a cup before dying', 'sinister hatter', 'hatter', 'top hat', 'teacup', 'tea', 'gothic horror', 'dark fairytale', 'amber eyes', 'copper hair', 'horror portrait', 'invitation'],
+    relatedArticles: ['the-crimson-queen', 'the-show-never-ends'],
+    excerpt: 'An invitation sealed in black wax leads to a sinister hatter and a steaming cup. Roses give way to iron, faces gather in the steam, and by dawn another name is stitched into his hat.',
+    story: `The invitation arrived without a sender.
+
+Sealed in black wax, it carried only two words:
+
+Come thirsty.
+
+At midnight, the doors locked behind the final guest. At the head of the table sat a stranger in a battered top hat, smiling over a cup that never stopped steaming.
+
+He asked how they wished to be remembered.
+
+Then he poured without waiting for an answer.
+
+The first sip tasted of roses.
+
+The second tasted of iron.
+
+By the third, faces began forming in the steam—every soul that had once occupied that chair.
+
+When the guest tried to stand, the room had no doors.
+
+The hatter raised his cup and smiled wider.
+
+By dawn, the table was empty. Another name had been stitched into the lining of his hat.
+
+A Cup Before Dying captures the moment curiosity becomes a sentence—when the invitation has been accepted, the final drink has been poured, and the smiling host already knows how the evening will end.
+
+The cup is still warm, and the chair across from him is empty. Add A Cup Before Dying to your collection before the final seat is taken.`,
+    behindTheCreation: `A Cup Before Dying builds its unease around hospitality that has already become a sentence. The invitation's two words, Come thirsty, lead directly to a host whose smile gives no reassurance and a drink poured before the guest can answer him.
+
+The sinister hatter portrait concentrates that story in the relationship between his gaze, his grin, and the cup. The encounter feels personal because the host's attention is as prominent as the object he offers.`,
+    creativeProcess: `The amber-eyed stare and wild copper hair bring warmth into a palette of black, aged bronze, smoky gray, and rust red. Those warm tones gather attention around the face without making the expression welcoming.
+
+The battered top hat establishes the silhouette, while the steaming, blood-stained teacup anchors the invitation in a visible object. Together, the face and the cup hold the portrait's tension between an offered drink and its known outcome.`,
+    symbolism: `The invitation represents curiosity becoming commitment. Its meaning remains direct: the guest is summoned to drink, and the story offers no escape after accepting.
+
+The cup turns a familiar gesture of welcome into the means of the guest's disappearance. Faces forming in the steam connect the occupied chair to earlier souls without identifying them, while the name stitched into the hat's lining makes the ending specific and personal.`,
+    hiddenDetails: `The contrast between the intense amber eyes and the unnerving grin keeps the host's expression difficult to receive as friendly. Copper hair and rust-red accents give the portrait a recurring warmth against its smoky shadows.
+
+The story gives the hat's lining particular significance: another name is stitched there by dawn. That textual detail deepens the battered hat's role without claiming that a readable name or hidden inscription is visible in the artwork.`,
+    collectorNotes: `A Cup Before Dying belongs to Dark Fairytales. Its sinister hatter, steaming teacup, and warm metallic tones suit collectors drawn to gothic portraits and familiar storybook imagery made threatening.
+
+The work's narrative turns on an accepted invitation and an outcome the smiling host already knows. The final stitched name preserves the consequence without adding identities for those who occupied the chair before.`,
+    closingArchive: 'By dawn, the table is empty and another name has been stitched into the lining of the hat. The archive ends with that supplied consequence: the accepted invitation has run its course, and the warm cup and empty chair retain their invitation to the viewer.',
+    featuredDescription: 'A sinister hatter with amber eyes, wild copper hair, and a steaming blood-stained teacup, portrayed in black, aged bronze, smoky gray, and rust red.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4540286660',
+    seo: {
+      title: 'A Cup Before Dying | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of A Cup Before Dying, a dark fairytale horror portrait of a sinister hatter whose final invitation comes with no way out.',
+    },
+  },
 ];
 
 const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skulls', 'Dark Fairytales', 'Creepy Clowns', 'Demons', 'Newest', 'Oldest'];

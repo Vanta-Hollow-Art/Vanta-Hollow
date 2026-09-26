@@ -1219,6 +1219,310 @@ The work's narrative turns on an accepted invitation and an outcome the smiling 
       description: 'Explore the story, symbolism, and creation of A Cup Before Dying, a dark fairytale horror portrait of a sinister hatter whose final invitation comes with no way out.',
     },
   },
+  {
+    entryNumber: 'Archive Entry 013',
+    title: 'The Iron Revenant',
+    slug: 'the-iron-revenant',
+    artworkImage: '/images/journal/the-iron-revenant/the-iron-revenant.png',
+    framedMockup: '/images/journal/the-iron-revenant/the-iron-revenant-framed.png',
+    publishedDate: 'September 25, 2026',
+    category: 'Horror',
+    collection: 'Horror',
+    keywords: ['iron revenant', 'gothic horror', 'horror art', 'dark resurrection', 'revenant', 'iron throne', 'cursed machinery', 'chained creature', 'vengeance', 'kingdom guilt'],
+    relatedArticles: ['the-haunted-reflection', 'when-hell-answered'],
+    excerpt: 'A kingdom buried its guilt in a living soul and powered its machinery with his suffering. When the engines fall silent and the chains loosen, the body made to carry other people\'s crimes leaves its throne empty.',
+    behindTheCreation: `The Iron Revenant gives institutional cruelty a single, intimate face. The stitched skin and embedded iron make the kingdom's violence tangible, while the story insists that the names driven into him never belonged to him. His monstrous appearance records what was done to him rather than proving the accusations true.
+
+The close view denies the comfortable distance of a distant dungeon scene. Pale eyes, torn seams, and crowded teeth confront the viewer before the narrative reveals the machinery that depended on his pain.`,
+    creativeProcess: `The head fills most of the square, its three-quarter angle giving the face weight and depth. Chains curve around the scalp and shoulder, while nails interrupt the outline with uneven points. These repeated iron shapes hold the eye close to the figure.
+
+A red circular glow burns behind the pale skin and dark clothing. That contrast separates the face from the mechanical background and connects the portrait to the chamber's red machinery without needing to show the entire kingdom above.`,
+    symbolism: `The nails turn accusations into physical burdens. Each carries a condemned name that is not his, making the body an archive of guilt displaced by those with the power to condemn. The stitched surface extends that idea: even the flesh enclosing the living soul has been assembled for punishment.
+
+The chains loosen rather than break. That precise change matters because the reversal begins with the instruments of confinement releasing their hold. The guilty vanish, but the names remain inside the revenant as he walks home.`,
+    hiddenDetails: `The stitches vary in direction and scale across the forehead and cheek, so the pale surface reads as joined pieces rather than an unmarked mask. Larger iron fastenings along the side of the head repeat that construction at a harsher scale.
+
+The chain crossing the scalp echoes the curved red structure behind it. Small highlights on the links and nails keep individual pieces of metal visible against the darkness. Their narrative significance comes from the accusations; the portrait does not need legible names carved into every nail.`,
+    collectorNotes: `The Iron Revenant belongs to Horror. Its close portrait, iron textures, and red backlight give it a direct presence for collectors drawn to gothic body horror and stories in which the apparent monster carries someone else's wrongdoing.
+
+The Iron Revenant captures the moment punishment becomes resurrection—when pain stops being a prison and becomes the weapon that returns for those who forged it.
+
+They forced him to carry their sins. Now he has come to return them.`,
+    closingArchive: 'The engines have stopped, the chains have loosened, and the throne is empty. By sunrise the guilty have vanished. The story leaves the revenant walking home with the names still inside him, preserving the difference between escaping punishment and being freed of its weight.',
+    story: `Every nail had a name.
+
+Murderer.
+
+Traitor.
+
+Heretic.
+
+Monster.
+
+None of them belonged to him.
+
+The kingdom had discovered a way to bury its guilt inside a single body. They stitched condemned flesh around a living soul, chained it beneath the city, and drove every sentence through bone until the screaming finally stopped.
+
+For years, the red machinery behind the chamber walls fed on his suffering and powered the kingdom above.
+
+Then, without warning, the engines went silent.
+
+The chains did not break.
+
+They loosened.
+
+When the executioners entered the chamber, the iron throne was empty. Across the city, every nail used to build the revenant began pulling itself from stone.
+
+By sunrise, the guilty had vanished.
+
+The creature they created was walking home with every name still buried inside him.`,
+    featuredDescription: 'A gothic horror artwork about punishment turned resurrection, where a kingdom\'s buried guilt rises through iron, bone, and vengeance.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4542338329',
+    seo: {
+      title: 'The Iron Revenant | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Iron Revenant, a gothic horror artwork about punishment, guilt, resurrection, and vengeance returning to claim the guilty.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 014',
+    title: 'The Guest',
+    slug: 'the-guest',
+    artworkImage: '/images/journal/the-guest/the-guest.png',
+    framedMockup: '/images/journal/the-guest/the-guest-framed.png',
+    publishedDate: 'September 25, 2026',
+    category: 'Horror',
+    collection: 'Horror',
+    keywords: ['the guest', 'haunted room', 'gothic horror', 'ceiling creature', 'haunted wall decor', 'black handprints', 'old house', 'supernatural horror', 'bedroom horror', 'lurking presence'],
+    relatedArticles: ['the-haunted-reflection', 'the-show-never-ends'],
+    excerpt: 'A woman dismisses the footsteps above her bed until the candle lights itself and a hand unfolds from the ceiling. The black marks she scrubbed from the wall belong to those who slept there before her.',
+    behindTheCreation: `The Guest begins with the erosion of an ordinary reassurance: a bedroom should offer shelter. The woman sits among blankets beneath an ornate headboard, but the wall behind her is covered in handprints and the threat enters from directly overhead. Familiar objects make the intrusion more immediate.
+
+Her upward gaze gives the viewer a direction to follow. The enormous hand emerging from the cracked ceiling makes the room feel occupied long before the creature's identity could be understood. The story leaves that identity unanswered.`,
+    creativeProcess: `The composition stacks the woman beneath the reaching hand, using the room's height to build pressure. Long fingers and black trails draw the eye down the wall, while the woman's face turns attention back toward the ceiling. That exchange keeps the encounter within the narrow space above the bed.
+
+Cold window light on the right meets the small warmth of the candle on the left. Neither light reaches enough of the room to make it safe; instead, they reveal fragments of damaged plaster, dark bedding, and the waiting presence.`,
+    symbolism: `The handprints reverse the woman's explanation of her surroundings. What she dismisses as damp becomes evidence of previous occupants, changing the wall from a surface she can clean into a record she cannot erase by scrubbing.
+
+The self-lit candle marks the end of denial rather than a rescue from darkness. The creature's relief at finding her awake makes its arrival especially unsettling, but the story does not explain that expression or provide a route of escape.`,
+    hiddenDetails: `Black handprints appear at different heights behind the bed, with long streaks trailing below them. Their repetition makes them part of the room's visual structure before their connection to previous sleepers is revealed.
+
+The creature's elongated fingers hang above the woman's upward-looking face, while the cracked ceiling frames the opening around them. The ornate headboard remains recognizably domestic beneath that damage, keeping the horror rooted in a place meant for rest.`,
+    collectorNotes: `The Guest belongs to Horror. Its confined bedroom, cold shadows, and single candle suit collectors drawn to haunted interiors and slow supernatural dread. The scene depends on proximity: the presence has been inside the house throughout the woman's attempts to explain it away.
+
+The Guest captures the moment a familiar space becomes a trap—when the ceiling opens, the doorway feels impossibly far away, and the thing that has watched from above finally decides to come down.
+
+Some guests knock before entering. This one has been waiting inside the house.`,
+    closingArchive: 'The footsteps have stopped above her bed, and the ceiling has opened. The face that appears looks relieved to find her awake. The archive leaves that relief unexplained and the handprints connected to the people who slept there before her, with no promised escape from the room.',
+    story: `For weeks, she heard something moving above the ceiling.
+
+A slow scrape across the floorboards.
+
+Three steps.
+
+A pause.
+
+Then three steps back.
+
+Each morning, another black handprint appeared on the wall. She scrubbed them away, blamed the damp, and convinced herself that old houses always made strange sounds.
+
+Until the night the candle lit itself.
+
+The footsteps stopped directly above her bed.
+
+Plaster cracked. Dust fell across the blankets. From the darkness overhead, a hand unfolded into the room—its fingers impossibly long, its nails dragging slowly across the ceiling as it searched for something to hold.
+
+Then its face appeared.
+
+It did not look surprised to find her awake.
+
+It looked relieved.
+
+The handprints were never stains.
+
+They were left by everyone who had slept in that room before her.`,
+    featuredDescription: 'A gothic horror artwork about a room that stops feeling safe when the thing hiding above the ceiling finally decides to come down.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4544703587',
+    seo: {
+      title: 'The Guest | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Guest, a gothic horror artwork about a haunted room, black handprints, and the thing waiting above the ceiling.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 015',
+    title: 'The Marigold Keeper',
+    slug: 'the-marigold-keeper',
+    artworkImage: '/images/journal/the-marigold-keeper/the-marigold-keeper.png',
+    framedMockup: '/images/journal/the-marigold-keeper/the-marigold-keeper-framed.png',
+    publishedDate: 'September 25, 2026',
+    category: 'Sugar Skulls',
+    collection: 'Sugar Skulls',
+    keywords: ['marigold keeper', 'sugar skull woman', 'day of the dead', 'sugar skull art', 'cemetery path', 'marigolds', 'remembrance', 'calavera', 'gothic sugar skull', 'forgotten souls'],
+    relatedArticles: ['the-widows-bloom', 'the-thirteenth-saint'],
+    excerpt: 'Marigolds bloom for souls whose names are fading from memory. A keeper in black lace gathers the flowers, turning their light into paths that guide the forgotten home before she returns to the shadows.',
+    behindTheCreation: `The Marigold Keeper approaches death through care and remembrance. The portrait meets the viewer with a steady human gaze beneath painted skull ornament, allowing the figure to feel present and attentive rather than predatory. Her role is to guide those whose names are being forgotten.
+
+Orange marigolds surround the dark clothing and hair with warmth. The flowers give the story's promise of a path home a visible presence, balancing the solemnity of the skull painting with living color.`,
+    creativeProcess: `The broad black hat frames the face, and the turned shoulder brings the portrait into an intimate three-quarter view. Lace, flowing hair, and floral decoration create layers of texture without obscuring the eyes.
+
+Warm orange flowers stand against a muted blue-green background. Burgundy details in the hat and face paint bridge those warm and cool areas, while the pale painted skin keeps the expression readable within the dark framing.`,
+    symbolism: `The marigolds stand for remembrance made into guidance. Each blooms for a soul whose name has begun to fade, then becomes a light and a path. Their beauty belongs to an act of care rather than a lure.
+
+The painted bones hold life and loss together in one face. The keeper's yearly return gives remembrance a recurring rhythm: after guiding the forgotten home, she withdraws to the shadows until another year has passed.`,
+    hiddenDetails: `Fine floral curves and burgundy accents surround the dark eye sockets, with smaller painted petals near the chin. The marks crossing the lips form part of the skull decoration while leaving the woman's expression human and composed.
+
+An ornamental medallion and hanging chains rest against the hat beside dark red flowers. Below them, the lace on the shoulder repeats the portrait's delicate patterning. The orange marigolds remain distinct from those darker ornaments, carrying the story's light through the surrounding shadows.`,
+    collectorNotes: `The Marigold Keeper belongs to Sugar Skulls. Its calavera-inspired portrait, black lace, and warm marigolds offer a gentle supernatural presence for collectors drawn to remembrance and the beauty of a life still held in memory.
+
+The related entries offer thematic comparisons in mourning and remembrance. They do not establish a shared history or connect the keeper to another story's characters.
+
+The Marigold Keeper captures the beauty between remembrance and loss—where painted bones celebrate life, darkness gives way to color, and no soul is left without a path home.
+
+Some keepers guard the dead. She guides them home.`,
+    closingArchive: 'By sunrise the flowers have vanished and the cemetery gates are closed. The keeper returns to the shadows until the following year. Her departure completes an act of guidance: the forgotten have been given a path toward the memories and offerings calling them home.',
+    story: `The marigolds always bloomed before she arrived.
+
+Every year, as midnight approached, their orange petals opened along the oldest path through the cemetery—one flower for every soul whose name had begun to fade from memory.
+
+Dressed in black lace, the keeper walked between the graves gathering each blossom by hand. Beneath her painted smile, she carried the stories of those who no longer had anyone waiting for them.
+
+Each marigold became a light.
+
+Each light became a path.
+
+When the veil between worlds finally opened, the forgotten followed her through the darkness toward the voices, memories, and offerings that still called them home.
+
+By sunrise, the cemetery stood empty once more. The flowers had vanished, the gates were closed, and the keeper returned to the shadows until another year had passed.`,
+    featuredDescription: 'A sugar skull artwork about remembrance and guidance, where marigold light opens a path home for the forgotten dead.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4544706005',
+    seo: {
+      title: 'The Marigold Keeper | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Marigold Keeper, a sugar skull artwork about remembrance, marigolds, forgotten souls, and guiding the dead home.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 016',
+    title: 'The Final Rescue',
+    slug: 'the-final-rescue',
+    artworkImage: '/images/journal/the-final-rescue/the-final-rescue.png',
+    framedMockup: '/images/journal/the-final-rescue/the-final-rescue-framed.png',
+    publishedDate: 'September 25, 2026',
+    category: 'Dark Fairytales',
+    collection: 'Dark Fairytales',
+    keywords: ['final rescue', 'twisted rapunzel', 'dark fairytale', 'gothic fairytale', 'haunted tower', 'evil princess', 'cursed braid', 'black roses', 'knight trap', 'fairytale horror'],
+    relatedArticles: ['the-crimson-queen', 'the-last-oath'],
+    excerpt: 'The promise of a rescued princess draws knights toward a braid woven with roses, chains, and crowns. Each rescuer becomes part of the path awaiting the next offering, while the princess watches from above.',
+    behindTheCreation: `The Final Rescue turns the familiar Rapunzel promise into the mechanism of a trap. The princess stands high within the tower, while her enormous black braid travels down through the composition toward the armored figure below. What appears to offer access is already holding the consequences of earlier attempts.
+
+Her elevated position gives her command of the scene. The story makes that relationship explicit: she is not the prisoner, and the knights answering the promise are offerings rather than rescuers who might succeed.`,
+    creativeProcess: `The braid provides the composition's main route, carrying the eye from the princess across the stone steps and into the foreground. Its loops spread beyond a single vertical strand, filling the tower with a dense network of hair, roses, and metal ornaments.
+
+Cold moonlight defines the arches and dark stone. Deep red flowers and clothing, together with gold crowns and chains, introduce smaller warm accents. Those details make the braid enticing enough to inspect even as its weight and reach become threatening.`,
+    symbolism: `The braid turns the expected instrument of rescue into the means of capture. Its growing thickness carries the story's central reversal: the rescuers become part of the path prepared for whoever follows.
+
+Crowns and roses transform apparent decoration into evidence of offerings. The tower's height supports the promise that a hero must climb, but the princess's freedom means that reaching her was never the same as saving her.`,
+    hiddenDetails: `Crowns sit among the dark coils rather than on the heads of victorious rescuers. Gold chains and rose stems follow the braid's curves, making the ornaments and the means of restraint visually difficult to separate.
+
+An armored figure lies beneath the hair in the foreground while the princess remains above. That difference in position makes the story's power relationship visible without requiring another event or an explanation that excuses her role in the trap.`,
+    collectorNotes: `The Final Rescue belongs to Dark Fairytales. Its moonlit tower, elaborate black braid, roses, and fallen knight appeal to collectors drawn to gothic storybook imagery whose familiar promise has turned hostile.
+
+The Final Rescue captures the moment chivalry becomes bait—when the princess is not the prisoner, the tower is not the cage, and the path to saving her is the trap itself.
+
+Not every princess is waiting to be saved. Some are waiting for the next hero to climb.`,
+    closingArchive: 'By dawn another crown has joined the roses, and the princess is waiting for the next kingdom to hear her song. The archive closes on the repeated offering, with the braid holding those who climbed before and preparing the path for the next arrival.',
+    story: `Every kingdom knew the promise:
+
+Climb the tower.
+Free the princess.
+Win her hand.
+
+At moonrise, she appeared beneath the highest arch and lowered a braid black as mourning cloth. Roses, gold chains, and tiny crowns had been woven between its strands.
+
+The first knight climbed for glory.
+
+The second climbed for love.
+
+The third came searching for the first two.
+
+No one questioned why the braid grew thicker each year.
+
+Each rescuer took hold, believing the weight beneath him was hair swaying against the tower. It was not.
+
+Her braid remembered every hand that touched it.
+
+It tightened around gauntlets, slipped beneath armor, bound sword arms, and dragged each knight against the stone until the tower fell silent again. Their crowns became ornaments. Their weapons disappeared beneath the coils. Their bodies became part of the path prepared for whoever answered next.
+
+She had never called for rescue.
+
+She had called for another offering.
+
+By dawn, a new crown had been woven among the roses, and the princess was already waiting for the next kingdom to hear her song.`,
+    featuredDescription: 'A dark fairytale artwork about a princess who was never waiting to be saved, where rescue becomes ritual and the tower becomes a trap.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4546024128',
+    seo: {
+      title: 'The Final Rescue | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Final Rescue, a twisted dark fairytale artwork where Rapunzel\'s braid becomes the trap and rescue becomes sacrifice.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 017',
+    title: 'The Last Oath',
+    slug: 'the-last-oath',
+    artworkImage: '/images/journal/the-last-oath/the-last-oath.png',
+    framedMockup: '/images/journal/the-last-oath/the-last-oath-framed.png',
+    publishedDate: 'September 25, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: ['last oath', 'dark fantasy knight', 'gothic knight', 'ruined cathedral', 'blue fire', 'fallen kingdom', 'oath', 'remembrance', 'judgment', 'crimson banners'],
+    relatedArticles: ['the-final-judgment', 'the-black-saint'],
+    excerpt: 'A lone knight kneels in a ruined cathedral to speak the names his kingdom tried to erase. Blue fire answers as an oath is remembered, binding his loyalty to the fallen rather than the crown.',
+    behindTheCreation: `The Last Oath centers on a posture that can be misread. The knight's bowed head and hands gathered over the sword suggest stillness, but the story identifies his kneeling as judgment. He has returned to bear witness to those abandoned by the crown.
+
+The cathedral gives that private act a public scale. Crimson banners hang beside the armored figure, keeping the symbols of royal loyalty in view while the blue fire answers a different allegiance: remembrance of the dead.`,
+    creativeProcess: `The sword establishes a firm vertical axis through the center of the image. The knight's hands, helmet, and kneeling body gather around it, while the cathedral's repeated arches reinforce the composition's solemn balance.
+
+Blue light travels along the blade and through the dark armor, reaching the stone at his feet. Red banners and low red light at the sides set a warmer boundary around that central glow. The contrast makes the remembered oath the visual focus without turning it into an unexplained display of power.`,
+    symbolism: `The kneeling records judgment rather than prayer or surrender. Speaking the dead by name answers the kingdom's attempt to erase them, and the sword he once swore never to raise against the throne becomes the center of that witness.
+
+The blue fire is an oath being remembered. Its movement through stone, blade, and armor connects the knight to the names he speaks. When the dead answer him, loyalty has already shifted from the failed crown to the people it betrayed.`,
+    hiddenDetails: `Blue veins of light remain visible between the dark plates across the shoulders and around the planted blade. They draw attention through the armor toward the floor, reflecting the story's sequence of fire rising through the cracks and entering the knight.
+
+The crimson banners frame rather than cover the central figure. Their ornamental designs remain part of the fallen kingdom's setting; no new ruler or separate heraldic history is needed to explain their presence. The bowed helmet conceals his expression while his posture carries the judgment.`,
+    collectorNotes: `The Last Oath belongs to Dark Fantasy. Its armored knight, ruined cathedral, crimson banners, and concentrated blue light suit collectors drawn to solemn martial imagery and loyalty tested by a kingdom's failure.
+
+The scene holds the moment before an outcome is known. The invaders mistake the lone knight for a defeated remnant, but the narrative ends with the dead answering him rather than describing a new battle or declaring its result.
+
+The Last Oath captures the moment loyalty is severed from a crown and bound instead to the fallen—when devotion becomes vengeance, and remembrance becomes the last power left standing when kingdoms fail.
+
+Some oaths die with kings. His survived the kingdom.`,
+    closingArchive: 'He lifts his head, the light beneath the blade burns brighter, and the dead answer behind him. The archive ends with the oath remembered and the broken promises returned in steel. What follows is left beyond the story\'s final moment.',
+    story: `They mistook the kneeling for prayer.
+
+It was judgment.
+
+The cathedral had outlived the kingdom that betrayed it. Its throne stood empty. Its bells had fallen silent. Only the crimson banners remained, hanging above the place where kings once demanded loyalty and called it honor.
+
+On the night the crown abandoned its people, one knight returned alone.
+
+He carried the sword he had sworn never to raise against the throne. At the center of the ruined hall, he drove its tip into the stone and bowed his head—not in surrender, but in witness. One by one, he spoke the names of the dead the kingdom had spent years trying to erase.
+
+With each name, blue fire answered.
+
+It rose through the cracks in the floor. It climbed the blade. It entered the armor. What looked like lightning was not power being summoned.
+
+It was an oath being remembered.
+
+When invaders finally crossed the cathedral gates, they found only a lone knight kneeling before his sword. They laughed, believing they had discovered the last defender of a fallen kingdom.
+
+Then he lifted his head.
+
+The light beneath the blade burned brighter. The dead answered behind him. And every oath broken by the living came back sharpened in steel.`,
+    featuredDescription: 'A dark fantasy knight artwork about a lone vow that survives a fallen kingdom, where remembrance answers in blue fire and broken loyalty becomes judgment.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4547257612',
+    seo: {
+      title: 'The Last Oath | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story, symbolism, and creation of The Last Oath, a dark fantasy knight artwork about loyalty, remembrance, blue fire, and judgment after a kingdom\'s fall.',
+    },
+  },
 ];
 
 const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skulls', 'Dark Fairytales', 'Creepy Clowns', 'Demons', 'Newest', 'Oldest'];

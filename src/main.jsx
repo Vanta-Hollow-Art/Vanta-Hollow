@@ -1523,6 +1523,580 @@ The light beneath the blade burned brighter. The dead answered behind him. And e
       description: 'Explore the story, symbolism, and creation of The Last Oath, a dark fantasy knight artwork about loyalty, remembrance, blue fire, and judgment after a kingdom\'s fall.',
     },
   },
+  {
+    entryNumber: 'Archive Entry 018',
+    title: 'The Moonbound Warden',
+    slug: 'the-moonbound-warden',
+    artworkImage: '/images/journal/the-moonbound-warden/the-moonbound-warden.png',
+    framedMockup: '/images/journal/the-moonbound-warden/the-moonbound-warden-framed.png',
+    publishedDate: 'September 26, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: ['moonbound warden', 'dark fantasy warrior', 'spectral wolf', 'Blackwood', 'gothic knight', 'blue fire', 'red sword', 'raven', 'full moon', 'ancient oath', 'dark forest'],
+    relatedArticles: ['the-last-oath', 'the-thirteenth-saint'],
+    excerpt: 'In Blackwood, a lone Warden discovers that the spectral wolf beside him carries generations of guardians who never returned. With no kingdom left to command him, he must decide whom the ancient oath still protects.',
+    story: `For more than a century, the northern road ended at the edge of Blackwood. There was no gate, no wall, and no army standing watch. Travelers simply knew that when the full moon climbed above the dead branches, they were to turn back. Somewhere beyond the tree line, an unseen bell would sound once through the valley, and a tradition older than the surviving kingdoms would begin. One warrior carrying a black blade would enter the forest before midnight. By sunrise, the warrior would be gone. Only a raven ever returned.
+
+When the last Warden was chosen, the kingdom that had created the oath no longer existed. Its castles were ruins, its bloodline forgotten, and no living ruler possessed the authority to command him into Blackwood. Still, he fastened the old armor around his body and took up the sword that had passed from Warden to Warden. Its steel was almost black, except for a thin crimson channel running through the blade. According to the oldest surviving warning, the weapon would burn red whenever something belonging to the darkness drew near.
+
+The sword began glowing before he had traveled a mile.
+
+He continued beneath the moon until the forest became unnaturally silent. Wind disappeared from the branches. Insects stopped moving beneath the leaves. Even his own footsteps seemed swallowed by the earth. Then blue light spread between the trees behind him, faint at first, until the darkness filled with the outline of something enormous.
+
+A wolf stepped from the forest.
+
+It towered above him, far larger than any living animal, its body formed from black fur, blue fire, and currents of spectral light that moved beneath its skin like lightning trapped under ice. Its eyes glowed with the same impossible blue. The Warden raised his sword, but the creature did not attack. It simply turned toward the deepest part of Blackwood and began walking.
+
+He remembered a line from the oath his father had taught him as a child: When the wolf appears, follow.
+
+So he followed.
+
+The spectral beast led him past crumbling watchtowers buried in roots, stone roads that had vanished from every map, and the remnants of an ancient city the forest had consumed. A raven appeared overhead and moved with them from branch to branch. As they traveled, the Warden noticed something that troubled him more than the ruins. The wolf rarely looked toward the path ahead. Instead, it kept watching him.
+
+Every time his sword burned brighter, the blue fire around the creature intensified.
+
+At the heart of Blackwood they reached a weathered boundary stone standing alone beneath the moon. Hundreds of names had been carved across its surface. The Warden recognized several of them immediately—the men whose portraits still hung inside the abandoned Hall of Guardians. But there were far more names than the histories recorded. Some were so old that the letters belonged to languages no scholar living could read.
+
+Beneath the final row of names, thick moss concealed an inscription.
+
+The Warden scraped it away.
+
+The oath had been remembered incorrectly.
+
+The wolf had never been sent to guide the Wardens through Blackwood. It was made from the Wardens who had never returned.
+
+Every guardian who crossed the boundary had surrendered something of himself to maintain the seal beneath the forest: courage, memory, rage, loyalty, fear, and eventually life itself. Generation after generation, those remnants gathered until they became powerful enough to take form. The enormous creature standing beside him was not one spirit.
+
+It was hundreds.
+
+The raven descended onto the boundary stone.
+
+Only then did the Warden understand why the bird always returned when the warrior did not. It had never been carrying news of another death back to the kingdom.
+
+It had been searching for the next name.
+
+The ground trembled beneath his boots.
+
+His sword erupted crimson.
+
+Something ancient moved below Blackwood, pressing against a barrier that had weakened with every forgotten year. The forest shook as the thing beneath it pushed upward, and the spectral wolf stepped between the Warden and the darkness. Blue fire poured from its body, illuminating the faces of ruined statues and the names carved into the stone.
+
+Nothing prevented him from leaving. The kingdom that demanded his sacrifice was dust. No king could condemn him. No witness would know whether he had honored the oath or abandoned it.
+
+He looked again at the hundreds of names.
+
+Then he understood what the oath had truly meant.
+
+They had not died protecting a kingdom.
+
+They had died protecting whoever came after it.
+
+The Warden closed his hand around the burning sword and stepped beside the wolf.
+
+The raven spread its wings.
+
+Deep beneath them, the darkness stopped rising.
+
+By sunrise, the northern road was empty again. The Warden never returned from Blackwood.
+
+But the next time the moon was full, travelers standing beyond the tree line swore that the blue wolf looked larger than before.
+
+And beside its enormous shadow walked the faint outline of a man carrying a red sword.`,
+    behindTheCreation: `The Moonbound Warden brings a solitary warrior into the company of a history he does not yet understand. The enormous wolf appears beside him as a powerful presence, but the story changes that presence from a guide into the accumulated remnants of earlier Wardens. Their shared position becomes the image of a duty carried across generations.
+
+The man's face remains visible beneath the moon. His choice matters because no surviving ruler can demand it; the armor and sword belong to an inherited role, while the decision to stay is his own.`,
+    creativeProcess: `The warrior anchors the foreground in dark armor, with the wolf rising above his shoulder in blue spectral light. Bare trunks enclose both figures, and the full moon gives the scene a high, cold point of illumination. The difference in scale makes the wolf feel greater than a single companion.
+
+The thin crimson channel in the lowered sword cuts through the blue palette. Its red tip draws attention toward the ground, while the raven perched to the right balances that low point with a small, sharply defined silhouette.`,
+    symbolism: `The wolf embodies what generations of guardians surrendered to the seal beneath Blackwood. Its size carries the weight of many lives, and its blue fire gathers their remnants into a form the last Warden can finally recognize.
+
+The sword's red light warns of the darkness drawing near. The raven carries a different responsibility: it searches for the next name. Together they place danger, succession, and choice around a man who comes to understand that the oath protects whoever follows, not merely the kingdom that created it.`,
+    hiddenDetails: `Blue light traces the wolf's outline and passes behind the warrior's dark shoulder, keeping the two figures distinct while binding them within the same glow. The wolf's bright eyes face outward, whereas the man's turned head gives him a separate direction of attention.
+
+The raven is small beside the immense beast, yet its isolated perch makes it easy to find. The sword's narrow red channel remains visible within otherwise dark steel. These details support the story without requiring the boundary stone or its carved names to appear in the composition.`,
+    collectorNotes: `The Moonbound Warden belongs to Dark Fantasy. Its full moon, black armor, spectral wolf, and restrained crimson blade offer a scene of guardianship whose emotional center is a voluntary choice. The related entries invite comparisons in duty and sacrifice without making their characters part of Blackwood's history.
+
+The Moonbound Warden captures the moment duty becomes something greater than obedience—a lone warrior discovering that the spectral beast beside him carries generations of guardians who made the same impossible choice beneath the same moon.`,
+    closingArchive: 'The northern road is empty by sunrise, and the Warden does not return. At the next full moon, travelers see a larger blue wolf and the faint outline of a man carrying a red sword beside it. The archive closes with that enduring presence: another guardian has chosen those who will come after him.',
+    featuredDescription: 'A moonlit dark fantasy artwork about a lone Warden, a spectral wolf, and an oath that survives the kingdom that created it.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4559101475',
+    seo: {
+      title: 'The Moonbound Warden | The Hollow Journal | Vanta Hollow',
+      description: 'Explore the story and symbolism of The Moonbound Warden, a dark fantasy warrior who discovers the spectral wolf of Blackwood carries generations of fallen guardians.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 019',
+    title: 'Kraken Of The Black Tide',
+    slug: 'kraken-of-the-black-tide',
+    artworkImage: '/images/journal/kraken-of-the-black-tide/kraken-of-the-black-tide.png',
+    framedMockup: '/images/journal/kraken-of-the-black-tide/kraken-of-the-black-tide-framed.png',
+    publishedDate: 'September 26, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: ['kraken', 'black tide', 'sea monster', 'dark fantasy', 'gothic ship', 'haunted voyage', 'Graven Wake', 'Alaric Veyne', 'ocean horror', 'tentacles', 'maritime legend', 'Seal of Mourning'],
+    relatedArticles: ['the-drowned-bride-of-saltmere', 'the-oath-between-worlds'],
+    excerpt: 'Captain Alaric Veyne sails the Graven Wake into the Black Tide and discovers that the Kraken recognizes his ship. Beneath its black paint lies the Seal of Mourning, evidence of a royal offering that never reached its destination.',
+    story: `For three hundred years, sailors crossing the northern passage marked one stretch of ocean with an empty circle.
+
+No reef was drawn inside it. No island. No depth was recorded beneath it. Older charts carried only the words Black Tide along the circle's edge, written in the careful hand of men who had survived long enough to know that some warnings became less useful the more precisely they were explained.
+
+Every captain knew the rule.
+
+When the sea beneath the hull turned darker than the night around it, turn south. Extinguish every lantern. Do not ring the ship's bell. Do not answer voices heard beyond the rail.
+
+And above all, do not continue toward the moon.
+
+Captain Alaric Veyne had spent his life becoming the sort of man who considered warnings an insult.
+
+His galleon, the Graven Wake, had crossed frozen straits, outrun privateers, survived cannon fire, and returned from storms that had reduced neighboring vessels to timber. Its hull was black oak. Its sails carried the silver mark of a drowned crown. Its crew had followed Veyne through enough impossible voyages that superstition had slowly become something they believed happened only to other men.
+
+So when the lookout reported that the water had turned black, Veyne ordered the ship forward.
+
+The wind died first.
+
+The sails remained swollen as though caught in a gale, yet no air moved across the deck. Ropes hung motionless. The sea continued to rise and fall beneath the ship, but the waves no longer made a sound against the hull.
+
+Then every compass aboard the Graven Wake turned downward.
+
+The helmsman abandoned his post.
+
+Veyne called him a coward and took the wheel himself.
+
+That was when the moon emerged.
+
+Cold light spilled between the storm clouds, painting a silver road across the black water directly ahead of them. At the end of that road something moved beneath the surface, so enormous that the swell reached the ship several seconds before the shape itself became visible.
+
+One of the sailors whispered a prayer.
+
+Another whispered a name.
+
+Kraken.
+
+The first tentacle rose without a splash.
+
+It unfolded beside the ship like a tower emerging from the sea, its surface black beneath the moon, rows of immense suckers opening and closing against the night. A second appeared beyond the stern. Then a third curled ahead of the bow.
+
+Men reached for weapons.
+
+Veyne ordered them lowered.
+
+For one impossible moment, nothing attacked.
+
+The tentacles simply remained there, surrounding the Graven Wake as though the ship had sailed unknowingly into the center of a closing hand.
+
+Then the ocean behind the galleon began to rise.
+
+At first the crew mistook it for a wave.
+
+The wave opened an eye.
+
+A pale blue light burned within it.
+
+The creature lifted higher.
+
+Water poured from a head larger than the ship's entire deck. Tentacles emerged in every direction, arching through the storm until their tips disappeared beyond the rigging. The moon shone behind the beast, and the Graven Wake became little more than a black silhouette beneath something ancient enough to make a three-masted galleon look like driftwood.
+
+Veyne had imagined monsters before.
+
+He had imagined teeth.
+
+He had imagined rage.
+
+What terrified him was the patience in the creature's eye.
+
+The Kraken was not angry.
+
+It recognized them.
+
+A low vibration passed through the hull.
+
+The sailors felt it through their boots before they heard the wood begin to groan.
+
+Then a symbol hidden beneath generations of black paint emerged across the bow.
+
+The pressure of the Kraken's tentacle had cracked the outer layers of lacquer, revealing an older carving beneath them: a crowned sea beast encircling a sinking vessel.
+
+Veyne stared at it.
+
+His father had purchased the Graven Wake thirty-seven years earlier from an estate whose previous owner had vanished at sea. The ship had been renamed, rebuilt, and stripped of every emblem connected to its former master.
+
+Almost every emblem.
+
+The ship's carpenter stumbled toward the bow and dropped to his knees.
+
+He knew the mark.
+
+The oldest maritime records called it the Seal of Mourning, burned into vessels once belonging to the kings of a drowned coastal empire. According to the stories, their fleet had not been destroyed by enemy ships.
+
+It had been offered.
+
+One vessel from every generation was sent north carrying gold, prisoners, and the blood of the royal family. In return, the thing beneath the Black Tide left the kingdom's shores untouched.
+
+The offerings ended when the kingdom fell.
+
+But the final ship had never arrived.
+
+Veyne slowly looked up at the creature towering behind them.
+
+The Graven Wake had not wandered into the Kraken's hunting ground.
+
+It had finally returned to where it was supposed to die.
+
+A tentacle tightened around the stern.
+
+The deck tilted.
+
+Cannons tore loose below and smashed through their restraints. Sailors clung to ropes and railings as the bow climbed above the waves. Another tentacle wrapped beneath the hull, lifting the ship until seawater poured from its timbers.
+
+Veyne drew his sword.
+
+There was nothing else left for a man like him to do.
+
+He climbed onto the bow while the Kraken's enormous eye followed him.
+
+Thirty years of victories had taught him that every enemy possessed a moment of hesitation. Every fortress had a weak wall. Every creature had a place where steel could enter.
+
+He looked into that cold blue eye and understood, finally, that none of those lessons belonged here.
+
+The Kraken did not hesitate because the Kraken did not fear him.
+
+Veyne lowered the sword.
+
+Around him, the Black Tide rose.
+
+The creature's tentacles closed until the ship disappeared inside their enormous arcs. The moonlight narrowed to a handful of silver fractures between them. The crew stopped screaming. Perhaps they understood. Perhaps there was simply nothing left to say.
+
+The final thing Veyne saw was the illuminated eye beyond the mast.
+
+Not cruel.
+
+Not triumphant.
+
+Waiting.
+
+Then the Kraken pulled the Graven Wake beneath the sea.
+
+At sunrise, another vessel crossed the northern passage.
+
+Its captain found calm water beneath an empty sky.
+
+No wreckage drifted there. No bodies. No broken mast or torn sail.
+
+Only a single piece of black-painted timber floated across the surface.
+
+Beneath the peeling paint was the carving of a crowned sea beast.
+
+The captain ordered his ship south before anyone could pull it aboard.`,
+    behindTheCreation: `Kraken Of The Black Tide sets human confidence against an older patience. The elaborate galleon appears formidable until the creature behind it changes the scale of everything on the water. What Veyne reads as a challenge becomes the fulfillment of a debt he did not know his vessel carried.
+
+The Kraken's illuminated eye gives the encounter an unsettling focus. Its attention is directed rather than chaotic, supporting the story's distinction between an enraged monster and a creature recognizing the ship it has been waiting for.`,
+    creativeProcess: `Sweeping tentacles surround the ship with large, curved forms, while masts, rigging, and gothic ornament crowd the center with finer lines. The vessel remains detailed enough to command attention even as the creature dwarfs it.
+
+Cold moonlight and pale blue highlights connect the eye, windows, and turbulent water. Almost-black sails and hull hold the ship together as a silhouette against the storm. The palette makes the scene feel submerged in the same cold darkness before the final descent occurs.`,
+    symbolism: `The Black Tide is the warned-against stretch of sea; the Seal of Mourning is the mark linking the vessel to the drowned empire's offerings. Their meanings meet when cracked paint exposes the carving and the Graven Wake's journey becomes a return.
+
+The Kraken's patience overturns Veyne's understanding of strength. His sword offers no meaningful advantage over a creature that does not fear him. The ship's altered name and rebuilt surfaces cannot cancel the obligation beneath them.`,
+    hiddenDetails: `Rows of suckers remain visible along the tentacles as their curves pass around the rigging. Those repeated forms make the creature's scale legible against the ship's windows, rails, and masts.
+
+Pale ornament appears across the dark sails, and blue lights punctuate the hull. These visible decorations should not be confused with the Seal of Mourning described beneath the bow's paint. The story establishes that specific carving and its history; the surrounding details build the vessel's gothic character.`,
+    collectorNotes: `Kraken Of The Black Tide belongs to Dark Fantasy. Its maritime scale, ornate ship, and watchful sea creature appeal to collectors drawn to ocean dread and forgotten obligations. The related ocean and oath stories share themes rather than a single empire, covenant, or mythology.
+
+Kraken Of The Black Tide captures the final instant before the Graven Wake is reclaimed—a towering sea monster, a doomed gothic vessel, and the terrible realization that the ocean has remembered a debt mankind forgot.`,
+    closingArchive: 'The Kraken draws the Graven Wake beneath the sea. By sunrise, only a piece of black-painted timber remains, bearing the crowned sea beast beneath its peeling surface. The next captain turns south before it can be brought aboard, leaving Veyne\'s ending intact and the old warning newly understood.',
+    featuredDescription: 'A gothic maritime fantasy artwork about an ancient Kraken reclaiming a vessel whose debt to the Black Tide was never fulfilled.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4560958945',
+    seo: {
+      title: 'Kraken Of The Black Tide | The Hollow Journal | Vanta Hollow',
+      description: 'Explore Kraken Of The Black Tide, a dark fantasy sea monster story about a doomed galleon, a forgotten royal debt, and the ancient creature waiting beneath the sea.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 020',
+    title: 'The Oath Between Worlds',
+    slug: 'the-oath-between-worlds',
+    artworkImage: '/images/journal/the-oath-between-worlds/the-oath-between-worlds.png',
+    framedMockup: '/images/journal/the-oath-between-worlds/the-oath-between-worlds-framed.png',
+    publishedDate: 'September 26, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: ['oath between worlds', 'gothic romance', 'dark romance', 'gothic couple', 'Queen Elara', 'King Avar', 'Caer Vey', 'enchanted mirror', 'northern breach', 'dark fantasy', 'royal sacrifice'],
+    relatedArticles: ['the-last-oath', 'the-widows-bloom'],
+    excerpt: 'Queen Elara finds King Avar holding the northern breach from beyond a mirror. When its final lock is damaged, the rulers divide the sacrifice between them, surrendering their remaining lives to protect Caer Vey and their son.',
+    story: `Queen Elara buried an empty coffin beneath a sky without stars.
+
+King Avar’s body had never returned from the northern breach. His soldiers came home frostbitten and silent, carrying only his crown inside a black wooden box. They said the king had remained behind when the dead broke through the veil, buying them enough time to close the passage.
+
+No one could tell Elara exactly how he died.
+
+By dawn after the funeral, every bell in Caer Vey had cracked.
+
+The river froze beneath midsummer sunlight. Frost appeared along the palace corridors. Most troubling of all, the mirrors turned black. They no longer reflected the people standing before them. They showed empty rooms instead, as though the palace already belonged to a world without the living.
+
+The court called it grief made manifest.
+
+Elara knew better.
+
+Avar had once told her what lay beyond the northern breach. It was not an afterlife meant for human souls. It was an older country—lightless, endless, and crowded with things that had spent centuries searching for a road into the living world.
+
+His final oath had been simple.
+
+If the gate failed, he would become the gate.
+
+For seven years, Elara ruled without him.
+
+Then, on the seventh anniversary of his death, the tallest mirror in the throne hall filled with blue light.
+
+Avar stood on the other side.
+
+His armor had lost every trace of warmth. Frost covered the crown upon his head, and the world behind him stretched beneath a colorless sky. He could hear Elara, but no voice of his own could cross the glass.
+
+He raised one hand.
+
+Elara placed hers against it.
+
+For a single heartbeat, warmth passed through the mirror.
+
+Then midnight ended, and he disappeared.
+
+He returned the next night.
+
+And the next.
+
+They were given one minute each midnight.
+
+Elara told him about the kingdom he had saved. She told him which orchard survived the killing frost, which ministers had remained loyal, and which had begun measuring the throne for themselves. She told him their son had grown tall enough to wear Avar’s first sword.
+
+She did not tell him that the boy still left an empty chair beside the fire.
+
+Avar answered without words.
+
+When he pressed his hand against the mirror, visions moved through the glass: ruined cities beneath black snow, armies of the dead gathering beyond distant towers, and a dark tide pressing endlessly against a narrow wall of blue light.
+
+Only then did Elara understand.
+
+Her husband was not trapped beyond the mirror.
+
+He was holding something there.
+
+The court eventually discovered the midnight meetings.
+
+Chancellor Morcant called the apparition a deception. He claimed some creature had stolen the dead king’s face and was using the queen’s grief to gain entry into Caer Vey.
+
+Elara forbade anyone from touching the mirror.
+
+Morcant returned the following night with soldiers, priests, and a hammer forged from white iron.
+
+Avar appeared at midnight.
+
+Elara barely had time to raise her hand before Morcant struck the frame.
+
+The mirror cracked.
+
+Cold exploded through the throne hall.
+
+Every torch went out.
+
+Through the fracture, Elara heard thousands of voices inhale at once.
+
+Behind Avar, the dead began to move.
+
+Morcant lifted the hammer again.
+
+Elara drew her sword, but Avar slammed both palms against the glass.
+
+A vision struck her.
+
+She saw the truth he had hidden for seven years.
+
+The mirror was the final lock on the northern breach. Avar had bound his own spirit into it when the gate failed. Break the mirror, and he would return to the living world.
+
+For one hour.
+
+Until sunrise, Elara could have her husband back.
+
+Their son could hear his father’s voice.
+
+The kingdom could kneel before its king again.
+
+Then the breach would open completely.
+
+And there would be no kingdom left by nightfall.
+
+Morcant raised the hammer.
+
+Elara lowered her sword.
+
+She removed her crown.
+
+Its oldest point had been shaped from the same gold used in the coronation crowns of Caer Vey’s first rulers. Elara pressed it into her palm until blood ran between her fingers.
+
+Then she placed her hand against the fracture.
+
+Gold spread through the broken glass.
+
+The dead screamed.
+
+The mirror demanded royal blood to restore the boundary, but the ancient oath had never said the sacrifice must belong to only one ruler.
+
+Avar understood before she did.
+
+He struck the glass from the other side, begging her to stop.
+
+Elara kept her hand in place.
+
+The spell divided what remained of their lives.
+
+From that night forward, Elara would slowly fade from the living world as Avar became more solid within it. One heartbeat exchanged for another. One year surrendered for one year restored. Neither would ever fully cross.
+
+Until the final midnight.
+
+On that night, the last piece of Elara would enter the mirror as the last piece of Avar left it.
+
+For one breath, they would meet at the center.
+
+Then both would become part of the seal.
+
+The kingdom would survive.
+
+Their son would live.
+
+And the road between worlds would close behind them forever.`,
+    behindTheCreation: `The Oath Between Worlds makes separation visible at the point where two hands almost meet. Elara and Avar face one another across a narrow boundary, close enough for recognition but unable to turn that closeness into an ordinary reunion. Their relationship carries the scene before the larger cost of their decision is understood.
+
+The artwork holds the moment after they have chosen to share the sacrifice. Neither has fully crossed. Their certainty concerns where they will meet at the final midnight, not a promise that they can return to life together.`,
+    creativeProcess: `The tall pointed mirror divides the square into two facing portraits. Its vertical frame remains firm between the rulers while their raised hands establish a smaller center of attention within it. Repeated arches extend that structure into the surrounding architecture.
+
+Elara retains warm skin and gold accents against the dark setting, while Avar appears within cold blue light. The brightest glow gathers around their palms, allowing an intimate gesture to carry the visual weight of the boundary between worlds.`,
+    symbolism: `The mirror is the final lock on the northern breach, not a passage to a conventional afterlife. Avar's oath binds him into that lock, and breaking it would briefly restore him at the cost of the kingdom he protected.
+
+Elara's royal blood repairs the fracture by dividing the sacrifice. The crowns therefore signify responsibility as well as marriage and rule. Their hands reach across a cost they now share: each exchange brings them toward the final breath together before both become part of the seal.`,
+    hiddenDetails: `Fine blue lines spread through the mirror around the meeting point of the hands. The frame remains visible between the two figures, preserving the separation even where the light appears most intense.
+
+The contrast between Elara's gold-trimmed armor and Avar's cold, luminous outline distinguishes their positions without making either a distant abstraction. Both crowns and both faces remain readable, keeping the scene focused on two particular people rather than an anonymous apparition.`,
+    collectorNotes: `The Oath Between Worlds belongs to Dark Fantasy and explores gothic romance through a shared responsibility. Its appeal rests in the closeness of the portraits and the cost of the gesture between them. Connections to other Journal entries concern devotion and remembrance; they do not extend the history of Caer Vey into those stories.
+
+The artwork captures the moment after their choice, when Elara and Avar raise their hands toward one another again. The glass still separates them. Their palms almost meet. Neither is reaching for rescue anymore.
+
+They are reaching because, for the first time in seven years, they know exactly where the other will be waiting.`,
+    closingArchive: 'Elara and Avar continue to reach toward one another through the glass. Their last meeting remains ahead: one breath at the center on the final midnight, followed by their place together within the seal. The archive preserves that future sacrifice, the kingdom\'s survival, and their living son without turning the ending into a reunion already completed.',
+    featuredDescription: 'A gothic dark romance artwork about two rulers separated by a mirror, whose final oath protects their kingdom at the cost of their remaining lives.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4562775661',
+    seo: {
+      title: 'The Oath Between Worlds | The Hollow Journal | Vanta Hollow',
+      description: 'Explore The Oath Between Worlds, a gothic dark romance about Queen Elara, King Avar, and the sacrifice that holds the boundary between life and death.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 021',
+    title: 'The Drowned Bride of Saltmere',
+    slug: 'the-drowned-bride-of-saltmere',
+    artworkImage: '/images/journal/the-drowned-bride-of-saltmere/the-drowned-bride-of-saltmere.png',
+    framedMockup: '/images/journal/the-drowned-bride-of-saltmere/the-drowned-bride-of-saltmere-framed.png',
+    publishedDate: 'September 26, 2026',
+    category: 'Dark Fantasy',
+    collection: 'Dark Fantasy',
+    keywords: ['drowned bride', 'Saltmere', 'gothic mermaid', 'dark siren', 'sea queen', 'gothic romance', 'dark ocean', 'underwater cathedral', 'royal covenant', 'blackened silver', 'dark fantasy', 'Maris'],
+    relatedArticles: ['kraken-of-the-black-tide', 'the-oath-between-worlds'],
+    excerpt: 'Crowned beneath Saltmere\'s drowned cathedral, Maris recognizes Orsen\'s last descendant aboard a passing ship. But the vessel carries refugees, leaving her suspended between fulfilling the covenant and the threatened loss of Saltmere itself.',
+    story: `Saltmere’s cathedral was built where the cliffs disappeared into the sea, and for generations its kings descended beneath the sanctuary each winter to renew an ancient covenant. The sea would spare the kingdom from famine, storm, and shipwreck so long as the royal bloodline never refused the bride it was owed.
+
+For three hundred years, no one questioned the promise.
+
+Then King Orsen declared the covenant a superstition invented by frightened ancestors. He sealed the flooded crypt, melted down the ceremonial crown, and ordered every record of the offering burned. Before the month ended, the fishing boats stopped returning. Merchant vessels vanished beyond the harbor lights. By winter, the granaries were nearly empty.
+
+Only then did the king remember that the sea had never asked for gold.
+
+It had asked for blood.
+
+His youngest daughter, Maris, was chosen before dawn. The court dressed her in black instead of white because no one intended to pretend she was walking toward a marriage. They placed a newly forged crown upon her head and led her through the cathedral as the tide rose over the steps. Maris never begged her father to spare her. She looked at him only once, then continued into the water alone.
+
+She awakened beneath the cathedral after the bells had gone silent.
+
+The altar remained. The arches remained. But the city above had disappeared behind a ceiling of dark water, her bridal veil drifted endlessly around her, and where her legs had been was a long armored tail of blackened silver. The sea had not accepted Maris as a sacrifice.
+
+It had crowned her.
+
+From that night forward, every vessel carrying the blood of King Orsen heard her song before it reached the horizon. Some turned back. The others descended through the black water and settled among the ruins surrounding her cathedral.
+
+A century passed before another royal ship appeared.
+
+Maris watched it cross the surface far above her, framed in the pale light pouring through the broken roof. She could already feel the bloodline aboard it. The last descendant of the king who condemned her was finally returning to Saltmere.
+
+But the ship was not carrying an army.
+
+It was carrying refugees.
+
+If Maris sang, the covenant would be fulfilled and the final heir of Orsen would join the drowned beneath her cathedral. If she remained silent, the ancient debt would be broken—and the sea had promised that Saltmere itself would be taken in payment.
+
+For the first time in a hundred years, the Drowned Bride did not know which fate was crueler.`,
+    behindTheCreation: `The Drowned Bride of Saltmere places a terrible decision inside a quiet image. Maris sits beneath the ruined arches while a ship passes high overhead, its small silhouette carrying consequences far greater than its size in the composition. Her stillness leaves room for the uncertainty the story refuses to resolve.
+
+The crown and armored tail establish the transformation from condemned daughter to siren. The sea has crowned her, but that position has not removed the cruelty of the covenant or made the final choice simple.`,
+    creativeProcess: `The cathedral arch frames a vertical relationship between the ship near the surface and Maris below. Pale shafts of light descend toward her crown, while her long tail curves across the lower part of the square. The composition connects the two levels without closing the distance between them.
+
+Blue-green water and deep stone shadows surround the black bridal clothing. Small silver highlights describe the tail's overlapping armor, keeping its texture legible while the drifting dark strands around her soften the boundary between figure and water.`,
+    symbolism: `Maris's crown marks the sea's response to the offering: she becomes its crowned presence rather than merely disappearing as a sacrifice. Her blackened-silver tail gives that changed existence a physical form beneath the cathedral.
+
+The overhead ship carries both the last descendant of Orsen and refugees who complicate the demanded payment. Singing would fulfill the covenant; silence would break the debt and expose Saltmere to the sea's promised claim. Neither action can be presented as a decision she has already made.`,
+    hiddenDetails: `The ship is visible through the light above the broken cathedral, separated from Maris by a wide column of water. Its distance makes her awareness of the bloodline a matter of the established story rather than something the viewer can read from figures aboard the vessel.
+
+Her hands rest across the dark silver scales, and the tail's curve leads toward its broad fin below the altar. The repeating arches remain visible behind her, holding the bridal and royal imagery within the same submerged sanctuary.`,
+    collectorNotes: `The Drowned Bride of Saltmere belongs to Dark Fantasy. Its crowned siren, underwater cathedral, and restrained ocean palette offer gothic beauty without resolving the moral tension at the center of the work. Its related entries make thematic comparisons in royal debts and sacrifice; their separate covenants do not become Saltmere's history.
+
+The Drowned Bride of Saltmere captures that suspended moment beneath the sea: a crowned siren surrounded by the ruins of an old promise while the ship carrying her final choice passes overhead.`,
+    closingArchive: 'The refugee ship passes above the cathedral with Orsen\'s last descendant aboard. Maris remains between song and silence, aware of what either could cost. The archive ends at that suspended choice, without saving or sinking the vessel and without declaring which fate she accepts.',
+    featuredDescription: 'A gothic ocean fantasy artwork about a crowned siren confronting the final debt of the royal bloodline that condemned her.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4564068236',
+    seo: {
+      title: 'The Drowned Bride of Saltmere | The Hollow Journal | Vanta Hollow',
+      description: 'Explore The Drowned Bride of Saltmere, a gothic dark fantasy tale of a crowned siren, a broken royal covenant, and a final choice beneath the sea.',
+    },
+  },
+  {
+    entryNumber: 'Archive Entry 022',
+    title: 'The One Who Stayed',
+    slug: 'the-one-who-stayed',
+    artworkImage: '/images/journal/the-one-who-stayed/the-one-who-stayed.png',
+    framedMockup: '/images/journal/the-one-who-stayed/the-one-who-stayed-framed.png',
+    publishedDate: 'September 26, 2026',
+    category: 'Creepy Clowns',
+    collection: 'Creepy Clowns',
+    keywords: ['one who stayed', 'creepy clown', 'abandoned carnival', 'horror clown', 'dark carnival', 'Ferris wheel', 'balloons', 'missing photographer', 'sinister clown', 'haunted circus'],
+    relatedArticles: ['the-show-never-ends', 'the-guest'],
+    excerpt: 'Balloons keep appearing in a carnival abandoned for years. A photographer enters to find their source and disappears, leaving a camera whose final frame shows the clown still waiting beneath the dead lights.',
+    story: `The carnival had been empty for years, but the balloons kept appearing.
+
+Nobody could explain who tied them there or why the Ferris wheel sometimes turned after midnight. The booths had collapsed, the midway had gone silent, and rainwater gathered in the broken pavement where crowds once stood shoulder to shoulder. Locals eventually stopped taking the road that passed behind the grounds. Some claimed they could still hear music drifting through the rusted gates. Others swore they had seen someone walking between the abandoned rides.
+
+One night, a photographer slipped through the fence looking for proof.
+
+He found the answer standing beneath the dead lights.
+
+The costume was stained by years of neglect, the painted smile had cracked across a face that no longer seemed capable of changing expression, and above him floated a cluster of balloons that should have lost their air long ago. Behind the clown, the Ferris wheel began to move.
+
+By morning, the photographer was gone. His camera was found lying in the mud near the entrance. The final frame showed the clown staring directly into the lens, smiling as though he had spent all those empty years waiting for someone to come back and watch the show.`,
+    behindTheCreation: `The One Who Stayed finds horror in a performance continuing after its audience has gone. A male clown stands at the center of a ruined midway, with balloons overhead and the Ferris wheel behind him. The familiar signs of entertainment survive in a setting that no longer offers any welcome.
+
+The figure's direct stare makes the viewer occupy the position of the camera. The short narrative needs no account of his origin: its force comes from someone going to look and leaving only an image behind.`,
+    creativeProcess: `The narrow passage funnels attention toward the clown's full-length figure. Dark buildings form close edges on either side, while the Ferris wheel opens a larger shape behind his head and shoulders. The balloons gather above him, holding bright familiar forms within the decayed setting.
+
+Dirty cream fabric, muted reds, and dull amber light keep the scene warmer than the Journal's moonlit fantasies. Wet-looking pavement catches that light below the figure, while shadow closes around his costume and the ruined booths.`,
+    symbolism: `The balloons contradict the years of abandonment. They should have lost their air, yet their continued appearance suggests that the show has not ended for the figure beneath them. The Ferris wheel's movement after midnight deepens that contradiction without explaining its cause.
+
+The camera becomes the story's surviving witness. Its final frame confirms the encounter while withholding the photographer's fate beyond his disappearance. The clown's smile leaves the sense of a waiting audience unresolved.`,
+    hiddenDetails: `The costume's ruffled collar and red buttons remain recognizable beneath the stains and worn fabric. Cracks and dark marks interrupt the pale painted face, while the red nose holds a small, familiar point of color at its center.
+
+Balloon strings descend into the space behind his shoulders, and the Ferris wheel's spokes remain visible beyond them. These repeated thin lines contrast with the heavy folds of the costume, tying the waiting performer to the abandoned attractions without adding an explanation for their persistence.`,
+    collectorNotes: 'The One Who Stayed belongs to Creepy Clowns. Its direct portrait within an abandoned carnival appeals to collectors drawn to the uneasy survival of familiar entertainment imagery. The connection to The Show Never Ends is thematic: this story does not identify the same carnival or performer.',
+    closingArchive: 'By morning the photographer is gone, and his camera lies in the mud near the entrance. The final photograph shows the clown looking into the lens. The archive leaves the disappearance unexplained, with the surviving image holding the expression of someone who has waited years for a viewer.',
+    featuredDescription: 'A dark carnival horror artwork about an abandoned midway, a missing photographer, and the clown who never stopped waiting for an audience.',
+    etsyUrl: 'https://vantahollow.etsy.com/listing/4565724958',
+    seo: {
+      title: 'The One Who Stayed | The Hollow Journal | Vanta Hollow',
+      description: 'Explore The One Who Stayed, a creepy clown horror artwork about an abandoned carnival, impossible balloons, and the performer still waiting beneath the dead lights.',
+    },
+  },
 ];
 
 const archiveFilters = ['All', 'Dark Fantasy', 'Horror', 'Sugar Skulls', 'Dark Fairytales', 'Creepy Clowns', 'Demons', 'Newest', 'Oldest'];

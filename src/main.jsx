@@ -3164,12 +3164,21 @@ function FAQPage() {
         <>
           <p>Posters are available in:</p>
           <ul>
+            <li>8x10</li>
+            <li>8x12</li>
             <li>9x11</li>
             <li>11x14</li>
+            <li>12x16</li>
             <li>12x18</li>
             <li>16x20</li>
+            <li>16x24</li>
             <li>18x24</li>
+            <li>20x30</li>
+            <li>24x32</li>
             <li>24x36</li>
+            <li>30x40</li>
+            <li>36x48</li>
+            <li>36x54</li>
           </ul>
           <p>Canvas prints are available in:</p>
           <ul>

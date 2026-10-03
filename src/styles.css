@@ -1088,6 +1088,10 @@ img {
   opacity: 1;
 }
 
+.faq-item:nth-child(2).open .faq-answer {
+  max-height: 1200px;
+}
+
 .about-page {
   padding-top: 148px;
 }

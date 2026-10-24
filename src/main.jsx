@@ -3608,14 +3608,17 @@ function App() {
           </a>
         </section>
 
-        <section className="collector-gallery" aria-labelledby="collector-gallery-title">
-          <div className="collector-gallery-heading">
+        <section className="featured collector-gallery" aria-labelledby="collector-gallery-title">
+          <div className="featured-copy collector-gallery-copy">
             <span className="eyebrow">Collected in the Wild</span>
-            <h2 id="collector-gallery-title">From the Walls of the Hollow</h2>
-            <p>Real Vanta Hollow pieces. Real collectors.<br />See how the artwork lives beyond the Hollow.</p>
+            <h2 id="collector-gallery-title">From the Walls<br />of the Hollow</h2>
+            <p>Real Vanta Hollow pieces.<br />Displayed by the collectors who brought them home.</p>
+            <a className="button" href={`${etsyShop}#reviews`} {...etsyLinkProps}>
+              See All Reviews <span aria-hidden="true">&rsaquo;</span>
+            </a>
           </div>
 
-          <div className="collector-gallery-grid">
+          <div className="featured-grid collector-gallery-grid">
             <figure className="collector-gallery-item">
               <img src="/images/collector-gallery/velvet-ofrenda-customer.jpg" alt="Velvet Ofrenda Vanta Hollow print displayed in an ornate gold frame in a collector's home." loading="lazy" />
               <figcaption>
@@ -3641,10 +3644,6 @@ function App() {
               </figcaption>
             </figure>
           </div>
-
-          <a className="button centered" href={`${etsyShop}#reviews`} {...etsyLinkProps}>
-            See All Reviews <span aria-hidden="true">&rsaquo;</span>
-          </a>
         </section>
 
         <section className="featured" id="about">

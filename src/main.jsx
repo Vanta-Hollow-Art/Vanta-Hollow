@@ -3608,6 +3608,45 @@ function App() {
           </a>
         </section>
 
+        <section className="collector-gallery" aria-labelledby="collector-gallery-title">
+          <div className="collector-gallery-heading">
+            <span className="eyebrow">Collected in the Wild</span>
+            <h2 id="collector-gallery-title">From the Walls of the Hollow</h2>
+            <p>Real Vanta Hollow pieces. Real collectors.<br />See how the artwork lives beyond the Hollow.</p>
+          </div>
+
+          <div className="collector-gallery-grid">
+            <figure className="collector-gallery-item">
+              <img src="/images/collector-gallery/velvet-ofrenda-customer.jpg" alt="Velvet Ofrenda Vanta Hollow print displayed in an ornate gold frame in a collector's home." loading="lazy" />
+              <figcaption>
+                <span className="collector-gallery-stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <h3>Velvet Ofrenda</h3>
+                <p>“Beautiful print. Arrived quickly.”</p>
+              </figcaption>
+            </figure>
+            <figure className="collector-gallery-item">
+              <img src="/images/collector-gallery/moonlit-catrina-customer.jpg" alt="Moonlit Catrina Vanta Hollow print displayed in a black frame in a collector's home." loading="lazy" />
+              <figcaption>
+                <span className="collector-gallery-stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <h3>Moonlit Catrina</h3>
+                <p>“Another beautiful print. Fast shipping and delivery.”</p>
+              </figcaption>
+            </figure>
+            <figure className="collector-gallery-item">
+              <img src="/images/collector-gallery/dark-alice-customer.jpg" alt="Dark Alice Vanta Hollow print displayed in a wooden frame in a collector's home." loading="lazy" />
+              <figcaption>
+                <span className="collector-gallery-stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <h3>Dark Alice</h3>
+                <p>“Gorgeous, creating a dark, mysterious mood &amp; scene!”</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <a className="button centered" href={`${etsyShop}#reviews`} {...etsyLinkProps}>
+            See All Reviews <span aria-hidden="true">&rsaquo;</span>
+          </a>
+        </section>
+
         <section className="featured" id="about">
           <div className="featured-copy">
             <span className="eyebrow">Collector Favorites</span>

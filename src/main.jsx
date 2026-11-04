@@ -2715,13 +2715,15 @@ function useRevealOnView() {
   return [elementRef, isVisible];
 }
 
-function JournalArtworkImage({ entry, className = '', framed = false, priority = false }) {
+function JournalArtworkImage({ entry, className = '', framed = false, priority = false, protectedImage = false }) {
   return (
-    <div className={`artwork-placeholder journal-artwork-image ${framed ? 'framed' : ''} ${className}`.trim()}>
+    <div className={`artwork-placeholder journal-artwork-image ${framed ? 'framed' : ''} ${protectedImage ? 'protected' : ''} ${className}`.trim()}>
       <img
         src={framed ? entry.framedMockup : entry.artworkImage}
         alt={framed ? `${entry.title} framed artwork mockup` : `${entry.title} artwork`}
         loading={priority ? 'eager' : 'lazy'}
+        draggable={protectedImage ? false : undefined}
+        onContextMenu={protectedImage ? (event) => event.preventDefault() : undefined}
       />
     </div>
   );
@@ -2788,7 +2790,7 @@ function JournalLandingPage() {
       return matchesSearch && matchesFilter;
     });
 
-    if (activeFilter === 'Newest') {
+    if (activeFilter !== 'Oldest') {
       return [...filtered].reverse();
     }
 
@@ -3119,9 +3121,7 @@ function JournalEntryPage({ entry }) {
         </aside>
 
         <div className="journal-entry-hero">
-          <a href={entry.artworkImage} target="_blank" rel="noreferrer" aria-label={`View larger ${entry.title} artwork`}>
-            <JournalArtworkImage entry={entry} priority />
-          </a>
+          <JournalArtworkImage entry={entry} priority protectedImage />
         </div>
 
         <div className="journal-entry-content">
@@ -3141,7 +3141,7 @@ function JournalEntryPage({ entry }) {
                 Collect This Piece <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
-            <JournalArtworkImage entry={entry} framed />
+            <JournalArtworkImage entry={entry} framed protectedImage />
           </section>
 
           <RelatedEntries entry={entry} />

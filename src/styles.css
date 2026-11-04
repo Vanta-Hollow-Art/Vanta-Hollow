@@ -1262,6 +1262,12 @@ img {
     transform 260ms ease;
 }
 
+.journal-artwork-image.protected img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .journal-record-art:hover .journal-artwork-image img,
 .journal-record-art:focus-visible .journal-artwork-image img,
 .journal-entry-hero a:hover .journal-artwork-image img,

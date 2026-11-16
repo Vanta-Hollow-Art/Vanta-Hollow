@@ -29,7 +29,7 @@ Existing page: https://www.vanta-hollow.com/journal/blackthorn-hall
 
 **Original meta description:** Explore Blackthorn Hall, a gothic haunted mansion story about Lenora Vale, an ancestral curse, and the watchful eye guarding an ancient secret.
 
-**Proposed meta description:** Discover Blackthorn Hall, a physical gothic haunted mansion art print with a watchful eye and crimson eclipse. Read its story and explore purchase options.
+**Proposed meta description:** An immense eye watches over Blackthorn Hall beneath a crimson eclipse. This physical gothic haunted mansion art print follows a woman into her family’s secret.
 
 **Original artwork alt:** Blackthorn Hall artwork
 
@@ -39,7 +39,7 @@ Existing page: https://www.vanta-hollow.com/journal/blackthorn-hall
 
 **Proposed mockup alt:** Framed display mockup of Blackthorn Hall; frame and setting shown for illustration.
 
-**Added purchase context:** A physical gothic art print built around the hall’s watchful eye and red-lit architecture.
+**Added purchase context:** Bring this gothic haunted mansion scene to your walls as a physical art print.
 
 **Added thematic link:** For another vision of gothic architecture, explore [The Cathedral](https://www.vanta-hollow.com/journal/the-cathedral). This is a visual/theme comparison, not a claim of shared story canon.
 
@@ -55,7 +55,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-last-oath
 
 **Original meta description:** Explore the story, symbolism, and creation of The Last Oath, a dark fantasy knight artwork about loyalty, remembrance, blue fire, and judgment after a kingdom's fall.
 
-**Proposed meta description:** Explore The Last Oath, a physical dark fantasy knight art print lit by blue fire. Discover the story behind the armored guardian and view purchase options.
+**Proposed meta description:** The Last Oath captures an armored knight in blue fire. This physical dark fantasy art print tells a story of loyalty that outlasts a fallen kingdom.
 
 **Original artwork alt:** The Last Oath artwork
 
@@ -65,7 +65,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-last-oath
 
 **Proposed mockup alt:** Display mockup of The Last Oath in a frame; presentation shown for illustration.
 
-**Added purchase context:** A physical dark fantasy knight print shaped by cold blue light and gothic scale.
+**Added purchase context:** The Last Oath brings its blue-lit knight and gothic setting to a physical art print.
 
 **Added thematic link:** For another knight’s journey through a dark fantasy landscape, explore [The Road to Vesperhold](https://www.vanta-hollow.com/journal/the-road-to-vesperhold). This is a visual/theme comparison, not a claim of shared story canon.
 
@@ -81,7 +81,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-thirteenth-saint
 
 **Original meta description:** Explore the story, symbolism, and creation of The Thirteenth Saint, a gothic dark fantasy artwork built around a forgotten alcove, ravens, and forbidden cathedral mythology.
 
-**Proposed meta description:** Meet The Thirteenth Saint, a crowned, black-winged figure beneath a crimson halo. Explore this physical dark angel art print, its story and purchase options.
+**Proposed meta description:** A crowned, black-winged figure returns beneath a crimson halo in The Thirteenth Saint, a physical dark angel art print rooted in forbidden cathedral lore.
 
 **Original artwork alt:** The Thirteenth Saint artwork
 
@@ -91,7 +91,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-thirteenth-saint
 
 **Proposed mockup alt:** Framed presentation mockup of The Thirteenth Saint; display styling is illustrative.
 
-**Added purchase context:** A physical dark angel art print with a crowned figure, black wings and a crimson halo.
+**Added purchase context:** Black wings and a crimson halo frame the crowned figure in this physical dark angel art print.
 
 **Added thematic link:** For a different portrayal of a dark-winged guardian, explore [The Exiled Seraph](https://www.vanta-hollow.com/journal/the-exiled-seraph). This is a visual/theme comparison, not a claim of shared story canon.
 
@@ -107,7 +107,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-widows-bloom
 
 **Original meta description:** Explore the story and symbolism of The Widow's Bloom, a gothic sugar skull portrait about burgundy roses, mourning, memory, and devotion beyond death.
 
-**Proposed meta description:** Discover The Widow's Bloom, a physical sugar skull art print with burgundy roses and calavera detail. Explore its story of remembrance and purchase options.
+**Proposed meta description:** Burgundy roses frame a gothic calavera portrait in The Widow's Bloom, a physical sugar skull art print inspired by mourning, remembrance and devotion.
 
 **Original artwork alt:** The Widow's Bloom artwork
 
@@ -117,7 +117,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-widows-bloom
 
 **Proposed mockup alt:** Display mockup of The Widow's Bloom in a frame; frame shown as part of the presentation.
 
-**Added purchase context:** A physical sugar skull art print with burgundy roses and intricate calavera detail.
+**Added purchase context:** The calavera portrait’s roses and mourning detail lend this physical sugar skull art print a quiet, intimate mood.
 
 **Added thematic link:** For another rose-filled calavera portrait, explore [The Rosebound Catrina](https://www.vanta-hollow.com/journal/the-rosebound-catrina). This is a visual/theme comparison, not a claim of shared story canon.
 
@@ -133,7 +133,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-aftershow
 
 **Original meta description:** Explore The Aftershow, a creepy clown horror story about a forbidden backstage mirror, missing performers, and the real show that begins after the audience goes home.
 
-**Proposed meta description:** Step into The Aftershow, a physical creepy clown art print centered on an unsettling backstage mirror. Read its horror story and explore purchase options.
+**Proposed meta description:** A sinister performer appears in a backstage mirror in The Aftershow, a physical creepy clown art print with a story that begins after the audience leaves.
 
 **Original artwork alt:** The Aftershow artwork
 
@@ -143,7 +143,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-aftershow
 
 **Proposed mockup alt:** Framed display mockup of The Aftershow; the frame and setting illustrate presentation.
 
-**Added purchase context:** A physical creepy clown art print centered on an unsettling backstage mirror.
+**Added purchase context:** This physical creepy clown art print brings the journal’s unsettling backstage scene into your space.
 
 **Added thematic link:** For another unsettling clown portrait, explore [The Quieting](https://www.vanta-hollow.com/journal/the-quieting). This is a visual/theme comparison, not a claim of shared story canon.
 
@@ -159,7 +159,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-crimson-queen
 
 **Original meta description:** Explore the story, symbolism, and creation of The Crimson Queen, a dark fairytale Queen of Hearts artwork about a ruler escaping the card that imprisoned her.
 
-**Proposed meta description:** Explore The Crimson Queen, a physical Queen of Hearts art print in black, crimson and aged parchment. Discover its dark fairytale story and purchase options.
+**Proposed meta description:** The Crimson Queen steps beyond her playing card in this physical Queen of Hearts art print, bringing a twisted fairytale to gothic wall art.
 
 **Original artwork alt:** The Crimson Queen artwork
 
@@ -169,7 +169,7 @@ Existing page: https://www.vanta-hollow.com/journal/the-crimson-queen
 
 **Proposed mockup alt:** Display mockup of The Crimson Queen in a frame; styling shown for illustration.
 
-**Added purchase context:** A physical Queen of Hearts art print in black, crimson and aged parchment.
+**Added purchase context:** Bring a darker take on the Queen of Hearts to your walls with this physical art print.
 
 **Added thematic link:** For another twisted dark fairytale scene, explore [The House That Hunts](https://www.vanta-hollow.com/journal/the-house-that-hunts). This is a visual/theme comparison, not a claim of shared story canon.
 

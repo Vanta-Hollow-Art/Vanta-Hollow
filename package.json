@@ -1,8 +1,9 @@
 {
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "build": "vite build && node scripts/indexnow-manifest.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:indexnow": "node --test tests/indexnow.test.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

@@ -1,0 +1,12 @@
+{
+  "src/main.jsx": "13baf58495eda295d1b08c424ebce2af588b98ba6000466344e26ec7b2bd1edf",
+  "src/styles.css": "4580a6f3cd1b6f75dd84c16dc83137fcc353c43fa30da2f5821ef9054459e638",
+  "public/sitemap.xml": "f09b6ca7035f97aa225ad7bc47cf9b448d71b05f68eb2671c53d3dc0013cb338",
+  "public/robots.txt": "6faf664b36a830fc0b127e2655ccd0f816b040d5c79bb4e4166753e4087c324e",
+  "scripts/canonical-pages.mjs": "80d9998293f59d72e04818e710032895053e000b5b64f719b3957591eb5555d7",
+  "scripts/indexnow-config.mjs": "8a6352ad1dc592a05b37152c2521ea2957f871748864e8387c72c255103a0678",
+  "scripts/indexnow-manifest.mjs": "aa43882682614c7dffa5146227f3e5411d2559e863d9b02702ce7f5f03784425",
+  "scripts/indexnow.mjs": "1a30257d7d1adb95d85b0d199a0ba00435b4b12281c9bedc927a9a5befe0dbab",
+  ".github/workflows/indexnow-test.yml": "35e42252ef5838f5557cfe75d89dbdc9b311bc238fe192164f6198ea821bcb9d",
+  ".github/workflows/indexnow.yml": "8edbf41800ac9e3fa892d0743b619036cd219224b9eb97c96300ad9cff938a0e"
+}

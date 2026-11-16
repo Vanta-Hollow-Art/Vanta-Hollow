@@ -8,8 +8,10 @@ import { origin } from '../scripts/indexnow-config.mjs';
 const read = file => readFileSync(file, 'utf8');
 const expectedSlugs = ['blackthorn-hall', 'the-last-oath', 'the-thirteenth-saint', 'the-widows-bloom', 'the-aftershow', 'the-crimson-queen'];
 
-test('only the six approved artworks have Phase 1 overrides', () => {
-  assert.deepEqual(Object.keys(artworkSeo).sort(), expectedSlugs.sort());
+test('all 46 artworks have unique physical-art overrides', () => {
+  assert.equal(Object.keys(artworkSeo).length, 46);
+  assert.equal(new Set(Object.values(artworkSeo).map(s => s.title)).size, 46);
+  assert.equal(new Set(Object.values(artworkSeo).map(s => s.description)).size, 46);
   for (const seo of Object.values(artworkSeo)) {
     assert.ok(seo.title.startsWith(seo.name + ' — '));
     assert.ok(seo.description.includes(seo.name));
@@ -40,8 +42,8 @@ test('all selected original HTML metadata matches the shared editorial source', 
   }
 });
 
-test('unselected page shells retain the existing metadata', () => {
-  const html = read('dist/journal/the-cathedral.html');
+test('non-artwork page shells retain the existing metadata', () => {
+  const html = read('dist/about.html');
   assert.ok(html.includes('<title>Vanta Hollow | Dark Fantasy Wall Art</title>'));
   const fixture = '<head><title>Existing</title></head><body>App</body>';
   assert.equal(artworkMetadataHtml(fixture, `${origin}/about`, undefined), fixture);
@@ -70,5 +72,15 @@ test('editorial overrides and thematic links reference existing artwork routes',
 
 test('the review branch cannot deploy automatically and other branches keep the default behavior', () => {
   const config = JSON.parse(read('vercel.json'));
-  assert.deepEqual(config.git.deploymentEnabled, { 'seo/phase-1': false });
+  assert.deepEqual(config.git.deploymentEnabled, { 'seo/phase-1': false, 'seo/remaining-journal-rollout': false });
+});
+
+test('Phase 1 metadata and original site content and configuration are preserved', async () => {
+  const { createHash } = await import('node:crypto');
+  const old = await import('./fixtures/phase1-seo.mjs');
+  for (const slug of expectedSlugs) assert.deepEqual(artworkSeo[slug], old.artworkSeo[slug]);
+  const hashes = JSON.parse(read('tests/fixtures/preserved-files.json'));
+  for (const [file, expected] of Object.entries(hashes)) {
+    assert.equal(createHash('sha256').update(read(file).replaceAll('\r\n','\n')).digest('hex'), expected, file);
+  }
 });

@@ -7,6 +7,7 @@ import {
   Search,
 } from 'lucide-react';
 import './styles.css';
+import { artworkSeo, physicalPrintLinkLabel } from './artwork-seo.mjs';
 
 const etsyShop = 'https://vantahollow.etsy.com';
 const collectorFavoritesUrl = 'https://www.etsy.com/shop/vantahollow/?etsrc=sdt&section_id=56626705';
@@ -2832,11 +2833,12 @@ function useRevealOnView() {
 }
 
 function JournalArtworkImage({ entry, className = '', framed = false, priority = false, protectedImage = false }) {
+  const seo = artworkSeo[entry.slug];
   return (
     <div className={`artwork-placeholder journal-artwork-image ${framed ? 'framed' : ''} ${protectedImage ? 'protected' : ''} ${className}`.trim()}>
       <img
         src={framed ? entry.framedMockup : entry.artworkImage}
-        alt={framed ? `${entry.title} framed artwork mockup` : `${entry.title} artwork`}
+        alt={framed ? (seo?.mockupAlt || `${entry.title} framed artwork mockup`) : (seo?.imageAlt || `${entry.title} artwork`)}
         loading={priority ? 'eager' : 'lazy'}
         draggable={protectedImage ? false : undefined}
         onContextMenu={protectedImage ? (event) => event.preventDefault() : undefined}
@@ -2976,8 +2978,9 @@ function JournalEntrySection({ title, children }) {
 
 function useJournalSeo(entry) {
   useEffect(() => {
-    const pageTitle = entry.seo?.title || `${entry.title} | The Hollow Journal | Vanta Hollow`;
-    const pageDescription = entry.seo?.description || entry.excerpt;
+    const seo = artworkSeo[entry.slug];
+    const pageTitle = seo?.title || entry.seo?.title || `${entry.title} | The Hollow Journal | Vanta Hollow`;
+    const pageDescription = seo?.description || entry.seo?.description || entry.excerpt;
     const canonicalUrl = getAbsoluteUrl(getEntryUrl(entry));
     const imageUrl = getAbsoluteUrl(entry.artworkImage);
     const previousTitle = document.title;
@@ -3026,7 +3029,7 @@ function useJournalSeo(entry) {
       headline: entry.title,
       description: pageDescription,
       image: imageUrl,
-      datePublished: entry.publishedDate,
+      datePublished: seo ? new Date(`${entry.publishedDate} UTC`).toISOString().slice(0, 10) : entry.publishedDate,
       author: {
         '@type': 'Organization',
         name: 'Vanta Hollow',
@@ -3210,6 +3213,8 @@ function RelatedEntries({ entry }) {
 
 function JournalEntryPage({ entry }) {
   useJournalSeo(entry);
+  const seo = artworkSeo[entry.slug];
+  const relatedArtwork = journalEntries.find((item) => item.slug === seo?.relatedSlug);
   const entryIndex = journalEntries.findIndex((item) => item.slug === entry.slug);
   const previousEntry = entryIndex > 0 ? journalEntries[entryIndex - 1] : null;
   const nextEntry = entryIndex < journalEntries.length - 1 ? journalEntries[entryIndex + 1] : null;
@@ -3252,9 +3257,22 @@ function JournalEntryPage({ entry }) {
           <section className="journal-featured-artwork">
             <div>
               <h2>Featured Artwork</h2>
-              <p>{entry.featuredDescription}</p>
+              <p>
+                {entry.featuredDescription}
+                {seo && (
+                  <>
+                    {' '}{seo.purchaseContext}
+                    {relatedArtwork && (
+                      <>
+                        {' '}{seo.relatedIntro}{' '}
+                        <a href={getEntryUrl(relatedArtwork)}>{relatedArtwork.title}</a>.
+                      </>
+                    )}
+                  </>
+                )}
+              </p>
               <a className="button journal-button" href={entry.etsyUrl || etsyShop} {...etsyLinkProps}>
-                Collect This Piece <span aria-hidden="true">&rsaquo;</span>
+                {seo ? physicalPrintLinkLabel : 'Collect This Piece'} <span aria-hidden="true">&rsaquo;</span>
               </a>
             </div>
             <JournalArtworkImage entry={entry} framed protectedImage />

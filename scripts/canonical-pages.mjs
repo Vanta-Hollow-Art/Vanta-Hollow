@@ -3,6 +3,33 @@ import { dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { discoverUrls } from './indexnow-manifest.mjs';
 import { origin } from './indexnow-config.mjs';
+import { artworkSeo } from '../src/artwork-seo.mjs';
+
+export const escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll("'", '&#39;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+
+export function artworkMetadataHtml(html, url, seo) {
+  if (!seo) return html;
+  let result = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(seo.title)}</title>`);
+  const image = new URL(seo.artworkImage, origin).href;
+  const values = [
+    ['name', 'description', seo.description],
+    ['property', 'og:type', 'article'],
+    ['property', 'og:title', seo.title],
+    ['property', 'og:description', seo.description],
+    ['property', 'og:url', url],
+    ['property', 'og:image', image],
+    ['name', 'twitter:card', 'summary_large_image'],
+    ['name', 'twitter:title', seo.title],
+    ['name', 'twitter:description', seo.description],
+    ['name', 'twitter:image', image],
+  ];
+  for (const [attribute, key, value] of values) {
+    const existing = new RegExp(`<meta\\b(?=[^>]*\\b${attribute}\\s*=\\s*["']${key}["'])[^>]*>`, 'gi');
+    result = result.replace(existing, '');
+    result = result.replace('</head>', `  <meta ${attribute}="${key}" content="${escapeHtml(value)}" />\n  </head>`);
+  }
+  return result;
+}
 
 export function sitemapXml(urls) {
   return '<?xml version="1.0" encoding="UTF-8"?>\n' +
@@ -31,7 +58,8 @@ export function buildCanonicalPages() {
     const pathname = new URL(url).pathname;
     const file = pathname === '/' ? 'dist/index.html' : `dist${pathname}.html`;
     mkdirSync(dirname(file), { recursive: true });
-    writeFileSync(file, canonicalHtml(template, url));
+    const seo = pathname.startsWith('/journal/') ? artworkSeo[pathname.slice('/journal/'.length)] : undefined;
+    writeFileSync(file, artworkMetadataHtml(canonicalHtml(template, url), url, seo));
   }
   // Use the same route discovery as IndexNow so future journal additions appear.
   writeFileSync('dist/sitemap.xml', sitemapXml(urls));

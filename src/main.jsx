@@ -2782,11 +2782,7 @@ function getEntryUrl(entry) {
 }
 
 function getAbsoluteUrl(path) {
-  if (typeof window === 'undefined') {
-    return path;
-  }
-
-  return new URL(path, window.location.origin).href;
+  return new URL(path, 'https://www.vanta-hollow.com').href;
 }
 
 function formatPublishedDate(entry) {

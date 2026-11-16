@@ -2,7 +2,7 @@
 
 This integration uses the existing Vite build, Vercel Git integration, free GitHub Actions for this public repository, and the free IndexNow API. No new packages, secrets, paid services, Vercel tokens, or Google configuration are needed.
 
-The production apex domain redirects with HTTP 308 to `www.vanta-hollow.com`. Submissions and key verification therefore use the serving `www` host. Existing apex URLs in the sitemap are normalized for notifications only; the sitemap, redirects, canonical metadata, and Search Console setup are unchanged.
+The production apex domain redirects with HTTP 308 to `www.vanta-hollow.com`. Submissions and key verification therefore use the serving `www` host. The sitemap and page canonicals also use that host; legacy apex sitemap URLs remain accepted by route discovery for compatibility. See `google-indexing-audit.md` for the canonical/sitemap correction. The existing Search Console property is unchanged.
 
 ## Deployment and verification
 
@@ -15,7 +15,7 @@ The production apex domain redirects with HTTP 308 to `www.vanta-hollow.com`. Su
 
 ## How changes are detected
 
-`scripts/indexnow-manifest.mjs` discovers literal application routes and journal slugs in the existing `src/main.jsx`, cross-checks the existing sitemap, and fingerprints built HTML, JS, CSS, images, and public assets. It fails closed if the journal structure changes or global HTML gains `noindex`. Current routes include `/journal` and entries missing from the sitemap; the sitemap itself is unchanged. Unknown sitemap paths are not submitted because this SPA returns HTTP 200 for unknown routes. Future routing changes must update discovery and its tests.
+`scripts/indexnow-manifest.mjs` discovers literal application routes and journal slugs in the existing `src/main.jsx`, cross-checks the sitemap, and fingerprints built HTML, JS, CSS, images, and public assets. It fails closed if the journal structure changes or global HTML gains `noindex`. The build runs `scripts/canonical-pages.mjs` first to emit each route's canonical HTML and the complete sitemap using the same discovered routes, then generates the IndexNow manifest. Unknown sitemap paths are not submitted because this SPA returns HTTP 200 for unknown routes. Future routing changes must update discovery and its tests.
 
 All routes share the SPA bundle, so a changed shared bundle or asset conservatively notifies every current page. Documentation or workflow-only changes with identical build output produce no notifications. Newly discovered routes submit automatically. URLs removed from the route manifest are submitted once as removals, including removals absent from the sitemap. This integration does not change the site's existing HTTP fallback behavior; a removed route should separately return 404/410 if permanent removal semantics are wanted.
 
@@ -35,4 +35,4 @@ Exactly-once delivery cannot be guaranteed across the remote API and GitHub: a l
 
 Run `npm ci`, `npm run test:indexnow`, and `npm run build`. Tests use mocked HTTP responses, including the production run and persistent ledger; they do not submit live URLs. Live key accessibility and real API acceptance can only be confirmed after the production deployment contains the key. No live success should be claimed from unit tests or preview builds.
 
-The site markup, artwork, styles, `sitemap.xml`, `robots.txt`, and Google Search Console setup are preserved. IndexNow notifies participating search engines; it does not guarantee indexing, Google indexing, or rankings. Protocol: https://www.indexnow.org/documentation
+The site content, artwork, styles, and Google Search Console setup are preserved. The sitemap, robots sitemap reference, and canonical metadata consistently identify the production www URLs. IndexNow notifies participating search engines; it does not guarantee indexing, Google indexing, or rankings. Protocol: https://www.indexnow.org/documentation
